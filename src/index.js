@@ -13,6 +13,23 @@ import * as firebase from 'firebase';
 const routing = (
     <Router>
         <div>
+            <ul>
+                <li>
+                    <Link to="/">Home</Link>
+                </li>
+                <li>
+                    <Link to="/login">Login</Link>
+                </li>
+                <li>
+                    <Link to="/registerUser">Registrer Bruker</Link>
+                </li>
+                <li>
+                    <Link to="/registerEvent">registerer event</Link>
+                </li>
+                <li>
+                    <Link to="/menuPage">menu</Link>
+                </li>
+            </ul>
             <Route path="/" component={App} />
             <Route path="/login" component={Login} />
             <Route path="/menuPage" component={MenuPage} />
