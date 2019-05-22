@@ -1,7 +1,7 @@
+
 import React, { Component } from 'react';
 import './SignupPage.css'; 
 import Header from './Header';
-import Footer from "./Footer";
 
 class SignupPage extends Component {
     state = {
@@ -11,20 +11,53 @@ class SignupPage extends Component {
     render() {
         return(
             <div>
-                <Header/>
-                <div className='signupContainer'>
-                    <form className='signupForm'>
-                        <input className='input' type="text" placeholder="First Name" />
-                        <input className='input' type="text" placeholder="Last Name" />
-                        <input className='input' type="text" placeholder="Email" />
-                        <input className='input' type="password" placeholder="Password" />
-                        <button className='submitbtn'>Sign Up</button>
+                <Header/> 
+                <h2 className='page-header' >Opprett bruker</h2>
+
+                <div className='formContainer'>
+                    <form className='inputForm'>
+                        <div className='inputSection'>
+                            <label>First Name *</label>
+                            <input className='input-box' type="text" placeholder="First Name" />
+                        </div>
+
+                        <div className='inputSection'>
+                            <label> Last Name *</label>
+                            <input className='input-box' type="text" placeholder="Last Name" />
+                        </div>
+
+                        <div className='inputSection'>
+                            <label> E-mail *</label>
+                            <input className='input-box' type="text" placeholder="Email" />
+                        </div>
+
+                        <div className='inputSection'>
+                            <label> Password *</label>
+                            <input className='input-box' type="password" placeholder="Password" />
+                        </div>
+
+                        <div className='inputSection'>
+                            <label> School</label>
+                            <input className='input-box' type="school" placeholder="School" />
+                        </div>
+
+                        <div className='inputSection'>
+                            <label> Intressen</label>
+                            <input className='input-box' type="school" placeholder="Intressen" />
+                        </div>
+
+                      
                     </form>
+                    <div className='wrapperButtons'>
+                            <button id='submitbtn'>Clear</button>
+                            <button id='submitbtn'>Sign Up</button>
+                        </div>
+
                 </div>
-                <Footer/>
             </div>
         )
     }
 }
 
 export default SignupPage;
+
