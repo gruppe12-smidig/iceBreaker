@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import Header from "./Header";
+import Footer from "./Footer";
 
 class Home extends Component {
     render() {
@@ -9,6 +10,7 @@ class Home extends Component {
                 <div id='HomeContainer'>
                     <h2>FUCK YOU ALL</h2>
                 </div>
+                <Footer/>
             </div>
 
         );

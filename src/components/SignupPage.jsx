@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './SignupPage.css'; 
 import Header from './Header';
+import Footer from "./Footer";
 
 class SignupPage extends Component {
     state = {
@@ -19,8 +20,8 @@ class SignupPage extends Component {
                         <input className='input' type="password" placeholder="Password" />
                         <button id='submitbtn'>Sign Up</button>
                     </form>
-
                 </div>
+                <Footer/>
             </div>
         )
     }

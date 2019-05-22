@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import Header from './Header';
+import Footer from "./Footer";
 
 class RegisterEventPage extends Component {
     render() {
@@ -9,6 +10,7 @@ class RegisterEventPage extends Component {
                     <div>
                         <h2>LOL tulla. Elsker dere</h2>
                     </div>
+                <Footer/>
             </div>
         );
     }
