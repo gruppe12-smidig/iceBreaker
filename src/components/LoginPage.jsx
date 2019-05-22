@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './loginPage.css';
+import Header from './Header';
 
 class LoginPage extends Component {
     state = {
@@ -9,6 +10,7 @@ class LoginPage extends Component {
     render() {
         return(
             <div>
+                <Header/>
                 <div id='LoginContainer'>
                     <form id='LoginForm'>
                         <input className='input' type="text" placeholder="Email" />

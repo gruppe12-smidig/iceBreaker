@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './SignupPage.css'; 
+import Header from './Header';
 
 class SignupPage extends Component {
     state = {
@@ -9,6 +10,7 @@ class SignupPage extends Component {
     render() {
         return(
             <div>
+                <Header/>
                 <div id='signupContainer'>
                     <form id='signupForm'>
                         <input className='input' type="text" placeholder="First Name" />

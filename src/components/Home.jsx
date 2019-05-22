@@ -1,9 +1,16 @@
 import React, {Component} from 'react';
+import Header from "./Header";
 
 class Home extends Component {
     render() {
         return (
-            <h2>FUCK YOU ALL</h2>
+            <div>
+                <Header/>
+                <div id='HomeContainer'>
+                    <h2>FUCK YOU ALL</h2>
+                </div>
+            </div>
+
         );
     }
 }
