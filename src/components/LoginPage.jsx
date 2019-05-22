@@ -12,11 +12,11 @@ class LoginPage extends Component {
         return(
             <div>
                 <Header/>
-                <div id='LoginContainer'>
-                    <form id='LoginForm'>
+                <div className='LoginContainer'>
+                    <form className='LoginForm'>
                         <input className='input' type="text" placeholder="Email" />
                         <input className='input' type="password" placeholder="Password" />
-                        <button id='submitbtn'>Login</button>
+                        <button className='submitbtn'>Login</button>
                     </form>
                 </div>
                 <Footer/>

@@ -12,13 +12,13 @@ class SignupPage extends Component {
         return(
             <div>
                 <Header/>
-                <div id='signupContainer'>
-                    <form id='signupForm'>
+                <div className='signupContainer'>
+                    <form className='signupForm'>
                         <input className='input' type="text" placeholder="First Name" />
                         <input className='input' type="text" placeholder="Last Name" />
                         <input className='input' type="text" placeholder="Email" />
                         <input className='input' type="password" placeholder="Password" />
-                        <button id='submitbtn'>Sign Up</button>
+                        <button className='submitbtn'>Sign Up</button>
                     </form>
                 </div>
                 <Footer/>

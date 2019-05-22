@@ -8,7 +8,12 @@ class Home extends Component {
             <div>
                 <Header/>
                 <div id='HomeContainer'>
-                    <h2>FUCK YOU ALL</h2>
+                    <h3>Icebreaker</h3>
+                    <div className='button_wrapper'>
+                        <button className='btn'>Find events</button>
+                        <button className='btn'>My events</button>
+                        <button className='btn'>new event</button>
+                    </div>
                 </div>
                 <Footer/>
             </div>

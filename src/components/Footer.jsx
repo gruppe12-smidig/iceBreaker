@@ -5,7 +5,6 @@ import './Footer.css';
 class Footer extends Component {
     render() {
         return (
-            /* Start footer*/
             <div className='footer_container'>
                 <div className='top_section'>
                     <div className='left'>
@@ -18,7 +17,7 @@ class Footer extends Component {
                             <span className='footer_p'>IceBreaker@gmail.com</span>
 
                         </div>
-                    </div> /* end left section */
+                    </div> {/* end left section */}
 
                     <div className='right_section'>
                         <h3>Addresse:</h3>
@@ -26,19 +25,19 @@ class Footer extends Component {
                             Chr. Kroghs gate 16
                             0186 Oslo
                         </p>
-                    </div> /* End right section*/
+                    </div> {/* End right section*/}
 
 
-                </div> /* End top section */
-                /* TODO: find a replacement for hr tag*/
+                </div> {/* End top section */}
+                {/* TODO: find a replacement for hr tag*/}
                 <div className='bottom_section'>
-                    /* TODO: put in some images*/
+                    {/* TODO: put in some images*/}
                     <span className='min_p'>Smidig gruppe 12</span>
 
                 </div>
 
 
-            </div> /* End footer_container*/
+            </div>
         );
     }
 }
