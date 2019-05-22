@@ -1,0 +1,11 @@
+.HeaderContainer {
+    background-color: lightslategrey;
+    border-style: outset;
+    border-color: #282c34;
+    padding: 30px;
+
+}
+
+.HeaderContainer_links {
+    display: flex;
+}

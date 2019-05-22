@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import { BrowserRouter as Router, Route, Link} from "react-router-dom";
 import './App.css';
+import './Header.css'
 import Home from './Home';
 import LoginPage from './LoginPage';
 import RegisterEventPage from './RegisterEventPage';

@@ -6,18 +6,18 @@ import './Header.css';
 class Header extends Component {
     render() {
         return(
-            <div>
-                <ul>
-                    <li>
+            <div className="HeaderContainer">
+                <ul className="HeaderContainer_links">
+                    <li className="HeaderLink">
                         <Link to="/">Home</Link>
                     </li>
-                    <li>
+                    <li className="HeaderLink">
                         <Link to="/LoginPage">Login</Link>
                     </li>
-                    <li>
+                    <li className="HeaderLink">
                         <Link to="/SignupPage">Registrer Bruker</Link>
                     </li>
-                    <li>
+                    <li className="HeaderLink">
                         <Link to="/RegisterEventPage">registerer event</Link>
                     </li>
                 </ul>
