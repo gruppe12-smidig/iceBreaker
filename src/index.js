@@ -1,43 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {Route, Link, BrowserRouter as Router} from "react-router-dom";
 import './index.css';
-import App from './App';
-import Login from './login';
-import MenuPage from './menuPage';
-import RegisterUser from './registerUser';
-import RegisterEvent from './registerEvent'
+import App from './components/App';
 import * as serviceWorker from './serviceWorker';
 import * as firebase from 'firebase';
 
-const routing = (
-    <Router>
-        <div>
-            <ul>
-                <li>
-                    <Link to="/">Home</Link>
-                </li>
-                <li>
-                    <Link to="/login">Login</Link>
-                </li>
-                <li>
-                    <Link to="/registerUser">Registrer Bruker</Link>
-                </li>
-                <li>
-                    <Link to="/registerEvent">registerer event</Link>
-                </li>
-                <li>
-                    <Link to="/menuPage">menu</Link>
-                </li>
-            </ul>
-            <Route path="/" component={App} />
-            <Route path="/login" component={Login} />
-            <Route path="/menuPage" component={MenuPage} />
-            <Route path="/registerUser" component={RegisterUser}/>
-            <Route path="/registerEvent" component={RegisterEvent}/>
-        </div>
-    </Router>
-)
 
 const firebaseConfig = {
     apiKey: "AIzaSyA9PZxcM-47HTb1X4MX6tJdlCyz50T4H5w",
@@ -50,7 +17,7 @@ const firebaseConfig = {
 };
 firebase.initializeApp(firebaseConfig);
 
-ReactDOM.render(routing, document.getElementById('root'));
+ReactDOM.render(<App/>, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
