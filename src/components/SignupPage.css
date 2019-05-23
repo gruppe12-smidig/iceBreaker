@@ -17,17 +17,7 @@ p {
     font-family: 'Open Sans', sans-serif;
 }
 
-button {
 
-    margin: 1.8rem;
-    height: 40px;
-    width: 100px;
-    border-radius: 5px;
-    color: rgb(255, 255, 255);
-    font-size: 1rem;
-    background-color: #155767;
-
-}
 
 .page-header {
     margin: 0%;
@@ -39,14 +29,6 @@ button {
 }
 
 
-/*Wrapper whole order input section  */
-.formContainer{
-    /* border: solid 3px rebeccapurple;  */
-    margin: 0 auto;
-    height: 500px;
-    width: 370px;
-
-}
 
 .inputContainerShorts {
    
@@ -56,16 +38,17 @@ button {
 }
 
 .inputForm{
-    /* border: solid 3px rgb(23, 71, 175); */
-    padding: 2rem; 
-   
+    margin: 0 auto; 
+
+
 }
 
 /* Class for all sections containing input-fields */
 .inputSection {
+    margin: 0 auto;
     margin-bottom: 1rem;
     padding: 0rem;
-    /* border: solid 3px rgb(134, 153, 51); */
+    width: 300px;
     display: grid;
     grid-template-columns: 1fr;
 }
@@ -73,12 +56,12 @@ button {
 
 /* Class for all input-fields */
 .input-box, .input-box-text{
-    border: solid 2px rgb(226, 226, 226);
+    border: solid 2px rgb(236, 236, 236);
     border-radius: 2px;
     padding: 0.5rem;
     font-size: 1rem;
-    height: 20px;
-
+    height: 18px;
+    width: 95%;
 }
 
 .input-box-text {
@@ -88,7 +71,6 @@ button {
 }
 
 
-
 /* Container for feedback to user below message-area */
 #status-bar {
     height: 20px;
@@ -96,8 +78,20 @@ button {
 }
 
 .wrapperButtons {
+    margin-bottom: 30px;
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-around;
+}
+.buttonReg {
+    margin: 1px;
+    height: 40px;
+    width: 100px;
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+    font-size: 1rem;
+    text-align: center;
+    background-color: #155767;
+
 }
 
 

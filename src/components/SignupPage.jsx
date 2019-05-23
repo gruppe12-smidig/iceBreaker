@@ -14,7 +14,6 @@ class SignupPage extends Component {
                 <Header/> 
                 <h2 className='page-header' >Opprett bruker</h2>
 
-                <div className='formContainer'>
                     <form className='inputForm'>
                         <div className='inputSection'>
                             <label>First Name *</label>
@@ -45,15 +44,17 @@ class SignupPage extends Component {
                             <label> Intressen</label>
                             <input className='input-box' type="school" placeholder="Intressen" />
                         </div>
-                        <div className='wrapperButtons'>
-                            <button id='submitbtn'>Clear</button>
-                            <button id='submitbtn'>Sign Up</button>
-                        </div>
+
+                     
                       
                     </form>
+                    <div className='wrapperButtons'>
+                            <button className='buttonReg'>Clear</button>
+                            <button className='buttonReg'>Sign Up</button>
+                        </div>
                   
 
-                </div>
+              
             </div>
         )
     }
