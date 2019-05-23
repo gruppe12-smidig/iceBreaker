@@ -15,9 +15,12 @@ class Home extends Component {
                             <img className='frontPenguin' src={penguin} alt="Image of penguin" />
                             <img className='frontPenguin' src={penguin} alt="Image of penguin" />
                     </div>
-                    <h3>Break som Ice</h3>
+                    <div className='greetContainer'>
+                        <h3>Break som Ice</h3>
+                        <p>Lorem ipsum lorem lorem lorem lorem ipsum lorem lorem lorem lorem</p>
+                    </div>
 
-                    <div className='button_wrapper'>
+                    <div className='btnWrapper'>
                         <button className='btn'>Find events</button>
                         <button className='btn'>My events</button>
                         <button className='btn'>new event</button>
