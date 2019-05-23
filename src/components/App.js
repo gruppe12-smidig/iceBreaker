@@ -6,6 +6,7 @@ import Home from './Home';
 import LoginPage from './LoginPage';
 import RegisterEventPage from './RegisterEventPage';
 import SignupPage from './SignupPage';
+import Events from './Events';
 
 
 class App extends Component {
@@ -16,6 +17,7 @@ class App extends Component {
                  <Route path="/loginPage" component={LoginPage}/>
                  <Route path="/SignupPage" component={SignupPage}/>
                  <Route path="/RegisterEventPage" component={RegisterEventPage}/>
+                 <Route path="/Events" component={Events}/>
          </Router>
      );
  }

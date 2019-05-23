@@ -13,6 +13,7 @@ class Home extends Component {
                         <button className='btn'>Find events</button>
                         <button className='btn'>My events</button>
                         <button className='btn'>new event</button>
+                        
                     </div>
                 </div>
                 <Footer/>
