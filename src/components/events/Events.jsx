@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import './Events.css';
-import Header from './Header';
-import boot from '../images/boot.png';
+import Header from '../header/Header';
+
+
 
 class Events extends Component {
 state = {
