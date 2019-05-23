@@ -1,0 +1,14 @@
+.homeContainer{
+    text-align: center;  
+}
+.wrapperPenguin{
+    margin: 0 auto;
+    /* border: 2px red solid; */
+    padding: 10px;
+    height: 120px;
+    width: 80%;
+    text-align: center;
+}
+.frontPenguin{
+height: 100px;
+}
