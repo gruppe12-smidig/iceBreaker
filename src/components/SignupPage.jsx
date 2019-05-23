@@ -48,7 +48,7 @@ class SignupPage extends Component {
                      
                       
                     </form>
-                    <div className='wrapperButtons'>
+                    <div className='wrapperBtns'>
                             <button className='buttonReg'>Clear</button>
                             <button className='buttonReg'>Sign Up</button>
                         </div>

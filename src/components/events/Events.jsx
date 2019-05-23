@@ -2,6 +2,9 @@
 import React, { Component } from 'react';
 import './Events.css';
 import Header from '../header/Header';
+import tea from '../../images/tea.png';
+import boot from '../../images/boot.png';
+
 
 
 
@@ -10,7 +13,7 @@ state = {
 }
 render() {
 return(
-<div>
+<div className='eventMain'>
 <Header />
 <h2 className='page-header'>Arrangementer</h2>
 <div id="wrapperButtons">
@@ -24,7 +27,8 @@ return(
 <img className="tea" src={tea} alt="tea"/>
 <span className="btn-test1">TEST</span>
 </button>
-
+</div>
+</div>
 )
 }
 }
