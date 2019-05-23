@@ -10,7 +10,7 @@ class SignupPage extends Component {
 
     render() {
         return(
-            <div>
+            <div className='signUpMain'>
                 <Header/> 
                 <h2 className='page-header' >Opprett bruker</h2>
 
