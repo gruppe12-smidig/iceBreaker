@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './SignupPage.css'; 
+import './RegisterEventPage.css'; 
 import Header from './Header';
 
 
@@ -53,17 +53,17 @@ class RegisterEventPage extends Component {
 
                                 <div className='inputSection'>
                                     <label> Siste påmelding</label>
-                                    <input  className='input-box' type="endSignUp" placeholder="Siste påmelding" />
+                                    
                                 </div>
 
                                 <div className='inputSection'>
                                     <label> Maks deltakere</label>
-                                    <input className='input-box' type="MaxP" placeholder="Maks deltakere" />
+                          
                                 </div>
                         </div>
                         <div className='inputSection'>
                             <label> Beskrivelse</label>
-                            <input className='input-box-text' type="beskrivelse" placeholder="Beskrivelse" />
+       
                         </div>
 
                       
