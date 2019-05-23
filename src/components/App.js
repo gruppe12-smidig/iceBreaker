@@ -1,12 +1,12 @@
 import React, {Component} from 'react';
 import { BrowserRouter as Router, Route, Link} from "react-router-dom";
 import './App.css';
-import './Header.css'
-import Home from './Home';
-import LoginPage from './LoginPage';
-import RegisterEventPage from './RegisterEventPage';
-import SignupPage from './SignupPage';
-import Events from './Events';
+import './header/Header.css'
+import Home from './home/home';
+import LoginPage from './login/LoginPage';
+import RegisterEventPage from './event/RegisterEventPage';
+import SignupPage from './signup/SignupPage';
+import Events from './events/Events';
 
 
 class App extends Component {

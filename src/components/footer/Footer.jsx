@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
 import {Link} from "react-router-dom";
 import './Footer.css';
-import mail from '../images/white-mail-icon.jpg'; 
-import phone from '../images/white-phone.png'; 
-import insta from '../images/insta.png'; 
-import face from '../images/fb.png'; 
+import mail from '../../images/white-mail-icon.jpg';
+import phone from '../../images/white-phone.png';
+import insta from '../../images/insta.png';
+import face from '../../images/fb.png';
   
 class Footer extends Component {
     render() {
@@ -33,7 +33,7 @@ class Footer extends Component {
                         <div className='contactWrapper'>
 
                                 <img className='phoneIcon' src={phone} alt="Phoneicon" />
-                                <span class="contact">99999 9999</span>   
+                                <span className="contact">99999 9999</span>
 
                         </div>
 

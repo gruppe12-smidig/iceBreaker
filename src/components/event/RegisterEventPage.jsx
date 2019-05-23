@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './RegisterEventPage.css'; 
-import Header from './Header';
+import Header from '../header/Header';
 
 
 

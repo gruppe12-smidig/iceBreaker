@@ -20,7 +20,7 @@ class Header extends Component {
                     <li className="HeaderLink">
                         <Link to="/RegisterEventPage">registerer event</Link>
                     </li>
-                    <li class="EventsLink">
+                    <li className="EventsLink">
                         <Link to="/Events">Arrangementer</Link>
                         </li>
                 </ul>

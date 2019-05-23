@@ -1,4 +1,4 @@
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+{/**<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
         <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
             <script>
                 window.addEventListener("load", function(){
@@ -21,4 +21,4 @@
                 Using Osano's Cookie Consent template to create a script that loads 
                 a pop-up banner to inform the user that we use cookies and a link
                 to learn more about cookies on nettvett.no
-            */
+            *//**/}

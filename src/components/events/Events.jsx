@@ -1,9 +1,10 @@
 
 import React, { Component } from 'react';
 import './Events.css';
-import Header from './Header';
-import boot from '../images/boot.png';
-import tea from '../images/tea.png';
+import Header from '../header/Header';
+
+
+
 class Events extends Component {
 state = {
 }
@@ -24,8 +25,6 @@ return(
 <span className="btn-test1">TEST</span>
 </button>
 
-</div>
-</div>
 )
 }
 }
