@@ -17,8 +17,8 @@
                     }
                 })});
             </script>
-            <!--
+            /*
                 Using Osano's Cookie Consent template to create a script that loads 
                 a pop-up banner to inform the user that we use cookies and a link
                 to learn more about cookies on nettvett.no
-            -->
+            */
