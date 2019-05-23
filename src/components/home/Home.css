@@ -13,8 +13,19 @@
 .frontPenguin{
 height: 100%;
 }
+.greetContainer{
+    padding: 1rem;
+}
 .btn{
     background-color:#155767;  
     width: 60%;
     max-width: 500px;
+    text-align: center;
+    text-transform:uppercase;
+    color: #ffffff;
+    font-size: 1.2em;
+}
+
+.btnWrapper{
+    margin-bottom: 20%;
 }

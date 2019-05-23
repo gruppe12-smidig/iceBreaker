@@ -46,10 +46,11 @@ class SignupPage extends Component {
                             <input className='input-box' type="school" placeholder="Intressen" />
                         </div>
                         <div className='wrapperButtons'>
-                            <button id='submitbtn'>Clear</button>
-                            <button id='submitbtn'>Sign Up</button>
+
+                        <button className='signBtn'>Clear</button>
+                            <button className='signBtn'>Sign Up</button>
                         </div>
-                      
+                       
                     </form>
                   
 
