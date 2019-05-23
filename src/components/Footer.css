@@ -3,41 +3,49 @@ body{
  }
  
  
- a:link {
+ .link {
      color: rgb(255, 255, 255);
      margin: 0%;
      padding: 0%;
-     text-decoration: none;
-   }
-   
-   a:visited {
-     text-decoration: none;
-   }
-   
-   a:hover {
      text-decoration: underline;
    }
    
-   a:active {
+   .link:visited {
+     text-decoration: none;
+   }
+   
+   .link:hover {
      text-decoration: underline;
    }
- 
+   
+   .link:active {
+     text-decoration: underline;
+   }
+ h3, h4{
+     font-size: 1rem;
+     
+ }
  img{
      padding: 0%;
      overflow: hidden;
  } 
  .footerContainer{
-    margin: 3px 3px auto -3px;
-    padding: 10px;
-    height: auto;
-    width:90%;
- border: solid 4px rgb(107, 20, 20); 
+    margin: 0 auto;
+    padding: 20px;
+    max-height: 600px;
+    width:96%;
     background-color: #2B455C;
     color: rgb(255, 255, 255);
     font-family: 'Roboto', sans-serif;
 
 
 }
+.topSection  {
+    display: grid;
+    grid-template-columns: 1fr;
+    
+     
+     }
  .bottomSection  {
 display: flex;
 justify-content: space-between;
@@ -53,20 +61,16 @@ justify-content: space-between;
  
  
  .minP{
+    margin-right: 20px;
     font-size:  0.8em;
     color: rgb(122, 122, 122);
  }
- 
-
-
- 
  
  
  .footer-p{
      margin-left: 10px;
      padding: 0%;
      font-size: 0.9em;
- 
  }
  
  .top-section{
@@ -76,15 +80,10 @@ justify-content: space-between;
      justify-content: space-between;
  }
  
- .left {
-     width: 40%;
-     /* border:  2px solid pink; */
-   
-    }
+
  
  .contactWrapper{
-  border:  2px solid pink; 
- display: inline;
+margin-bottom: 20px;
 
  
  }
@@ -106,7 +105,11 @@ justify-content: space-between;
      justify-content: flex-end;
  }
  .phoneIcon{
+
+     margin-top: -10px;
+
      height: 20px;
+
  }
  .mailIcon{
     height: 20px;

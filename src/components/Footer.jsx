@@ -11,35 +11,42 @@ class Footer extends Component {
         return (
             <div className='footerContainer'>
                 <div className='top_section'>
-                    <div className='left'>
-                        <a>
-                            <h3>Om oss</h3>
-                        </a>
-
-                     
-                    </div> {/* end left section */}
+          
+                        
+                 
 
                     <div className='topSection'>
 
-                        <h3>Kontakt</h3>
+           
+                        <Link className="link" to="/"><h3>Om oss</h3></Link>
+            
+
+                        <h4>Kontakt</h4 >
                         
                         <div className='contactWrapper'>
+
                                 <img className='mailIcon' src={mail} alt="Mailicon" />
-                                  <span className='footer_p'>IceBreaker@gmail.com</span>
+                                  <span className='contact'>IceBreaker@gmail.com</span>
 
                         </div>
 
                         <div className='contactWrapper'>
+
                                 <img className='phoneIcon' src={phone} alt="Phoneicon" />
-                                <span class="footer-p">99999 9999</span>   
+                                <span class="contact">99999 9999</span>   
 
                         </div>
 
                         <div className='contactWrapper'>
-                                <p className='footer_p'>
+
+                                <p className='footerAdress'>
                                     Chr. Kroghs gate 16
-                                    0186 Oslo
                                 </p>
+                                <p className='footerAdress'>
+                                     0186 Oslo
+                                </p>
+                                  
+                           
 
                         </div>
 
