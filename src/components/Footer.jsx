@@ -1,38 +1,70 @@
 import React, {Component} from 'react';
 import {Link} from "react-router-dom";
 import './Footer.css';
-
+import mail from '../images/white-mail-icon.jpg'; 
+import phone from '../images/white-phone.png'; 
+import insta from '../images/insta.png'; 
+import face from '../images/fb.png'; 
+  
 class Footer extends Component {
     render() {
         return (
-            <div className='footer_container'>
+            <div className='footerContainer'>
                 <div className='top_section'>
-                    <div className='left'>
-                        <a>
-                            <h3>Om oss</h3>
-                        </a>
+          
+                        
+                 
 
-                        <div className='contact_wrapper'>
+                    <div className='topSection'>
 
-                            <span className='footer_p'>IceBreaker@gmail.com</span>
+           
+                        <Link className="link" to="/"><h3>Om oss</h3></Link>
+            
+
+                        <h4>Kontakt</h4 >
+                        
+                        <div className='contactWrapper'>
+
+                                <img className='mailIcon' src={mail} alt="Mailicon" />
+                                  <span className='contact'>IceBreaker@gmail.com</span>
 
                         </div>
-                    </div> {/* end left section */}
 
-                    <div className='right_section'>
-                        <h3>Addresse:</h3>
-                        <p className='footer_p'>
-                            Chr. Kroghs gate 16
-                            0186 Oslo
-                        </p>
-                    </div> {/* End right section*/}
+                        <div className='contactWrapper'>
+
+                                <img className='phoneIcon' src={phone} alt="Phoneicon" />
+                                <span class="contact">99999 9999</span>   
+
+                        </div>
+
+                        <div className='contactWrapper'>
+
+                                <p className='footerAdress'>
+                                    Chr. Kroghs gate 16
+                                </p>
+                                <p className='footerAdress'>
+                                     0186 Oslo
+                                </p>
+                                  
+                           
+
+                        </div>
+
+
+                       
+                    </div> {/* End topSection*/}
 
 
                 </div> {/* End top section */}
                 {/* TODO: find a replacement for hr tag*/}
-                <div className='bottom_section'>
-                    {/* TODO: put in some images*/}
-                    <span className='min_p'>Smidig gruppe 12</span>
+                <div className='bottomSection'>
+
+                        <div className='wrapperIcons'>
+                            <img className='phoneIcon' src={insta} alt="Instagram icon" />
+                            <img className='phoneIcon' src={face} alt="Facebook icon" />
+                        </div>
+                                <span className='minP'>Smidig gruppe 12</span>
+            
 
                 </div>
 

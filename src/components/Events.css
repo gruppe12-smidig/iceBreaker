@@ -1,7 +1,7 @@
-body {
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,700&display=swap');
 
-    margin: 0rem;
-    background-color:#FAFAFA;
+body {
+    background-color: #FAFAFA;
 }
 
 /* Deletes chrome blue focus-border */
@@ -10,94 +10,64 @@ body {
 }
 
 
-p {
-    margin: 0%;
-    padding: 0%;
-    line-height: 2rem;
-    font-family: 'Open Sans', sans-serif;
+.page-header {
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-size: 24px;
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-color: #0071A4;
+    color: #498492;
+    font-weight: 600;
+}
+
+#wrapperButtons {
+    display: grid;
+    justify-content: center;
 }
 
 button {
-
-    margin: 1.8rem;
-    height: 40px;
-    width: 100px;
-    border-radius: 5px;
-    color: rgb(255, 255, 255);
-    font-size: 1rem;
-    background-color: #155767;
-
-}
-
-.page-header {
-    margin: 0%;
-    text-transform: uppercase;
-    font-size: 1.3rem;
-    text-align: center;
-    text-decoration: underline;
-    color: #155767;
-}
-
-
-/*Wrapper whole order input section  */
-.formContainer{
-    /* border: solid 3px rebeccapurple;  */
     margin: 0 auto;
-    height: 500px;
-    width: 370px;
+    border-radius: 3px;
+    font-family: 'Montserrat', sans-serif;
+    margin: 1.8rem;
+    height: 88px;
+    width: 289px;
+    text-align: left;
+    padding-left: 20px;
+    font-size: 22px;
+    border-style: none;
+    margin-top: 1px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0px 3px 6px grey;
+}
+
+/*Buttons*/
+.btn-coffeMeeting {
+    background-color: #155767;
+    color: white;
+}
+
+.btn-onTour {
+    color: black;
+    background-color: #678C97;
+}
+
+.btn-physicalActivity {
+    color: black;
+    background-color: #7DFBBC;
+}
+
+.btn-foodAndTalk {
+    color: black;
+    background-color: #EE8178;
 
 }
 
-.inputContainerShorts {
-   
-    margin: 0.5rem auto 1rem auto;
-    display: grid;
-    grid-template-columns: 30% 30%;
+.btn-studyGroup {
+    color: white;
+    background-color: #BB2D56;
 }
-
-.inputForm{
-    /* border: solid 3px rgb(23, 71, 175); */
-    padding: 2rem; 
-   
-}
-
-/* Class for all sections containing input-fields */
-.inputSection {
-    margin-bottom: 1rem;
-    padding: 0rem;
-    /* border: solid 3px rgb(134, 153, 51); */
-    display: grid;
-    grid-template-columns: 1fr;
-}
-
-
-/* Class for all input-fields */
-.input-box, .input-box-text{
-    border: solid 2px rgb(226, 226, 226);
-    border-radius: 2px;
-    padding: 0.5rem;
-    font-size: 1rem;
-    height: 20px;
-
-}
-
-.input-box-text {
-
-    height: 100px;
-
-}
-
-
-
-/* Container for feedback to user below message-area */
-#status-bar {
-    height: 20px;
-    width: 100%;
-}
-
-.wrapperButtons {
-    display: flex;
-    justify-content: flex-start;
-}
-
-
