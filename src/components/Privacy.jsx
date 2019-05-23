@@ -1,23 +1,23 @@
 import React, { Component } from 'react';
-import './Cookies.css';
+import './Privacy.css';
 import Header from './Header';
 import Footer from "./Footer";
 
-class Cookies extends Component {
+class Privacy extends Component {
 
     render() {
         return(
             <div>
                 <Header/>
-                <h2 className='page-header'>Informasjonskapsler</h2>
+                <h2 className='page-header'>Personvernerklæring</h2>
 
                 <div className='text-wrapper'>
                     <p>
                     Lorem ipsum dolor sit amet 
                     consectetur adipisicing elit. Perspiciatis, aspernatur?
-
-                    Lorem ipsum dolor sit, amet 
-                    consectetur adipisicing elit. Placeat, odit!
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                    Qui deleniti expedita, quaerat consequuntur illo consectetur 
+                    modi nesciunt sunt voluptatibus praesentium.
                     </p>
                 </div>
                 <Footer/>
@@ -26,4 +26,4 @@ class Cookies extends Component {
     }
 }
 
-export default Cookies;
+export default Privacy;
