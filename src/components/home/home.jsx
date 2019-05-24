@@ -21,9 +21,9 @@ class Home extends Component {
                     </div>
 
                     <div className='btnWrapper'>
-                        <button className='btn'>Find events</button>
-                        <button className='btn'>My events</button>
-                        <button className='btn'>new event</button>
+                        <button className='btn'>Finn arrangementer</button>
+                        <button className='btn'>Mine arrangementer</button>
+                        <button className='btn'>Opprett arrangement</button>
                         
                     </div>
                 </div>

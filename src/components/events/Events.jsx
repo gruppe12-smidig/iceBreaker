@@ -16,7 +16,7 @@ return(
 <div className='eventMain'>
 
 <h2 className='page-header'>Arrangementer</h2>
-<div id="wrapperButtons">
+<div id="wrapperGenreButtons">
 <button className='btn-coffeMeeting'>Kaffetreff<img className="tea" src={tea} alt="tea"/> </button> 
 <button className='btn-onTour'>Ut på tur<img className="boot" src={boot} alt="boot"/></button>
 <button className='btn-physicalActivity'>Fysisk aktivitet</button>

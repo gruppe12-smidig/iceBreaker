@@ -4,9 +4,10 @@
 }
 .wrapperPenguin{
     margin: 0 auto;
+    margin-top: 10%;
     /* border: 2px red solid; */
     padding: 5%;
-    height: 120px;
+    height: 100px;
     width: 80%;
     text-align: center;
 }
