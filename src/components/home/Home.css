@@ -1,0 +1,31 @@
+.homeContainer{
+    text-align: center;  
+    background-color:#FAFAFA;
+}
+.wrapperPenguin{
+    margin: 0 auto;
+    /* border: 2px red solid; */
+    padding: 5%;
+    height: 120px;
+    width: 80%;
+    text-align: center;
+}
+.frontPenguin{
+height: 100%;
+}
+.greetContainer{
+    padding: 1rem;
+}
+.btn{
+    background-color:#155767;  
+    width: 60%;
+    max-width: 500px;
+    text-align: center;
+    text-transform:uppercase;
+    color: #ffffff;
+    font-size: 1.2em;
+}
+
+.btnWrapper{
+    margin-bottom: 20%;
+}

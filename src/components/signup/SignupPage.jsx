@@ -1,7 +1,7 @@
 
 import React, { Component } from 'react';
 import './SignupPage.css'; 
-import Header from './Header';
+import Header from '../header/Header';
 
 class SignupPage extends Component {
     state = {
@@ -45,13 +45,14 @@ class SignupPage extends Component {
                             <label> Intressen</label>
                             <input className='input-box' type="school" placeholder="Intressen" />
                         </div>
+                        <div className='wrapperButtons'>
 
-                      
-                    </form>
-                    <div className='wrapperButtons'>
-                            <button id='submitbtn'>Clear</button>
-                            <button id='submitbtn'>Sign Up</button>
+                        <button className='signBtn'>Clear</button>
+                            <button className='signBtn'>Sign Up</button>
                         </div>
+                       
+                    </form>
+                  
 
                 </div>
             </div>

@@ -17,12 +17,10 @@ p {
     font-family: 'Open Sans', sans-serif;
 }
 
-button {
-
-    margin: 1.8rem;
-    height: 40px;
-    width: 100px;
-    border-radius: 5px;
+.signBtn {
+    height: 50px;
+    width: 150px;
+    border-radius: 2px;
     color: rgb(255, 255, 255);
     font-size: 1rem;
     background-color: #155767;
@@ -65,7 +63,8 @@ button {
 .inputSection {
     margin-bottom: 1rem;
     padding: 0rem;
-    /* border: solid 3px rgb(134, 153, 51); */
+
+/* border: solid 3px rgb(134, 153, 51); */
     display: grid;
     grid-template-columns: 1fr;
 }
@@ -86,7 +85,6 @@ button {
     height: 100px;
 
 }
-
 
 
 /* Container for feedback to user below message-area */
