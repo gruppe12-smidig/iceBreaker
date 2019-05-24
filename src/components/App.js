@@ -36,7 +36,6 @@ class App extends Component {
             sideDrawer = <SideDrawer/>;
             backdrop = <Backdrop click={this.backDropClickHandler}/>;
         }
-
         return (
             <div style={{height: '100%'}}>
 
@@ -44,6 +43,7 @@ class App extends Component {
                     <Header drawerClickHandler={this.drawerToggleClickHandler}/>
                     {sideDrawer}
                     {backdrop}
+
                     <Switch>
                         <Route exact path="/" component={Home}/>
                         <Route path="/loginPage" component={LoginPage}/>
