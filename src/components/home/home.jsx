@@ -22,16 +22,18 @@ class Home extends Component {
                     </div>
 
                     <div className='btnWrapper'>
-                        <button className='btn'>Finn arrangementer</button>
-                        <button className='btn'>Mine arrangementer</button>
-                        <button className='btn'>Opprett arrangement</button>
+                        
+                        <a href="/Events"><button className='btn'>Finn arrangementer</button></a> 
+                        <a href="/MyEvents"><button className='btn'>Mine arrangementer</button></a> 
+                        <a href="/RegisterEventPage"><button className='btn'>Opprett arrangement</button></a> 
+                  
                         
                     </div>
 
                 </div>
 
                 <Footer/>
-                
+
             </div>
 
         );

@@ -7,6 +7,7 @@ import LoginPage from './login/LoginPage';
 import RegisterEventPage from './event/RegisterEventPage';
 import SignupPage from './signup/SignupPage';
 import Events from './events/Events';
+ import MyEvents from './myEvents/MyEvents';
 import Switch from "react-router-dom/es/Switch";
 import Header from "./header/Header";
 import Backdrop from "./Backdrop";
@@ -52,6 +53,7 @@ class App extends Component {
                         <Route path="/SignupPage" component={SignupPage}/>
                         <Route path="/RegisterEventPage" component={RegisterEventPage}/>
                         <Route path="/events" component={Events}/>
+                        <Route path="/myEvents" component={MyEvents}/> 
                     </Switch>
                 </Router>
             </div>
