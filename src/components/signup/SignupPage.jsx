@@ -11,7 +11,7 @@ class SignupPage extends Component {
     render() {
         return(
             <div>
-                <Header/> 
+
                 <h2 className='page-header' >Opprett bruker</h2>
 
                 <div className='formContainer'>

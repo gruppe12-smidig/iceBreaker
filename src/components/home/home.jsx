@@ -8,7 +8,7 @@ class Home extends Component {
     render() {
         return (
             <div>
-                <Header/>
+
                 <div className='homeContainer'>
                  
                     <div className='wrapperPenguin'>

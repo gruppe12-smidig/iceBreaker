@@ -14,7 +14,7 @@ state = {
 render() {
 return(
 <div className='eventMain'>
-<Header />
+
 <h2 className='page-header'>Arrangementer</h2>
 <div id="wrapperButtons">
 <button className='btn-coffeMeeting'>Kaffetreff<img className="tea" src={tea} alt="tea"/> </button> 

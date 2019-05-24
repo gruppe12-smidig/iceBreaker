@@ -22,7 +22,7 @@ class RegisterEventPage extends Component {
             <div>
                           
 
-                <Header/> 
+
                 <h2 className='page-header' >Opprett arrangement</h2>
                 <div className='formContainer'>
 
