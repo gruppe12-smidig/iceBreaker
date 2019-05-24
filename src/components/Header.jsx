@@ -1,28 +1,21 @@
 import React, {Component} from 'react';
-import {Link} from "react-router-dom";
+import DrawerToggleButton from './DrawerToggleButton';
 import './Header.css';
-
 
 class Header extends Component {
     render() {
-        return(
-            <div className="HeaderContainer">
-                <ul className="HeaderContainer_links">
-                    <li className="HeaderLink">
-                        <Link to="/">Home</Link>
-                    </li>
-                    <li className="HeaderLink">
-                        <Link to="/LoginPage">Login</Link>
-                    </li>
-                    <li className="HeaderLink">
-                        <Link to="/SignupPage">Registrer Bruker</Link>
-                    </li>
-                    <li className="HeaderLink">
-                        <Link to="/RegisterEventPage">registerer event</Link>
-                    </li>
-                </ul>
-            </div>
-        )
+        return (
+
+            <header className="main_toolbar">
+                <nav className="toolbar_navigation">
+                    <div>
+                        <DrawerToggleButton click={this.props.drawerClickHandler}/>
+                    </div>
+                    <div className="toolbar_logo"><a href="/">IceBreaker</a></div>
+                    <div className="spacer"></div>
+                </nav>
+            </header>
+        );
     }
 }
 
