@@ -44,7 +44,6 @@ class App extends Component {
                     <Header drawerClickHandler={this.drawerToggleClickHandler}/>
                     {sideDrawer}
                     {backdrop}
-
                     <Switch>
                         <Route exact path="/" component={Home}/>
                         <Route path="/loginPage" component={LoginPage}/>
