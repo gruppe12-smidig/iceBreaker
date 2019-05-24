@@ -13,9 +13,9 @@ state = {
 }
 render() {
 return(
-<div className='eventMain'>
+<div className='mainContainer'>
 
-<h2 className='page-header'>Arrangementer</h2>
+<h2 className='subHeader'>Arrangementer</h2>
 <div id="wrapperGenreButtons">
 <button className='btn-coffeMeeting'>Kaffetreff<img className="tea" src={tea} alt="tea"/> </button> 
 <button className='btn-onTour'>Ut på tur<img className="boot" src={boot} alt="boot"/></button>

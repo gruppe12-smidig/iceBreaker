@@ -7,11 +7,34 @@ body {
 
   margin: 0;
   height: 100%;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+  /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  -moz-osx-font-smoothing: grayscale; */
+
+  font-family: 'Roboto', sans-serif;
+
+}
+
+.subHeader {
+    margin: 0%;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    text-align: center;
+    color: #498492;
+}
+.boldP{
+font-weight: 700;
+}
+
+.mainContainer{
+  margin: 0 auto;
+  border: solid 3px rgb(51, 153, 148); 
+  padding: 2rem;
+  height: auto; 
+
 }
 
 code {

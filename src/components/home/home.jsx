@@ -9,14 +9,15 @@ class Home extends Component {
         return (
             <div>
 
-                <div className='homeContainer'>
+                <div className='mainContainer'>
                  
                     <div className='wrapperPenguin'>
                             <img className='frontPenguin' src={penguin} alt="Image of penguin" />
                             <img className='frontPenguin' src={penguin} alt="Image of penguin" />
                     </div>
+
                     <div className='greetContainer'>
-                        <h3>Break som Ice</h3>
+                        <h3 className='greeting'>Break som Ice</h3>
                         <p>Lorem ipsum lorem lorem lorem lorem ipsum lorem lorem lorem lorem</p>
                     </div>
 
@@ -26,8 +27,11 @@ class Home extends Component {
                         <button className='btn'>Opprett arrangement</button>
                         
                     </div>
+
                 </div>
+
                 <Footer/>
+                
             </div>
 
         );
