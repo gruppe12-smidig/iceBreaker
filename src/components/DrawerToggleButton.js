@@ -6,7 +6,6 @@ const drawerToggleButton = props => (
                 <div className="toggle-button_line"> </div>
                 <div className="toggle-button_line"> </div>
                 <div className="toggle-button_line"> </div>
-
             </button>
         );
 

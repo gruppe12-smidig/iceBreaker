@@ -51,6 +51,7 @@ class App extends Component {
                         <Route path="/loginPage" component={LoginPage}/>
                         <Route path="/SignupPage" component={SignupPage}/>
                         <Route path="/RegisterEventPage" component={RegisterEventPage}/>
+                        <Route path="/Events" component={Events}/>
                     </Switch>
                 </Router>
             </div>

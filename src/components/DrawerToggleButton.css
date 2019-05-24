@@ -9,7 +9,7 @@
     cursor: pointer;
     padding: 0;
     box-sizing: border-box;
-    margin-right: 1rem;
+
 }
 
 .toggle-button:focus {
@@ -19,6 +19,5 @@
 .toggle-button_line{
     width: 30px;
     height: 2px;
-    background: white;
+    background: darkgoldenrod;
 }
-
