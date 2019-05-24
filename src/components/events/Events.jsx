@@ -1,7 +1,6 @@
 
 import React, { Component } from 'react';
 import './Events.css';
-import Header from '../header/Header';
 import tea from '../../images/tea.png';
 import boot from '../../images/boot.png';
 
