@@ -18,6 +18,8 @@ return(
 <div className='mainContainer'>
 
 <h2 className='subHeader'>Arrangementer</h2>
+
+<div className='eventsContainer'>
 <div id="wrapperGenreButtons">
 
 <a href="/FindEvents">
@@ -50,6 +52,7 @@ return(
 
 
 
+</div>
 </div>
 </div>
 )

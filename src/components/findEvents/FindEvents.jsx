@@ -20,7 +20,7 @@ class FindEvents extends Component {
          <div>
                     <div className="mainContainer">
 
-
+                        <div className='findEventsContainer'>
                         <h2 className='subHeader' > Genre-navn</h2>
 
                         <div className='eventContainer'>
@@ -42,7 +42,7 @@ class FindEvents extends Component {
 
                         </div>
 
-                
+                        </div>
                     </div>
 
             <Footer/> 

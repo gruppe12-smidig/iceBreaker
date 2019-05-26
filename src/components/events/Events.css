@@ -10,6 +10,9 @@ margin: 0 auto;
 outline: none !important;
 }
 
+.eventsContainer{
+    margin-top: 3rem;
+}
 
 #wrapperGenreButtons {
 display: grid;
