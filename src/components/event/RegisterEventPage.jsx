@@ -19,11 +19,11 @@ class RegisterEventPage extends Component {
 
     render() {
         return(
-            <div>
+            <div className="mainContainer">
                           
 
-                <Header/> 
-                <h2 className='page-header' >Opprett arrangement</h2>
+
+                <h2 className='subHeader' >Opprett arrangement</h2>
                 <div className='formContainer'>
 
                     <form className='inputForm'>
@@ -69,8 +69,8 @@ class RegisterEventPage extends Component {
                       
                     </form>
                     <div className='wrapperButtons'>
-                            <button id='submitbtn'>Clear</button>
-                            <button id='submitbtn'>Sign Up</button>
+                            <button className='signBtn'>Clear</button>
+                            <button className='signBtn'>Sign Up</button>
                         </div>
 
                 </div>

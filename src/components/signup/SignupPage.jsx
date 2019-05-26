@@ -10,48 +10,51 @@ class SignupPage extends Component {
 
     render() {
         return(
-            <div>
-                <Header/> 
-                <h2 className='page-header' >Opprett bruker</h2>
+            <div className="mainContainer">
+
+                <h2 className='subHeader' >Opprett bruker</h2>
 
                 <div className='formContainer'>
                     <form className='inputForm'>
                         <div className='inputSection'>
-                            <label>First Name *</label>
-                            <input className='input-box' type="text" placeholder="First Name" />
+                            <label className="boldP">Førnavn *</label>
+                            <input className='input-box' type="text" placeholder="Førnavn" />
                         </div>
 
                         <div className='inputSection'>
-                            <label> Last Name *</label>
-                            <input className='input-box' type="text" placeholder="Last Name" />
+                            <label className="boldP"> Etternavn *</label>
+                            <input className='input-box' type="text" placeholder="Etternavn" />
                         </div>
 
                         <div className='inputSection'>
-                            <label> E-mail *</label>
-                            <input className='input-box' type="text" placeholder="Email" />
+                            <label className="boldP"> E-mail *</label>
+                            <input className='input-box' type="text" placeholder="E-mail" />
                         </div>
 
                         <div className='inputSection'>
-                            <label> Password *</label>
-                            <input className='input-box' type="password" placeholder="Password" />
+                            <label className="boldP"> Passord *</label>
+                            <input className='input-box' type="password" placeholder="Passord ..." />
                         </div>
 
                         <div className='inputSection'>
-                            <label> School</label>
-                            <input className='input-box' type="school" placeholder="School" />
+                            <label className="boldP"> Skole</label>
+                            <input className='input-box' type="school" placeholder="Skole ..." />
                         </div>
 
                         <div className='inputSection'>
-                            <label> Intressen</label>
-                            <input className='input-box' type="school" placeholder="Intressen" />
+                            <label className="boldP"> Interessen</label>
+                            <input className='input-box' type="school" placeholder="Interessen ... " />
                         </div>
-                        <div className='wrapperButtons'>
-                            <button id='submitbtn'>Clear</button>
-                            <button id='submitbtn'>Sign Up</button>
-                        </div>
-                      
+                        
+                        
+                       
                     </form>
                   
+                    <div className='wrapperButtons'>
+
+                        <button className='signBtn'>Tøm</button>
+                            <button className='signBtn'>Opprett</button>
+                    </div>
 
                 </div>
             </div>

@@ -1,0 +1,47 @@
+.homeContainer{
+    padding: 2rem;
+    text-align: center;  
+    background-color:#FAFAFA;
+}
+.greeting {
+    font-size: 2.2rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+
+  }
+.wrapperPenguin{
+    margin: 0 auto;
+    /* margin-top: auto; */
+    /* border: 2px red solid; */
+    padding: 5%;
+    height: 100px;
+    width: 80%;
+    text-align: center;
+}
+.frontPenguin{
+height: 100%;
+}
+.greetContainer{
+  
+    text-align: center;
+    margin:-2rem auto 2rem auto; 
+
+}
+.btn{
+    margin-bottom: 2rem;
+    padding: 1rem;
+    width: 90%;
+    max-width: 500px;
+    height: 100px;
+    border-radius: 3px;
+    text-align: center;
+    text-transform:uppercase;
+    color: #ffffff;
+    font-size: 1.1em;
+    background-color:#155767;  
+}
+
+.btnWrapper{
+    margin-bottom: 20%;
+    text-align: center;
+}

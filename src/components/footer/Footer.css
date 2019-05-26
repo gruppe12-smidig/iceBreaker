@@ -1,5 +1,6 @@
 body{
     background-color:white;
+
  }
  
  
@@ -28,15 +29,11 @@ body{
  
      
  }
- img{
-     padding: 0%;
-     overflow: hidden;
- } 
+
  .footerContainer{
     margin: 0 auto;
     padding: 20px;
     max-height: 600px;
-    width:96%;
     background-color: #2B455C;
     color: rgb(255, 255, 255);
     font-family: 'Roboto', sans-serif;

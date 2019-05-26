@@ -11,7 +11,6 @@ class LoginPage extends Component {
     render() {
         return(
             <div>
-                <Header/>
                 <div className='LoginContainer'>
                     <form className='LoginForm'>
                         <input className='input' type="text" placeholder="Email" />
