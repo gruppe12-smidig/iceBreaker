@@ -1,4 +1,5 @@
 
+
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,700&display=swap');
 body {
 background-color: #FAFAFA;
@@ -49,18 +50,8 @@ padding-left: 20px;
 background-color: #155767;
 color: white;
 }
-
-.btn-coffeMeeting img{
-    position: relative;
-    height: 50px;
-    width: 40px;
-    margin-left: 100px;
-}
-
 .btn-onTour {
-vertical-align: middle;
-padding-top: 20px;
-clear: left;
+
 color: black;
 background-color: #678C97;
 }
@@ -83,4 +74,14 @@ background-color: #EE8178;
 color: white;
 background-color: #BB2D56;
 }
+
+.Test{
+    margin-bottom: 100px;
+}
+.btn-test img{
+    width: 50px;
+    height: 50px;
+    align-items: right;
+}
 /*IMAGES*/
+
