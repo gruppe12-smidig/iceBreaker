@@ -1,0 +1,12 @@
+.calender{
+    height: 40px;
+}
+
+.btn {
+padding: 2rem;
+width: 100%;
+display: flex;
+justify-content: space-between;
+font-size: 1.3rem;
+}
+

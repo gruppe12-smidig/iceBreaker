@@ -9,25 +9,31 @@ class Home extends Component {
         return (
             <div>
 
-                <div className='homeContainer'>
+                <div className='mainContainer'>
                  
                     <div className='wrapperPenguin'>
                             <img className='frontPenguin' src={penguin} alt="Image of penguin" />
                             <img className='frontPenguin' src={penguin} alt="Image of penguin" />
                     </div>
+
                     <div className='greetContainer'>
-                        <h3>Break som Ice</h3>
+                        <h3 className='greeting'>Break som Ice</h3>
                         <p>Lorem ipsum lorem lorem lorem lorem ipsum lorem lorem lorem lorem</p>
                     </div>
 
                     <div className='btnWrapper'>
-                        <button className='btn'>Find events</button>
-                        <button className='btn'>My events</button>
-                        <button className='btn'>new event</button>
+                        
+                        <a href="/Events"><button className='btn'>Finn arrangementer</button></a> 
+                        <a href="/MyEvents"><button className='btn'>Mine arrangementer</button></a> 
+                        <a href="/RegisterEventPage"><button className='btn'>Opprett arrangement</button></a> 
+                  
                         
                     </div>
+
                 </div>
+
                 <Footer/>
+
             </div>
 
         );

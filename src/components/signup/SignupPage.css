@@ -19,37 +19,27 @@ p {
 
 .signBtn {
 
-
-    height: 50px;
+    margin: 1.5rem;
+    height: 45px;
     width: 150px;
-    border-radius: 2px;
+    border-radius: 3px;
     color: rgb(255, 255, 255);
     font-size: 1rem;
     background-color: #155767;
 
 }
 
-.page-header {
-    margin: 0%;
-    text-transform: uppercase;
-    font-size: 1.3rem;
-    text-align: center;
-    text-decoration: underline;
-    color: #155767;
-}
-
 
 /*Wrapper whole order input section  */
 .formContainer{
-    /* border: solid 3px rebeccapurple;  */
+     
     margin: 0 auto;
     height: 500px;
-    width: 370px;
+    width: 300px;
 
 }
 
 .inputContainerShorts {
-   
     margin: 0.5rem auto 1rem auto;
     display: grid;
     grid-template-columns: 30% 30%;
@@ -96,6 +86,7 @@ p {
 }
 
 .wrapperButtons {
+    width : 300px;
     display: flex;
     justify-content: space-between;
 }

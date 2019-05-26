@@ -11,6 +11,7 @@ class SideDrawer extends Component {
             <li><a href="/LoginPage">Login Page</a></li>
             <li><a href="/SignupPage">Sign up</a></li>
             <li><a href="/RegisterEventPage">New event</a></li>
+            <li><a href="/Events">Events</a></li>
         </ul>
     </nav>
         );
