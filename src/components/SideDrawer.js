@@ -7,12 +7,11 @@ class SideDrawer extends Component {
         return(
     <nav className="side-drawer">
         <ul>
-            <li><a href="/">Home</a></li>
             <li><a href="/ProfilePage">Min Profil</a></li>
-            <li><a href="/LoginPage">Login Page</a></li>
-            <li><a href="/SignupPage">Sign up</a></li>
-            <li><a href="/RegisterEventPage">New event</a></li>
-            <li><a href="/Events">Events</a></li>
+            <li><a href="/Events">Arrangementer</a></li>
+            <li><a href="/myEvents">Mine Arrangementer</a></li>
+            <li><a href="/">Om IceBreaker</a></li>
+            <li><a href="/">Logg Ut</a></li>
         </ul>
     </nav>
         );
