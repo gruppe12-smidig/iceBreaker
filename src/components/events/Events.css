@@ -1,32 +1,22 @@
 
+
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,700&display=swap');
 body {
 background-color: #FAFAFA;
+margin: 0 auto;
 }
 /* Deletes chrome blue focus-border */
 :focus {
 outline: none !important;
 }
 
-.page-header {
-font-family: 'Montserrat', sans-serif;
-text-transform: uppercase;
-margin-top: 30px;
-margin-bottom: 10px;
-font-size: 24px;
-text-align: center;
-text-decoration: underline;
-text-decoration-color: #0071A4;
-color: #498492;
-font-weight: 600;
-}
+
 #wrapperGenreButtons {
 display: grid;
 justify-content: center;
 }
-#wrapperGenreButtons button {
-padding: 0;
-margin: 0 auto;
+
+#wrapperGenreButtons .btn-coffeMeeting, .btn-foodAndTalk, .btn-onTour, .btn-physicalActivity, .btn-studyGroup {
 border-radius: 3px;
 font-family: 'Montserrat', sans-serif;
 margin: 1.8rem;
@@ -35,7 +25,6 @@ width: 289px;
 text-align: left;
 font-size: 22px;
 border-style: none;
-margin-top: 1px;
 margin-top: 10px;
 margin-bottom: 10px;
 box-shadow: 0px 3px 6px grey;
@@ -53,34 +42,86 @@ color: white;
 .btn-coffeMeeting img{
     position: relative;
     height: 50px;
-    width: 40px;
+    width: 50px;
+    top: 1px;
     margin-left: 100px;
 }
 
 .btn-onTour {
-vertical-align: middle;
-padding-top: 20px;
-clear: left;
 color: black;
 background-color: #678C97;
 }
+
 .btn-onTour img{
-position: relative;
-height: 50px;
-width: 50px;
-top: -10px;
-margin-left: 100px;
+    position: relative;
+    height: 50px;
+    width: 50px;
+    top: 1px;
+    margin-left: 100px;
 }
+
 .btn-physicalActivity {
 color: black;
 background-color: #7DFBBC;
 }
+
+.btn-physicalActivity img{
+    position: relative;
+    height: 50px;
+    width: 50px;
+    top: 1px;
+    margin-left: 40px;
+}
+
 .btn-foodAndTalk {
 color: black;
 background-color: #EE8178;
 }
+
+.btn-foodAndTalk img{
+    position: relative;
+    height: 50px;
+    width: 50px;
+    top: 1px;
+    margin-left: 100px;
+}
+
 .btn-studyGroup {
 color: white;
 background-color: #BB2D56;
 }
-/*IMAGES*/
+
+.btn-studyGroup img {
+    position: relative;
+    height: 50px;
+    width: 50px;
+    top: 1px;
+    margin-left: 40px;
+}
+
+.btn-createEvent{
+    display:block;
+	margin:0 auto;
+    background-color: #155767;
+    color: white;
+    border-radius: 3px;
+    font-family: 'Montserrat', sans-serif;
+    height: 76px;
+    width: 207px;
+    text-align: center;
+    font-size: 16px;
+    border-style: none;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    box-shadow: 0px 3px 6px grey;
+    
+}
+
+.btn-createEvent img{
+    position: relative;
+    height: 30px;
+    width: 30px;
+    top: 1px;
+    margin-right: 1px;
+}
+

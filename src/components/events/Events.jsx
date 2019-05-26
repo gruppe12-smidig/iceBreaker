@@ -1,8 +1,11 @@
-
 import React, { Component } from 'react';
 import './Events.css';
 import tea from '../../images/tea.png';
 import boot from '../../images/boot.png';
+import gym from '../../images/gym.png';
+import cutlery from '../../images/cutlery.png';
+import studying from '../../images/studying.png';
+import calender from '../../images/kalender-white.png';
 
 
 
@@ -28,25 +31,25 @@ return(
 </button> </a> 
 
 <a href="/FindEvents">
-<button className='btn-physicalActivity'>Fysisk aktivitet
+<button className='btn-physicalActivity'>Fysisk aktivitet<img className="gym" src={gym} alt="gym"/>
 </button> </a> 
 
 <a href="/FindEvents">
-<button className='btn-foodAndTalk'>Mat&Prat
+<button className='btn-foodAndTalk'>Mat&Prat<img className="cutlery" src={cutlery} alt="cutlery"/>
 </button> </a> 
 
 <a href="/FindEvents">
-<button className='btn-studyGroup'>Studiegrupper
+<button className='btn-studyGroup'>Studiegrupper<img className="studying" src={studying} alt="studying"/>
 </button> </a> 
 
+<a href="/RegisterEventPage">
+<button className='btn-createEvent'>OPPRETT ARRANGEMENT<br></br><img className="calender" src={calender} alt="calender"/>
+</button></a>
 
 
 
 
-<button className='btn-test'>Test
-<img className="tea" src={tea} alt="tea"/>
-<span className="btn-test1">TEST</span>
-</button>
+
 </div>
 </div>
 )
