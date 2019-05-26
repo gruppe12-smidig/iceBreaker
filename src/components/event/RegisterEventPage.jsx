@@ -8,7 +8,7 @@ class RegisterEventPage extends Component {
     constructor (props) {
       super(props)
       this.state = {
-          startDate: ''
+          startDate: new Date()
       };
 
       this.handleChange = this.handleChange.bind(this);
@@ -52,32 +52,48 @@ class RegisterEventPage extends Component {
                         
                         {/* Short fields, dates and numbers */}
 
-                        <div className='inputContainerShorts'>
+                        <div className='inputShort'>
                                 <div className='inputSection'>
                                     <label> Starter: *</label>
-                               
-                                </div>
-
-                                <div className='inputSection'>
-                                    <label> Slutter *</label>
-                                    <input  className='input-box' type="endDate" placeholder="Slutter" />
-                                </div>
-
-                                <div className='inputSection'>
-                                    <label> velg dato</label>
                                     <DatePicker
+                                        className='input-box-short'
                                         selected={ this.state.startDate}
                                         onChange={ this.handleChange }
                                         name="startDate"
                                         dateFormat="DD/MM/YYYY"
                                     />
+                                </div>
+
+                                <div className='inputSection'>
+                                    <label> Slutter *</label>
+                                    <DatePicker
+                                        className='input-box-short'
+                                        selected={ this.state.startDate}
+                                        onChange={ this.handleChange }
+                                        name="startDate"
+                                        dateFormat="DD/MM/YYYY"
+                                    />
+                                </div>
+
+                                <div className='inputSection'>
+                                    <label> Siste påmelding</label>
+                                    <DatePicker
+                                        className='input-box-short'
+                                        selected={ this.state.startDate}
+                                        onChange={ this.handleChange }
+                                        name="startDate"
+                                        dateFormat="DD/MM/YYYY"
+                                    />
+
                                     
                                 </div>
 
                                 <div className='inputSection'>
-                                    <label> Maks deltakere</label>
-                          
-                                </div>
+                            <label> Maks</label>
+                            <input className='input-box-short' type="text" placeholder="Maks" />
+                        </div>
+
+                               
                         </div>
                         <div className='inputSection'>
                             <label> Beskrivelse</label>

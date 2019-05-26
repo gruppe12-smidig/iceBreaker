@@ -30,19 +30,21 @@ p {
 
 
 /*Wrapper whole order input section  */
-.formContainer{
-    /* border: solid 3px rebeccapurple;  */
+.formContainerReg{
+    border: solid 3px rebeccapurple;  
     margin: 0 auto;
+    margin-top: 300px;
     height: 500px;
     width: 370px;
 
 }
 
-.inputContainerShorts {
+.inputShort {
    
     margin: 0.5rem auto 1rem auto;
     display: grid;
-    grid-template-columns: 30% 30%;
+    grid-template-columns: 1fr 1fr ;
+    justify-content: space-between;
 }
 
 .inputForm{
@@ -63,7 +65,7 @@ p {
 
 
 /* Class for all input-fields */
-.input-box, .input-box-text{
+.input-box, .input-box-short, .input-box-text{
     border: solid 2px rgb(226, 226, 226);
     border-radius: 2px;
     padding: 0.5rem;
@@ -76,6 +78,10 @@ p {
 
     height: 100px;
 
+}
+.input-box-short{
+    width: 100px;
+    
 }
 
 
