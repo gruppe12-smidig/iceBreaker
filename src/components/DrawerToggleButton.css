@@ -2,13 +2,16 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    height: 24px;
-    width: 36px;
-    background: transparent;
+    height: 50px;
+    width: 50px ;
+    background: rgba(196, 152, 40, 0.274);
+    border-radius: 50%;
     border: none;
     cursor: pointer;
-    padding: 0;
+    padding: 10px;
     box-sizing: border-box;
+
+    /* margin-right: 1rem; */
 }
 
 .toggle-button:focus {
@@ -16,7 +19,12 @@
 }
 
 .toggle-button_line{
+
     width: 30px;
-    height: 2px;
-    background: darkgoldenrod;
+    height: 4px;
+    border-radius: 2px;
+    background: rgb(235, 168, 0);
+    z-index: 999;
+ 
 }
+
