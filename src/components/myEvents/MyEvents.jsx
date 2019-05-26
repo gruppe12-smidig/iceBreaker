@@ -23,7 +23,7 @@ class MyEvents extends Component {
 
                         <h2 className='subHeader' >Mine arrangementer</h2>
 
-                        <div className='eventContainer'>
+                        <div className='myEventContainer'>
 
                             <div className='adminEventsContainer'>
                                 <h3 className='subHeader'>Ansvarlig for</h3>
@@ -36,7 +36,9 @@ class MyEvents extends Component {
 
                                 </ul>
 
-                                <a href="/RegisterEventPage"><button className='btn'>Opprett ny</button></a> 
+                                <div className='btnWrapper'>
+                                    <a href="/RegisterEventPage"><button className='btn'>Opprett ny</button></a> 
+                                </div>
 
                             </div>
 
@@ -52,9 +54,9 @@ class MyEvents extends Component {
                                 <li className='eventBox'><div className="testEvent"></div></li>
 
                                 </ul>
-
-                                <a href="/Events"><button className='btn'>Finn ny</button></a> 
-
+                                <div className='btnWrapper'>
+                                      <a href="/Events"><button className='btn'>Finn ny</button></a> 
+                                </div>
                             </div>
 
 
