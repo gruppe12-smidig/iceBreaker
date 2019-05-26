@@ -33,10 +33,10 @@ class RegisterEventPage extends Component {
         return(
             <div className="mainContainer">
                           
-
+            <div className='formContainerReg'>
 
                 <h2 className='subHeader' >Opprett arrangement</h2>
-                <div className='formContainer'>
+
 
                     <form className='inputForm'>
 
@@ -97,6 +97,7 @@ class RegisterEventPage extends Component {
                         </div>
                         <div className='inputSection'>
                             <label> Beskrivelse</label>
+                            <input className='input-box-text' type="text" placeholder="Beskrivelse" />
        
                         </div>
 

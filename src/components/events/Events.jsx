@@ -17,9 +17,12 @@ render() {
 return(
 <div className='mainContainer'>
 
-<h2 className='subHeader'>Arrangementer</h2>
+
 
 <div className='eventsContainer'>
+
+<h2 className='subHeader'>Arrangementer</h2>
+
 <div id="wrapperGenreButtons">
 
 <a href="/FindEvents">

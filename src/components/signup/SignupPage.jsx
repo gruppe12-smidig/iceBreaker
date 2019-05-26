@@ -64,9 +64,11 @@ class SignupPage extends Component {
         return(
             <div className="mainContainer">
 
+            <div className='formContainer'>
+
                 <h2 className='subHeader' >Opprett bruker</h2>
 
-                <div className='formContainer'>
+             
                     <form className='inputForm'>
                         <div className='inputSection'>
                             { this.state.errorMessage !== null ? (
