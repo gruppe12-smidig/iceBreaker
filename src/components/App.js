@@ -14,6 +14,7 @@ import Switch from "react-router-dom/es/Switch";
 import Header from "./header/Header";
 import Backdrop from "./Backdrop";
 import SideDrawer from "./SideDrawer";
+import About from "./about/About";
 
 
 class App extends Component {
@@ -57,7 +58,8 @@ class App extends Component {
                         <Route path="/RegisterEventPage" component={RegisterEventPage}/>
                         <Route path="/events" component={Events}/>
                         <Route path="/myEvents" component={MyEvents}/> 
-                        <Route path="/findEvents" component={FindEvents}/> 
+                        <Route path="/findEvents" component={FindEvents}/>
+                        <Route path="/About" component={About}/>
                     </Switch>
                 </Router>
             </div>

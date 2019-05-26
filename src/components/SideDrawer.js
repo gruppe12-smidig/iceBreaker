@@ -10,7 +10,7 @@ class SideDrawer extends Component {
             <li><a href="/ProfilePage">Min Profil</a></li>
             <li><a href="/Events">Arrangementer</a></li>
             <li><a href="/myEvents">Mine Arrangementer</a></li>
-            <li><a href="/">Om IceBreaker</a></li>
+            <li><a href="/About">Om IceBreaker</a></li>
             <li><a href="/">Logg Ut</a></li>
         </ul>
     </nav>
