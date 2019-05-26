@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import { BrowserRouter as Router, Route, Link} from "react-router-dom";
+import firebase from './firebase/Firebase';
+
 import './App.css';
 import './header/Header.css'
 import ProfilePage from './profile/ProfilePage'
@@ -18,9 +20,16 @@ import About from "./about/About";
 
 
 class App extends Component {
-    state = {
-        sideDrawerOpen: false
-    };
+  constructor() {
+      super();
+      this.state = {
+          user: null,
+          sideDrawerOpen: false
+      };
+  }
+
+
+
 
     drawerToggleClickHandler = () => {
         this.setState((prevState) => {
@@ -32,6 +41,15 @@ class App extends Component {
     backDropClickHandler = () => {
         this.setState({sideDrawerOpen: false});
     };
+
+    componentDidMount() {
+        const ref = firebase.database().ref('user');
+
+        ref.on('value', snapshot => {
+            let FBUser = snapshot.val();
+            this.setState({user: FBUser});
+        })
+    }
 
     render() {
         let sideDrawer;
