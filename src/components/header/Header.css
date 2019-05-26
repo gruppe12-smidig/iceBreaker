@@ -1,7 +1,7 @@
 .main_toolbar {
-    background-color: #2B455C;
+    /* background-color: #2B455C; */
     border-color: #282c34;
-    padding: 30px;
+    padding: 10px;
 
 }
 
@@ -13,12 +13,15 @@
     padding: 0 1rem;
 }
 
+.logo{
+    height: 52px;
+}
 .toolbar_logo {
-    margin-left: 0.01rem;
+    /* margin-left: 0.01rem; */
 }
 
 .toolbar_logo a{
-    color: white;
+    color: rgb(255, 255, 255);
     text-decoration: none;
     font-size: 1.5rem;
 }
