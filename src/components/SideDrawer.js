@@ -6,7 +6,7 @@ import './SideDrawer.css'
 class SideDrawer extends Component {
     render() {
         return(
-    <navlink className="side-drawer">
+    <nav className="side-drawer">
         <ul>
             <li><Link to="/">Home</Link></li>
             <li><Link to="/LoginPage">Login Page</Link></li>
@@ -14,7 +14,7 @@ class SideDrawer extends Component {
             <li><Link to="/RegisterEventPage">New event</Link></li>
             <li><Link to="/Events">Events</Link></li>
         </ul>
-    </navlink>
+    </nav>
         );
     }
 }

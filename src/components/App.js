@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { BrowserRouter as Router, Route, Link} from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import firebase from './firebase/Firebase';
 
 import './App.css';
@@ -11,7 +11,6 @@ import SignupPage from './signup/SignupPage';
 import Events from './events/Events';
 import MyEvents from './myEvents/MyEvents';
 import FindEvents from './findEvents/FindEvents';
-import Switch from "react-router-dom/es/Switch";
 import Header from "./header/Header";
 import Backdrop from "./Backdrop";
 import SideDrawer from "./SideDrawer";
