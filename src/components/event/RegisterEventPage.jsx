@@ -1,21 +1,33 @@
 import React, { Component } from 'react';
 import './RegisterEventPage.css'; 
 import Header from '../header/Header';
-
-
-
-// import "react-datepicker/dist/react-datepicker.css";
-
-
+import DatePicker from 'react-datepicker';
 
 
 class RegisterEventPage extends Component {
-    state = {
-        date: new Date(),
+    constructor (props) {
+      super(props)
+      this.state = {
+          startDate: ''
+      };
+
+      this.handleChange = this.handleChange.bind(this);
+      this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+    handleChange(date) {
+        this.setState({
+            startDate: date
+        })
     }
 
-   
-  
+    handleSubmit(e) {
+        e.preventDefault();
+        let main = this.state.startDate
+        console.log(main.format('L'));
+    }
+
+
 
     render() {
         return(
@@ -52,7 +64,13 @@ class RegisterEventPage extends Component {
                                 </div>
 
                                 <div className='inputSection'>
-                                    <label> Siste påmelding</label>
+                                    <label> velg dato</label>
+                                    <DatePicker
+                                        selected={ this.state.startDate}
+                                        onChange={ this.handleChange }
+                                        name="startDate"
+                                        dateFormat="DD/MM/YYYY"
+                                    />
                                     
                                 </div>
 
