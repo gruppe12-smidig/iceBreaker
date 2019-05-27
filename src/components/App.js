@@ -17,6 +17,7 @@ import Backdrop from "./Backdrop";
 import SideDrawer from "./SideDrawer";
 import About from "./about/About";
 import StartPage from "./startpage/StartPage";
+import EventView from "./eventView/EventView";
 
 
 class App extends Component {
@@ -85,6 +86,8 @@ class App extends Component {
                         <Route path="/findEvents" component={FindEvents}/>
                         <Route path="/About" component={About}/>
                         <Route path="/StartPage" component={StartPage}/>
+                        <Route path="/EventView" component={EventView}/>
+
                     </Switch>
                 </Router>
             </div>
