@@ -8,7 +8,9 @@ class RegisterEventPage extends Component {
     constructor (props) {
       super(props)
       this.state = {
-          startDate: new Date()
+          startDate: '',
+          endDate: '',
+          lastSignDate:''
       };
 
       this.handleChange = this.handleChange.bind(this);
@@ -17,7 +19,8 @@ class RegisterEventPage extends Component {
 
     handleChange(date) {
         this.setState({
-            startDate: date
+            startDate: date,
+            endDate:date
         })
     }
 
@@ -68,9 +71,9 @@ class RegisterEventPage extends Component {
                                     <label> Slutter *</label>
                                     <DatePicker
                                         className='input-box-short'
-                                        selected={ this.state.startDate}
+                                        selected={ this.state.endDate}
                                         onChange={ this.handleChange }
-                                        name="startDate"
+                                        name="endDate"
                                         dateFormat="DD/MM/YYYY"
                                     />
                                 </div>
@@ -101,7 +104,7 @@ class RegisterEventPage extends Component {
        
                         </div>
 
-                      
+              
                     </form>
                     <div className='wrapperButtons'>
                             <button className='signBtn'>Clear</button>
