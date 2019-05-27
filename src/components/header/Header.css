@@ -9,7 +9,7 @@
         -webkit-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.377);
            -moz-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.377);
                 box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.377);
-    z-index: 0;
+    z-index: 999;
 
 }
 
@@ -23,9 +23,6 @@
 
 .logo{
     height: 52px;
-}
-.toolbar_logo {
-    /* margin-left: 0.01rem; */
 }
 
 .toolbar_logo a{
