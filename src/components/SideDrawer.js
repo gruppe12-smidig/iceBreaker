@@ -8,7 +8,6 @@ class SideDrawer extends Component {
             user: null,
             sideDrawerOpen: false
         };
-
         return (
             <navlink className="side-drawer">
                 <ul>
