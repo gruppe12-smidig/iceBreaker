@@ -2,7 +2,6 @@
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,700&display=swap');
 body {
-background-color:#FAFAFA;
 margin: 0 auto;
 }
 /* Deletes chrome blue focus-border */
@@ -11,7 +10,7 @@ outline: none !important;
 }
 
 .eventsContainer{
-    margin-top: 5rem;
+    margin-top: 7rem;
 }
 
 #wrapperGenreButtons {

@@ -1,5 +1,5 @@
 .homeContainer{
-    margin-top: 10rem;
+    margin-top: 8rem;
     text-align: center;  
 }
 .greeting {
@@ -22,7 +22,7 @@ height: 90%;
 
 .greetContainer{
     text-align: center;
-    margin:-2rem auto 2rem auto; 
+    margin:-2rem auto auto auto; 
 
 }
 .homeContainer .btn{

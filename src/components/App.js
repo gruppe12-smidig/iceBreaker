@@ -7,7 +7,7 @@ import './header/Header.css'
 import ProfilePage from './profile/ProfilePage'
 import Home from './home/home';
 import LoginPage from './login/LoginPage';
-import RegisterEventPage from './event/RegisterEventPage';
+import RegisterEventPage from './NewEvent/RegisterEventPage';
 import SignupPage from './signup/SignupPage';
 import Events from './events/Events';
 import MyEvents from './myEvents/MyEvents';
@@ -17,6 +17,7 @@ import Backdrop from "./Backdrop";
 import SideDrawer from "./SideDrawer";
 import About from "./about/About";
 import StartPage from "./startpage/StartPage";
+import EventView from "./eventView/EventView";
 
 
 class App extends Component {
@@ -85,6 +86,8 @@ class App extends Component {
                         <Route path="/findEvents" component={FindEvents}/>
                         <Route path="/About" component={About}/>
                         <Route path="/StartPage" component={StartPage}/>
+                        <Route path="/EventView" component={EventView}/>
+
                     </Switch>
                 </Router>
             </div>

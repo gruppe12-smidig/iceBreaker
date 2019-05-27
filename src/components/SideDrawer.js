@@ -3,11 +3,19 @@ import {Link} from 'react-router-dom';
 import './SideDrawer.css';
 
 class SideDrawer extends Component {
-    render() {
+
+    constructor(props){
+        super(props);
         this.state = {
             user: null,
             sideDrawerOpen: false
         };
+
+
+    }
+
+
+    render() {
         return (
             <navlink className="side-drawer">
                 <ul>
