@@ -14,7 +14,7 @@ body {
   -moz-osx-font-smoothing: grayscale; */
 
   font-family: 'Roboto', sans-serif;
-
+position: relative;
 }
 
 .subHeader {
