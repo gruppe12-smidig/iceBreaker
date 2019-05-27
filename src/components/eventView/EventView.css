@@ -1,10 +1,10 @@
 .eventViewContainer{
     margin-top: 7rem;
-    border: solid 3px red;
+
 }
 
 .descriptionWrapper, .infoWrapper{
-    border: solid 3px rgb(0, 255, 55);
+   
     padding: 2rem;
 }
 
@@ -16,12 +16,81 @@
 }
 
 .infoSection *{
-    border: solid 3px rgb(4, 0, 255);
+ 
     display:inline;
 }
 
 .floePeng{
     margin: 0 auto;
     width: 100%;
+    max-width: 500px;
+}
+
+.userContainer{
+    margin-top: 1rem;
+    padding: 2rem;
+ 
+}
+
+.user{
+    margin-top: 1rem;
+}
+.peng{
+    height: 20px;
+}
+
+.chatContainer{
+    margin: 0 auto;
+    margin: 2rem auto 1rem auto;
+    border: dashed rgb(133, 182, 194) 5px;
+    display: block;
+    height: auto;
+    min-height: 200px;
+    width: 90%;
+}
+.post {
+    padding: 1rem;
+    border-bottom: solid 1px rgb(212, 212, 212);
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+.userIcon{
+    margin: 0 auto;
+    display: block;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: rgb(123, 68, 145);
+}
+
+.message{
+    margin: 1rem;
+}
+.chatFormWrapper {
+    margin-bottom: 3rem;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+.chatForm{
+
+    height: 45px;
+    width: 250px;
+    border-radius: 20px;
+    background-color: rgb(255, 255, 255);
+}
+
+.chatBtn{
+padding: 0%;
+height: 45px; 
+width: 45px;   
+background-color: rgb(236, 162, 0);
+color: black;
+text-transform: uppercase;
+border-radius: 50%;
 }
 
