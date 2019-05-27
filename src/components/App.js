@@ -29,7 +29,6 @@ class App extends Component {
 
 
 
-
     drawerToggleClickHandler = () => {
         this.setState((prevState) => {
             return {sideDrawerOpen: !prevState.sideDrawerOpen};

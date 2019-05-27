@@ -7,7 +7,6 @@ import logo from '../../images/logo.png';
 class Header extends Component {
     render() {
         return (
-
             <header className="main_toolbar">
                 <nav className="toolbar_navigation">
                     
