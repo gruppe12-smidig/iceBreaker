@@ -93,7 +93,7 @@ class RegisterEventPage extends Component {
 
                                 <div className='inputSection'>
                             <label className='boldP'> Maks</label>
-                            <input className='input-box-short' type="text" placeholder="Maks" />
+                            <input className='input-box-short' type="number" min="2"  placeholder="Maks" />
                         </div>
 
                                
