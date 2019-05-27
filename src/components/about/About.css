@@ -1,5 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat:100,300,400&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
 body {
 margin: 0 auto;
@@ -9,21 +10,40 @@ margin: 0 auto;
 outline: none !important;
 }
 
+h2{
+    font-size: 20px;
+}
 .formContainer{
-    border: 1px solid rebeccapurple;
-    padding: 90px 90px;
+   margin-top: 100px;
 }
 
 .mainContainer{
-    border: 1px solid red;
     background-color:#FAFAFA;
 }
 
-.subheader{
-    margin-top: 70px;
+.subHeader{
+    margin-top: 80px;
+    margin-bottom: 20px;
 }
 
-.header h1{
-    font-family: 'Montserrat', sans-serif;
+.aboutUs{
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    height: 200px;
+    box-shadow: 0px 3px 6px rgba(68, 113, 124, 0.452);
+}
+.contactUs{
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    height: 100px;
+    box-shadow: 0px 3px 6px rgba(68, 113, 124, 0.452); 
+}
+
+.aboutUs-description, .contactUs-description{
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    letter-spacing: 0.1px;
 }
 
