@@ -9,7 +9,12 @@ margin: 0 auto;
 outline: none !important;
 }
 
-
+.mainContainerLogIn{
+    background-image: url(../../images/background.jpg);
+    width: 375px;
+    height: 700px;
+    border: 0.1px solid transparent;
+}
 .username, .password{
     width: 100%;
     padding: 12px 20px;
