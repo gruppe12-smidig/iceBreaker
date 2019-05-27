@@ -30,7 +30,8 @@ class FindEvents extends Component {
                                 {/*Render of event components from DB  */}
                                 <ul>
 
-                                    <li className='eventBox'><div className="testEvent"></div></li>
+                                    <li className='eventBox'>
+                                        <div className="testEvent"></div></li>
                                     <li className='eventBox'><div className="testEvent"></div></li>
                                     <li className='eventBox'><div className="testEvent"></div></li>
 

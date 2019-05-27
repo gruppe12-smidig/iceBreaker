@@ -1,4 +1,6 @@
-
+/* .mainContainer{
+padd
+} */
 .myEventContainer .subHeader{
     margin-top: 1rem;
     text-align: center;
@@ -49,4 +51,12 @@
     box-shadow: 0px 3px 6px rgba(68, 113, 124, 0.452);
 
  
+}
+
+.wrapperButtons {
+    margin: 0 auto;
+    width : 300px;
+    display: flex;
+    justify-content: space-between;
+
 }
