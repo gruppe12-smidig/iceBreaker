@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './loginPage.css';
- 
+import background from '../../images/background.jpg';
+import Header from '../header/Header';
 
 class LoginPage extends Component {
     state = {
