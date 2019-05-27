@@ -56,7 +56,6 @@ p {
 .inputSection {
     margin-bottom: 1rem;
     padding: 0rem;
-    /* border: solid 3px rgb(134, 153, 51); */
     display: grid;
     grid-template-columns: 1fr;
 }
