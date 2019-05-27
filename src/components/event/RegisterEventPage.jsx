@@ -1,30 +1,42 @@
 import React, { Component } from 'react';
 import './RegisterEventPage.css'; 
 import Header from '../header/Header';
+import DatePicker from 'react-datepicker';
 
-
-
-// import "react-datepicker/dist/react-datepicker.css";
-
-
-
-
+import 'react-datepicker/dist/react-datepicker.css';
 class RegisterEventPage extends Component {
-    state = {
-        date: new Date(),
+    constructor (props) {
+      super(props)
+      this.state = {
+          startDate: new Date()
+      };
+
+      this.handleChange = this.handleChange.bind(this);
+      this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+    handleChange(date) {
+        this.setState({
+            startDate: date
+        })
     }
 
-   
-  
+    handleSubmit(e) {
+        e.preventDefault();
+        let main = this.state.startDate
+        console.log(main.format('L'));
+    }
+
+
 
     render() {
         return(
             <div className="mainContainer">
                           
-
+            <div className='formContainerReg'>
 
                 <h2 className='subHeader' >Opprett arrangement</h2>
-                <div className='formContainer'>
+
 
                     <form className='inputForm'>
 
@@ -40,29 +52,52 @@ class RegisterEventPage extends Component {
                         
                         {/* Short fields, dates and numbers */}
 
-                        <div className='inputContainerShorts'>
+                        <div className='inputShort'>
                                 <div className='inputSection'>
                                     <label> Starter: *</label>
-                               
+                                    <DatePicker
+                                        className='input-box-short'
+                                        selected={ this.state.startDate}
+                                        onChange={ this.handleChange }
+                                        name="startDate"
+                                        dateFormat="DD/MM/YYYY"
+                                    />
                                 </div>
 
                                 <div className='inputSection'>
                                     <label> Slutter *</label>
-                                    <input  className='input-box' type="endDate" placeholder="Slutter" />
+                                    <DatePicker
+                                        className='input-box-short'
+                                        selected={ this.state.startDate}
+                                        onChange={ this.handleChange }
+                                        name="startDate"
+                                        dateFormat="DD/MM/YYYY"
+                                    />
                                 </div>
 
                                 <div className='inputSection'>
                                     <label> Siste påmelding</label>
+                                    <DatePicker
+                                        className='input-box-short'
+                                        selected={ this.state.startDate}
+                                        onChange={ this.handleChange }
+                                        name="startDate"
+                                        dateFormat="DD/MM/YYYY"
+                                    />
+
                                     
                                 </div>
 
                                 <div className='inputSection'>
-                                    <label> Maks deltakere</label>
-                          
-                                </div>
+                            <label> Maks</label>
+                            <input className='input-box-short' type="text" placeholder="Maks" />
+                        </div>
+
+                               
                         </div>
                         <div className='inputSection'>
                             <label> Beskrivelse</label>
+                            <input className='input-box-text' type="text" placeholder="Beskrivelse" />
        
                         </div>
 

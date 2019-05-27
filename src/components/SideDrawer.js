@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {Link} from 'react-router-dom';
 import './SideDrawer.css'
 
 
@@ -7,11 +8,11 @@ class SideDrawer extends Component {
         return(
     <nav className="side-drawer">
         <ul>
-            <li><a href="/ProfilePage">Min Profil</a></li>
-            <li><a href="/Events">Arrangementer</a></li>
-            <li><a href="/myEvents">Mine Arrangementer</a></li>
-            <li><a href="/About">Om IceBreaker</a></li>
-            <li><a href="/">Logg Ut</a></li>
+            <li><Link to="/">Home</Link> </li>
+            <li><Link to="/LoginPage">Login Page</Link></li>
+            <li><Link to="/SignupPage">Sign up</Link></li>
+            <li><Link to="/RegisterEventPage">New event</Link></li>
+            <li><Link to="/Events">Events</Link></li>
         </ul>
     </nav>
         );
