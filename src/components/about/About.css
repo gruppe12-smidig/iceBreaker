@@ -9,4 +9,21 @@ margin: 0 auto;
 outline: none !important;
 }
 
-.formContainer{}
+.formContainer{
+    border: 1px solid rebeccapurple;
+    padding: 90px 90px;
+}
+
+.mainContainer{
+    border: 1px solid red;
+    background-color:#FAFAFA;
+}
+
+.subheader{
+    margin-top: 70px;
+}
+
+.header h1{
+    font-family: 'Montserrat', sans-serif;
+}
+

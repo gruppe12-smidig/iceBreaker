@@ -13,6 +13,8 @@ class LoginPage extends Component {
         return(
             <div className='mainContainerLogIn'>
                 <div className='formContainer'>
+                <div className='header'><img className="logo" src={logo} alt="logo"/></div>
+
                     <form className='inputForm'>
                         <input className="username" placeholder="Brukernavn" type="text"></input>
                         <input className="password" placeholder="Passord" type="text"></input>

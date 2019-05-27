@@ -9,6 +9,14 @@ margin: 0 auto;
 outline: none !important;
 }
 
+.header img{
+
+    display:block;
+	margin:0 auto;
+    width: 150px;
+    height: 70px;
+}
+
 .mainContainerLogIn{
     background-image: url(../../images/background.jpg);
     width: 375px;
@@ -16,6 +24,8 @@ outline: none !important;
     border: 0.1px solid transparent;
 }
 .username, .password{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0px;

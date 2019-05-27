@@ -8,7 +8,7 @@ class About extends Component {
         return (
             <div className='mainContainer'>
             <div className='formContainer'>
-              <h2 className='header'>Om oss</h2>
+            <h2 className='subHeader'>OM OSS</h2>
             </div>
           </div>
         );
