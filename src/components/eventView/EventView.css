@@ -14,3 +14,14 @@
     line-height: 1.5rem;
     font-size: 1.1rem;
 }
+
+.infoSection *{
+    border: solid 3px rgb(4, 0, 255);
+    display:inline;
+}
+
+.floePeng{
+    margin: 0 auto;
+    width: 100%;
+}
+

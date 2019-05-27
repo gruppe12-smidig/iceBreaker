@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './EventView.css';
 import Footer from "../footer/Footer";
 import Header from '../header/Header';
+import floePeng from '../../images/floePeng.png';
 
 
 import calender from '../../images/kalender-white.png';
@@ -34,15 +35,26 @@ class EventView extends Component {
 
                     <div className='infoWrapper'>
 
-                                    <p className='boldP'>Dato:</p>  <span ></span>     
-                                    <p className='boldP'>Siste påmelding:</p>  <span></span>    
-                                    <p className='boldP'>Maks deltakere:</p>  <span></span>     
-                                    <p className='boldP'>Ansvarlig:</p>  <span></span>    
+                                    <div className='infoSection'>
+                                    <p className='boldP'>Dato:</p>  <span > 20-02-2019 - 23-02-2019 </span> 
+                                    </div>
+
+                                    <div className='infoSection'> 
+                                    <p className='boldP'>Siste påmelding:</p>  <span>20-02-2019</span>   
+                                    </div> 
+
+                                    <div className='infoSection'>
+                                    <p className='boldP'>Maks deltakere:</p>  <span>4</span> 
+                                    </div>
+
+                                    <div className='infoSection'>
+                                    <p className='boldP'>Ansvarlig:</p>  <span>Anne Lien</span>    
+                                    </div>
 
                     </div>
  
 
-
+                    <img className='floePeng' src={floePeng} alt="Image penguins" />
 
                         </div>
                     </div>
