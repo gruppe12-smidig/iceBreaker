@@ -53,17 +53,24 @@ class App extends Component {
     render() {
         let sideDrawer;
         let backdrop;
+        let header = <Header drawerClickHandler={this.drawerToggleClickHandler}/>
 
         if (this.state.sideDrawerOpen) {
             sideDrawer = <SideDrawer/>;
             backdrop = <Backdrop click={this.backDropClickHandler}/>;
         }
+        if (window.location.pathname === '/LoginPage') {
+            return <LoginPage/>;
+        }
+        if (window.location.pathname === '/StartPage') {
+            return <StartPage/>;
+        }
 
-        return (
+        else return (
             <div style={{height: '100%'}}>
 
                 <Router>
-                    <Header drawerClickHandler={this.drawerToggleClickHandler}/>
+                    {header}
                     {sideDrawer}
                     {backdrop}
 
@@ -74,7 +81,7 @@ class App extends Component {
                         <Route path="/SignupPage" component={SignupPage}/>
                         <Route path="/RegisterEventPage" component={RegisterEventPage}/>
                         <Route path="/events" component={Events}/>
-                        <Route path="/myEvents" component={MyEvents}/> 
+                        <Route path="/myEvents" component={MyEvents}/>
                         <Route path="/findEvents" component={FindEvents}/>
                         <Route path="/About" component={About}/>
                         <Route path="/StartPage" component={StartPage}/>

@@ -1,0 +1,41 @@
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,300,400&display=swap');
+
+body {
+margin: 0 auto;
+}
+/* Deletes chrome blue focus-border */
+:focus {
+outline: none !important;
+}
+
+.formContainer{
+    padding: 10px;
+    margin-top: 40px;
+}
+
+
+.quote{
+    font-family: 'Montserrat', sans-serif;
+    color: #F4BC36;
+    font-size: 25px;
+    font-weight: 100;
+    text-align: center;
+    margin-top: 90px;
+    margin-bottom: 90px;
+}
+
+button{
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 3px;
+    border-style: none;
+    border-radius: 6px;
+    font-size: 23px;
+    display:block;
+	margin:0 auto;
+    background-color:#366E7C;
+    color: white;
+    width: 290px;
+    height: 86px;
+    margin-bottom: 40px;
+}
