@@ -63,7 +63,7 @@ class RegisterEventPage extends Component {
                                         selected={ this.state.startDate}
                                         onChange={ this.handleChange }
                                         name="startDate"
-                                        dateFormat="DD/MM/YYYY"
+                                      
                                     />
                                 </div>
 
@@ -74,7 +74,7 @@ class RegisterEventPage extends Component {
                                         selected={ this.state.endDate}
                                         onChange={ this.handleChange }
                                         name="endDate"
-                                        dateFormat="DD/MM/YYYY"
+                                  
                                     />
                                 </div>
 
@@ -85,7 +85,7 @@ class RegisterEventPage extends Component {
                                         selected={ this.state.startDate}
                                         onChange={ this.handleChange }
                                         name="startDate"
-                                        dateFormat="DD/MM/YYYY"
+                                       
                                     />
 
                                     
