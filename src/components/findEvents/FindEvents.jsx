@@ -30,8 +30,15 @@ class FindEvents extends Component {
                                 {/*Render of event components from DB  */}
                                 <ul>
 
-                                    <li className='eventBox'>
-                                        <div className="testEvent"></div></li>
+                                    <li className='eventBox'> <div className="testEvent">
+                                            <h2 className='heading'>Event navn</h2>
+                                            <p className='arr-info'>Kontakt: Heidi Larsen<br/> Dato: 4/8-2019</p>
+                                            <a href="/">
+                                                <button className='btn-participate'>DELTA </button> 
+                                            </a> 
+                                        </div> 
+                                    </li>
+                                        
                                     <li className='eventBox'><div className="testEvent"></div></li>
                                     <li className='eventBox'><div className="testEvent"></div></li>
 

@@ -63,7 +63,7 @@ class RegisterEventPage extends Component {
                                         selected={ this.state.startDate}
                                         onChange={ this.handleChange }
                                         name="startDate"
-                                        dateFormat="DD/MM/YYYY"
+                                      
                                     />
                                 </div>
 
@@ -74,7 +74,7 @@ class RegisterEventPage extends Component {
                                         selected={ this.state.endDate}
                                         onChange={ this.handleChange }
                                         name="endDate"
-                                        dateFormat="DD/MM/YYYY"
+                                  
                                     />
                                 </div>
 
@@ -85,7 +85,7 @@ class RegisterEventPage extends Component {
                                         selected={ this.state.startDate}
                                         onChange={ this.handleChange }
                                         name="startDate"
-                                        dateFormat="DD/MM/YYYY"
+                                       
                                     />
 
                                     
@@ -93,7 +93,7 @@ class RegisterEventPage extends Component {
 
                                 <div className='inputSection'>
                             <label className='boldP'> Maks</label>
-                            <input className='input-box-short' type="text" placeholder="Maks" />
+                            <input className='input-box-short' type="number" min="2"  placeholder="Maks" />
                         </div>
 
                                

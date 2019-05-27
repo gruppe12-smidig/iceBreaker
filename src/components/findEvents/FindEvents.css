@@ -12,3 +12,23 @@ font-size: 1.3rem;
  .findEventsContainer{
      margin-top: 5rem;
  }
+
+
+ .heading{
+    text-align: center;
+    color: #008099; 
+    margin-top: 0;
+    font-weight: normal;
+    }
+.arr-info{
+    padding-left: 30%;
+    margin-top: -10px;
+    }
+.btn-participate{
+    background-color: #F5C759;
+    width: 80px;
+    height: 30px;
+    text-align: center;
+    border-radius: 5px;
+    float: right;
+    }
