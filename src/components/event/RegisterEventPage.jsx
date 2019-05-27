@@ -8,7 +8,9 @@ class RegisterEventPage extends Component {
     constructor (props) {
       super(props)
       this.state = {
-          startDate: new Date()
+          startDate: '',
+          endDate: '',
+          lastSignDate:''
       };
 
       this.handleChange = this.handleChange.bind(this);
@@ -17,7 +19,8 @@ class RegisterEventPage extends Component {
 
     handleChange(date) {
         this.setState({
-            startDate: date
+            startDate: date,
+            endDate:date
         })
     }
 
@@ -41,12 +44,12 @@ class RegisterEventPage extends Component {
                     <form className='inputForm'>
 
                         <div className='inputSection'>
-                            <label>Navn på arrangement *</label>
+                            <label className='boldP'>Navn på arrangement *</label>
                             <input className='input-box' type="text" placeholder="Navn" />
                         </div>
              
                         <div className='inputSection'>
-                            <label> Typ av arrangement</label>
+                            <label className='boldP'> type arrangement</label>
                             <input className='input-box' type="text" placeholder="Arrangement-typ" />
                         </div>
                         
@@ -54,7 +57,7 @@ class RegisterEventPage extends Component {
 
                         <div className='inputShort'>
                                 <div className='inputSection'>
-                                    <label> Starter: *</label>
+                                    <label className='boldP'> Starter: *</label>
                                     <DatePicker
                                         className='input-box-short'
                                         selected={ this.state.startDate}
@@ -65,18 +68,18 @@ class RegisterEventPage extends Component {
                                 </div>
 
                                 <div className='inputSection'>
-                                    <label> Slutter *</label>
+                                    <label className='boldP'> Slutter *</label>
                                     <DatePicker
                                         className='input-box-short'
-                                        selected={ this.state.startDate}
+                                        selected={ this.state.endDate}
                                         onChange={ this.handleChange }
-                                        name="startDate"
+                                        name="endDate"
                                         dateFormat="DD/MM/YYYY"
                                     />
                                 </div>
 
                                 <div className='inputSection'>
-                                    <label> Siste påmelding</label>
+                                    <label className='boldP'> Siste påmelding</label>
                                     <DatePicker
                                         className='input-box-short'
                                         selected={ this.state.startDate}
@@ -89,23 +92,23 @@ class RegisterEventPage extends Component {
                                 </div>
 
                                 <div className='inputSection'>
-                            <label> Maks</label>
+                            <label className='boldP'> Maks</label>
                             <input className='input-box-short' type="text" placeholder="Maks" />
                         </div>
 
                                
                         </div>
                         <div className='inputSection'>
-                            <label> Beskrivelse</label>
+                            <label className='boldP'> Beskrivelse</label>
                             <input className='input-box-text' type="text" placeholder="Beskrivelse" />
        
                         </div>
 
-                      
+              
                     </form>
                     <div className='wrapperButtons'>
-                            <button className='signBtn'>Clear</button>
-                            <button className='signBtn'>Sign Up</button>
+                            <button className='signBtn'>Tøm</button>
+                            <button className='signBtn'>Opprett</button>
                         </div>
 
                 </div>

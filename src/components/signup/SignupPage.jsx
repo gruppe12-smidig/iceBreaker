@@ -139,8 +139,8 @@ class SignupPage extends Component {
                         </div>
 
                         <div className='inputSection'>
-                            <label className="boldP"> Interessen</label>
-                            <input className='input-box' type="school" placeholder="Interessen ... " />
+                            <label className="boldP"> Interesser</label>
+                            <input className='input-box' type="school" placeholder="Interesser ... " />
                         </div>
                         
                         

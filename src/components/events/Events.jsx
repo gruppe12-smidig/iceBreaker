@@ -26,25 +26,25 @@ return(
 <div id="wrapperGenreButtons">
 
 <a href="/FindEvents">
-<button className='btn-coffeMeeting'>Kaffetreff<img className="tea" src={tea} alt="tea"/>
+<button className='btn-coffeMeeting'><p className='btnP'>Kaffetreff</p><img className="tea" src={tea} alt="tea"/>
 </button> </a> 
 
 
 
 <a href="/FindEvents">
-<button className='btn-onTour'>Ut på tur<img className="boot" src={boot} alt="boot"/>
+<button className='btn-onTour'><p className='btnP'>Ut på tur</p><img className="boot" src={boot} alt="boot"/>
 </button> </a> 
 
 <a href="/FindEvents">
-<button className='btn-physicalActivity'>Fysisk aktivitet<img className="gym" src={gym} alt="gym"/>
+<button className='btn-physicalActivity'><p className='btnP'>Fysisk aktivitet</p><img className="gym" src={gym} alt="gym"/>
 </button> </a> 
 
 <a href="/FindEvents">
-<button className='btn-foodAndTalk'>Mat&Prat<img className="cutlery" src={cutlery} alt="cutlery"/>
+<button className='btn-foodAndTalk'><p className='btnP'>Mat&Prat</p><img className="cutlery" src={cutlery} alt="cutlery"/>
 </button> </a> 
 
 <a href="/FindEvents">
-<button className='btn-studyGroup'>Studiegrupper<img className="studying" src={studying} alt="studying"/>
+<button className='btn-studyGroup'><p className='btnP'>Studiegrupper</p><img className="studying" src={studying} alt="studying"/>
 </button> </a> 
 
 <a href="/RegisterEventPage">
