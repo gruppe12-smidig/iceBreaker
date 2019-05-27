@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import './RegisterEventPage.css'; 
-import Header from '../header/Header';
+import './RegisterEventPage.css';
 import DatePicker from 'react-datepicker';
 
 import 'react-datepicker/dist/react-datepicker.css';
+
+
 class RegisterEventPage extends Component {
     constructor (props) {
       super(props)

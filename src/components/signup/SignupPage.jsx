@@ -69,7 +69,7 @@ class SignupPage extends Component {
                 <h2 className='subHeader' >Opprett bruker</h2>
 
              
-                    <form className='inputForm'>
+                    <form className='inputForm' onSubmit={this.handleSubmit}>
                         <div className='inputSection'>
                             { this.state.errorMessage !== null ? (
                                <FormError theMessage={this.state.errorMessage}/>
@@ -142,16 +142,13 @@ class SignupPage extends Component {
                             <label className="boldP"> Interesser</label>
                             <input className='input-box' type="school" placeholder="Interesser ... " />
                         </div>
-                        
-                        
+
+
+                        <div className='wrapperButtons'>
+                            <button className='signBtn' type="submit">Opprett</button>
+                        </div>
                        
                     </form>
-                  
-                    <div className='wrapperButtons'>
-
-                        <button className='signBtn'>Tøm</button>
-                            <button className='signBtn' onSubmit={this.handleSubmit}>Opprett</button>
-                    </div>
 
                 </div>
             </div>

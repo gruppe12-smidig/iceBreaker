@@ -7,7 +7,7 @@ import './header/Header.css'
 import ProfilePage from './profile/ProfilePage'
 import Home from './home/home';
 import LoginPage from './login/LoginPage';
-import RegisterEventPage from './event/RegisterEventPage';
+import RegisterEventPage from './NewEvent/RegisterEventPage';
 import SignupPage from './signup/SignupPage';
 import Events from './events/Events';
 import MyEvents from './myEvents/MyEvents';
