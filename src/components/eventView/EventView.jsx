@@ -11,10 +11,17 @@ import calender from '../../images/kalender-white.png';
 
 
 class EventView extends Component {
-    state = {
-
-    }
-
+    constructor () {
+        super()
+        this.state = {
+          isHidden: true
+        }
+      }
+      toggleHidden () {
+        this.setState({
+          isHidden: !this.state.isHidden
+        })
+      }
 
     render() {
 
@@ -22,6 +29,10 @@ class EventView extends Component {
 
          <div>
                     <div className="mainContainer">
+
+          
+
+
 
                         <div className='eventViewContainer'>
                         <h2 className='subHeader' > Kontegrupp 2</h2>
@@ -109,11 +120,30 @@ class EventView extends Component {
 
                             </div>
 
+                            <div className='post'>
+
+                            <div className='wrapperUserIcon'>
+                                <div className='userIcon'></div>
+                            </div>
+
+                            <div className='wrapperMessage'>
+                                <p className='message'>      {!this.state.isHidden && <Melding />}</p>
+                            </div>
+
+
+                            </div>
+
+                            
+
                         </div>
                         <div className='chatFormWrapper'>
 
                                 <div className='chatForm'></div>
-                                <div className='chatBtn'></div>
+                                <div className='chatBtn' onClick={this.toggleHidden.bind(this)}></div>
+
+                         
+       
+       
                         </div>
                       
                     </div>
@@ -124,5 +154,11 @@ class EventView extends Component {
         )
     }
 }
+
+const Melding = () => (
+    <div className='modal'>
+          Test melding vises ved klikking :D!
+      </div>
+    )
 
 export default EventView;
