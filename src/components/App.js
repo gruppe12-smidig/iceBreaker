@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
-import { BrowserRouter as Router, Route, Link} from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
+import firebase from './firebase/Firebase';
+
 import './App.css';
 import './header/Header.css'
 import Home from './home/home';
@@ -9,16 +11,22 @@ import SignupPage from './signup/SignupPage';
 import Events from './events/Events';
 import MyEvents from './myEvents/MyEvents';
 import FindEvents from './findEvents/FindEvents';
-import Switch from "react-router-dom/es/Switch";
 import Header from "./header/Header";
 import Backdrop from "./Backdrop";
 import SideDrawer from "./SideDrawer";
 
 
 class App extends Component {
-    state = {
-        sideDrawerOpen: false
-    };
+  constructor() {
+      super();
+      this.state = {
+          user: null,
+          sideDrawerOpen: false
+      };
+  }
+
+
+
 
     drawerToggleClickHandler = () => {
         this.setState((prevState) => {
@@ -30,6 +38,15 @@ class App extends Component {
     backDropClickHandler = () => {
         this.setState({sideDrawerOpen: false});
     };
+
+    componentDidMount() {
+        const ref = firebase.database().ref('user');
+
+        ref.on('value', snapshot => {
+            let FBUser = snapshot.val();
+            this.setState({user: FBUser});
+        })
+    }
 
     render() {
         let sideDrawer;

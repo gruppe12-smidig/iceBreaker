@@ -1,29 +1,39 @@
-.eventContainer .subHeader{
+
+.myEventContainer .subHeader{
     margin-top: 1rem;
     text-align: center;
     color: #007A9E;
     font-size: 1.4rem;
 }
 
-.eventContainer .btn{
-    margin-top: -1rem;
-   height: 70%;
-   border-radius: 5px;
-
-    
+.myEventContainer .btn{
+    margin: 0 auto;
+    margin-top: -2rem;
+    font-size: 1rem;
+    padding: 2px;
+   height: 43px;
+   width: 100%;
+   max-width: 200px;
+   border-radius: 20px;
+   text-align: center;
+   display: block;
 }
 
-.eventContainer{
-    margin-top: 2rem;
-    /* border: solid rgb(206, 206, 206) 1px; */
+
+.myEventContainer{
+    margin-top: 4rem;
+   
 }
 
 .adminEventsContainer , 
 .joinedEventsContainer{
-   text-align:center;
     margin: 0 auto;
+    margin-top: 1rem;
     display: grid;
-    grid-template-columns: 100%; 
+    grid-template-columns: 90%; 
+    justify-content: center;
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
 }
 
 
@@ -34,7 +44,6 @@
   
     margin: 0 auto;
     margin-bottom: 2rem;
-
     padding: 1rem;
     height: 130px;
     box-shadow: 0px 3px 6px rgba(68, 113, 124, 0.452);

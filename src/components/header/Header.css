@@ -2,6 +2,14 @@
     /* background-color: #2B455C; */
     border-color: #282c34;
     padding: 10px;
+    width: 100%;
+    position:fixed;
+    background-color: rgb(255, 255, 255);
+
+        -webkit-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.377);
+           -moz-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.377);
+                box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.377);
+    z-index: 999;
 
 }
 

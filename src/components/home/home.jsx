@@ -10,7 +10,7 @@ class Home extends Component {
             <div>
 
                 <div className='mainContainer'>
-                 
+                 <div className='homeContainer'>
                     <div className='wrapperPenguin'>
                             <img className='frontPenguin' src={penguin} alt="Image of penguin" />
                             <img className='frontPenguin' src={penguin} alt="Image of penguin" />
@@ -23,17 +23,18 @@ class Home extends Component {
 
                     <div className='btnWrapper'>
                         
-                        <a href="/Events"><button className='btnFront'>Finn arrangementer</button></a> 
-                        <a href="/MyEvents"><button className='btnFront'>Mine arrangementer</button></a> 
-                        <a href="/RegisterEventPage"><button className='btnFront'>Opprett arrangement</button></a> 
+                        <a href="/Events"><button className='btn'>Finn arrangementer</button></a> 
+                        <a href="/MyEvents"><button className='btn'>Mine arrangementer</button></a> 
+                        <a href="/RegisterEventPage"><button className='btn'>Opprett arrangement</button></a> 
                   
                         
                     </div>
 
                 </div>
-
+                
+                </div>
                 <Footer/>
-
+     
             </div>
 
         );

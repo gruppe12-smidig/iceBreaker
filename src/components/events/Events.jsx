@@ -17,7 +17,12 @@ render() {
 return(
 <div className='mainContainer'>
 
+
+
+<div className='eventsContainer'>
+
 <h2 className='subHeader'>Arrangementer</h2>
+
 <div id="wrapperGenreButtons">
 
 <a href="/FindEvents">
@@ -50,6 +55,7 @@ return(
 
 
 
+</div>
 </div>
 </div>
 )
