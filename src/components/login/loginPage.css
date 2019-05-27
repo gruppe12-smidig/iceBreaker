@@ -9,14 +9,25 @@ margin: 0 auto;
 outline: none !important;
 }
 
-.mainContainerLogIn{
-    background-image: url(../../images/background.jpg);
 
-}
-
-input{
+.username, .password{
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0px;
     box-sizing: border-box;
+}
+
+.btn-login{
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 3px;
+    border-style: none;
+    border-radius: 3px;
+    font-size: 20px;
+    font-weight: 700;
+    display:block;
+	margin:0 auto;
+    background-color: #E2B14D;
+    color: white;
+    width: 240px;
+    height: 50px;
 }
