@@ -7,11 +7,11 @@ class Privacy extends Component {
 
     render() {
         return(
-            <div>
+            <div className='mainContainer'>
                 <Header/>
-                <h2 className='page-header'>Personvernerklæring</h2>
+                <h2 className='pageHeader'>Personvernerklæring</h2>
 
-                <div className='text-wrapper'>
+                <div className='textWrapper'>
                     <p>
                     Lorem ipsum dolor sit amet 
                     consectetur adipisicing elit. Perspiciatis, aspernatur?

@@ -7,11 +7,11 @@ class Cookies extends Component {
 
     render() {
         return(
-            <div>
+            <div className='mainContainer'>
                 <Header/>
-                <h2 className='page-header'>Informasjonskapsler</h2>
+                <h2 className='pageHeader'>Informasjonskapsler</h2>
 
-                <div className='text-wrapper'>
+                <div className='textWrapper'>
                     <p>
                     Lorem ipsum dolor sit amet 
                     consectetur adipisicing elit. Perspiciatis, aspernatur?
