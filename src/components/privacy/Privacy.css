@@ -7,20 +7,26 @@ body {
 
 }
 
-.pageHeader {
+.pageHeadline {
     font-size: 20px;
 
         /* Font: Montserrat eller Roboto?? */
 
 }
 
-.ingress {
+.preamble {
+    font-family: 'Roboto', 'sans-serif';
+    font-size: 14px;
+
+}
+
+.miniHeadline {
     font-family: 'Roboto', 'sans-serif';
     font-size: 15px;
 
 }
 
-.main-article {
+.mainArticle {
     font-family: 'Roboto', 'sans-serif';
     font-size: 12px;
 
