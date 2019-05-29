@@ -8,7 +8,7 @@ class Privacy extends Component {
     render() {
         return(
             <div className='mainContainer'>
-                <Header/>
+     <div className='wrappperPrivacy'>
                 <h2 className='pageHeadline'>Personvernerklæring</h2>
 
                 <div className='textWrapper'>
@@ -59,6 +59,7 @@ class Privacy extends Component {
                         kan sendes til oss på hjelp@icebreaker.no
                     </p>
                     
+                </div>
                 </div>
                 <Footer/>
             </div>

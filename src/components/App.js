@@ -18,6 +18,8 @@ import SideDrawer from "./SideDrawer";
 import About from "./about/About";
 import StartPage from "./startpage/StartPage";
 import EventView from "./eventView/EventView";
+import Cookies from "./cookies/Cookies";
+import Privacy from "./privacy/Privacy";
 
 
 class App extends Component {
@@ -87,6 +89,9 @@ class App extends Component {
                         <Route path="/About" component={About}/>
                         <Route path="/StartPage" component={StartPage}/>
                         <Route path="/EventView" component={EventView}/>
+                        <Route path="/Cookies" component={Cookies}/>
+                        <Route path="/Privacy" component={Privacy}/>
+
 
                     </Switch>
                 </Router>
