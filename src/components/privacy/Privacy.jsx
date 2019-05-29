@@ -8,7 +8,7 @@ class Privacy extends Component {
     render() {
         return(
             <div className='mainContainer'>
-     <div className='wrappperPrivacy'>
+     <div className='wrapperPrivacy'>
                 <h2 className='pageHeadline'>Personvernerklæring</h2>
 
                 <div className='textWrapper'>
