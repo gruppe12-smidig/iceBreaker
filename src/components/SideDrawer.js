@@ -27,6 +27,7 @@ class SideDrawer extends Component {
                     <li><Link to="/StartPage" onClick={{sideDrawerOpen: false}}>Startside TEMPORARY</Link></li>
                     <li><Link to="/Privacy" onClick={{sideDrawerOpen: false}}>Personvern</Link></li>
                     <li><Link to="/Cookies" onClick={{sideDrawerOpen: false}}>Informasjonskapsler</Link></li>
+                    <li><Link to="/StartPage" onClick={{sideDrawerOpen: false}}>Logg ut</Link></li>
                 </ul>
             </navlink>
         );
