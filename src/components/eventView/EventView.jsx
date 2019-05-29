@@ -63,15 +63,15 @@ class EventView extends Component {
                     </div>
  
 
-                    <img className='floePeng' src={floePeng} alt="Image penguins" />
+                    <img className='floePeng' src={floePeng} alt="penguins" />
 
                         </div>
 
                         <div className='userContainer'>
                             <ul>
-                                <li className='user'> <img className='peng' src={peng} alt="Image penguin" /> <span>Anne Lien</span>   </li>
-                                <li className='user'> <img className='peng' src={peng} alt="Image penguin" /> <span>Per Olsen</span>  </li>
-                                <li className='user'> <img className='peng' src={peng} alt="Image penguin" /> <span>Johan Berg</span>  </li>
+                                <li className='user'> <img className='peng' src={peng} alt=" penguin" /> <span>Anne Lien</span>   </li>
+                                <li className='user'> <img className='peng' src={peng} alt=" penguin" /> <span>Per Olsen</span>  </li>
+                                <li className='user'> <img className='peng' src={peng} alt=" penguin" /> <span>Johan Berg</span>  </li>
                             </ul>
                         </div>
                         <div className='chatContainer'>
