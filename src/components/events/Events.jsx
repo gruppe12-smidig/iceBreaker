@@ -23,39 +23,66 @@ return(
 
 <h2 className='subHeader'>Arrangementer</h2>
 
-<div id="wrapperGenreButtons">
+<div className="wrapperGenreButtons">
+
+<div className='wrapperBtn'>
+    <a href="/FindEvents">
+    <button className='btn-coffeMeeting'><p className='btnP'>Kaffetreff</p><img className="tea" src={tea} alt="tea"/>
+    </button> </a> 
+
+    <p className='btnBigScreen'>Kaffetreff</p>
+
+</div>
+
+
+<div className='wrapperBtn'>
+    <a href="/FindEvents">
+    <button className='btn-onTour'><p className='btnP'>Ut på tur</p><img className="boot" src={boot} alt="boot"/>
+    </button> </a> 
+
+
+<p className='btnBigScreen'>Ut på tur</p>
+
+</div>
+
+
+<div className='wrapperBtn'>
+    <a href="/FindEvents">
+    <button className='btn-physicalActivity'><p className='btnP'>Fysisk aktivitet</p><img className="gym" src={gym} alt="gym"/>
+    </button> </a> 
+
+    <p className='btnBigScreen'>Fysisk aktivitet</p>
+
+</div>
+
+<div className='wrapperBtn'>
 
 <a href="/FindEvents">
-<button className='btn-coffeMeeting'><p className='btnP'>Kaffetreff</p><img className="tea" src={tea} alt="tea"/>
-</button> </a> 
+    <button className='btn-foodAndTalk'><p className='btnP'>Mat&Prat</p><img className="cutlery" src={cutlery} alt="cutlery"/>
+    </button> </a> 
 
+    <p className='btnBigScreen'>Mat&Prat</p>
 
+</div>
 
-<a href="/FindEvents">
-<button className='btn-onTour'><p className='btnP'>Ut på tur</p><img className="boot" src={boot} alt="boot"/>
-</button> </a> 
+<div className='wrapperBtn'>
+    <a href="/FindEvents">
+    <button className='btn-studyGroup'><p className='btnP'>Studiegrupper</p><img className="studying" src={studying} alt="studying"/>
+    </button> </a> 
 
-<a href="/FindEvents">
-<button className='btn-physicalActivity'><p className='btnP'>Fysisk aktivitet</p><img className="gym" src={gym} alt="gym"/>
-</button> </a> 
+    <p className='btnBigScreen'>Studiegrupper</p>
 
-<a href="/FindEvents">
-<button className='btn-foodAndTalk'><p className='btnP'>Mat&Prat</p><img className="cutlery" src={cutlery} alt="cutlery"/>
-</button> </a> 
-
-<a href="/FindEvents">
-<button className='btn-studyGroup'><p className='btnP'>Studiegrupper</p><img className="studying" src={studying} alt="studying"/>
-</button> </a> 
-
-<a href="/RegisterEventPage">
-<button className='btn-createEvent'>OPPRETT ARRANGEMENT<br></br><img className="calender" src={calender} alt="calender"/>
-</button></a>
+</div>
 
 
 
 
 
 </div>
+<a href="/RegisterEventPage">
+<button className='btn-createEvent'>OPPRETT ARRANGEMENT<br></br><img className="calender" src={calender} alt="calender"/>
+</button></a>
+
 </div>
 </div>
 )

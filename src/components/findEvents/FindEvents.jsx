@@ -23,11 +23,11 @@ class FindEvents extends Component {
                         <div className='findEventsContainer'>
                         <h2 className='subHeader' > Genre-navn</h2>
 
-                        <div className='eventContainer'>
+                   
 
                          
                                 {/*Render of event components from DB  */}
-                                <ul>
+                                <ul className='eventContainer'>
 
                                     <li className='eventBox'> <div className="testEvent">
                                             <h2 className='heading'>Event navn</h2>
@@ -43,12 +43,13 @@ class FindEvents extends Component {
 
                                 </ul>
 
-                                <a href="/RegisterEventPage"><button className='btn'> 
-                                 <p>Opprett ny</p> <img className="calender" src={calender} alt="boot"/></button></a> 
+                       
 
                         
 
-                        </div>
+           
+                        <a href="/RegisterEventPage"><button className='btn'> 
+                                 <p>Opprett ny</p> <img className="calender" src={calender} alt="boot"/></button></a> 
 
                         </div>
                     </div>

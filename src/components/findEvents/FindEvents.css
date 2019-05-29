@@ -5,6 +5,7 @@
 .btn {
 padding: 2rem;
 width: 100%;
+max-width: 300px;
 display: flex;
 justify-content: space-between;
 font-size: 1.3rem;
@@ -12,6 +13,10 @@ font-size: 1.3rem;
  .findEventsContainer{
      margin-top: 7rem;
  }
+ .eventBox{
+    margin: 0 auto;
+    margin: 5%;
+}
 
 
  .heading{
@@ -34,3 +39,40 @@ font-size: 1.3rem;
     float: right;
     font-size: 15px;
     }
+
+    /* ----------- < iPad  ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+and (min-device-width: 568px) 
+and (max-device-width: 1112px)
+and (-webkit-min-device-pixel-ratio: 2)
+{
+
+
+  
+}
+
+/* ----------- Desktop ----------- */
+@media screen 
+and (min-device-width: 1200px) 
+
+{ 
+
+    .eventContainer{
+        margin: 0 auto;
+        margin-top: 2rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        
+    }
+
+    .eventBox{
+        margin: 0 auto;
+        width: 95%;
+    }
+
+    .findEventsContainer{
+        margin-top: 9rem;
+    }
+}

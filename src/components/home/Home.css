@@ -38,3 +38,56 @@ height: 90%;
     padding: 10%;
     text-align: center;
 }
+/* ----------- < iPad  ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 568px) 
+  and (max-device-width: 1112px)
+  and (-webkit-min-device-pixel-ratio: 2)
+{
+
+    .wrapperPenguin{
+        margin-top: 10rem;
+       
+    }
+  
+
+       
+        .btnWrapper {
+            margin-top: -2rem;
+           display: flex;
+           justify-content: space-evenly;
+        }
+
+        .btnWrapper .btn { 
+            width: 96%;
+        }
+    
+  }
+
+  /* ----------- Desktop ----------- */
+@media screen 
+and (min-device-width: 1200px) 
+
+ { 
+    .wrapperPenguin{
+        margin-top: 12rem;
+       
+    }
+
+    .frontPenguin{
+        height: 100%;
+        }
+
+        .greetContainer{
+            margin:2rem ; 
+        
+        }
+
+        .btnWrapper {
+            margin-top: -4rem;
+           display: flex;
+           justify-content: space-evenly;
+        }
+}
