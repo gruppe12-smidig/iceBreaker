@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import './Home.css';
-import Header from "../header/Header";
 import Footer from "../footer/Footer";
 import penguin from '../../images/penguin.png';
 

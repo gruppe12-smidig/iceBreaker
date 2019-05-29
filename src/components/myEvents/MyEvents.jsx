@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './MyEvents.css';
 import Footer from "../footer/Footer";
-import Header from '../header/Header';
 
 
 

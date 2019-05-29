@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './EventView.css';
 import Footer from "../footer/Footer";
-import Header from '../header/Header';
 import floePeng from '../../images/floePeng.png';
 import peng from '../../images/penguin.png';
 

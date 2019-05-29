@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './loginPage.css';
 import background from '../../images/background.jpg';
-import Header from '../header/Header';
 import logo from '../../images/logo-1.png';
 
 class LoginPage extends Component {
