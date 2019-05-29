@@ -19,12 +19,14 @@ class SideDrawer extends Component {
         return (
             <navlink className="side-drawer">
                 <ul>
-                    <Link to="/" onClick={{sideDrawerOpen: false}}>Home</Link>
-                    <li><Link to="/LoginPage" onClick={{sideDrawerOpen: false}}>Login Page</Link></li>
-                    <li><Link to="/SignupPage" onClick={{sideDrawerOpen: false}}>Sign up</Link></li>
-                    <li><Link to="/RegisterEventPage" onClick={{sideDrawerOpen: false}}>New event</Link></li>
-                    <li><Link to="/Events" onClick={{sideDrawerOpen: false}}>Events</Link></li>
-                    <li><Link to="/StartPage" onClick={{sideDrawerOpen: false}}>Startpage TEMPORARY</Link></li>
+                    <Link to="/" onClick={{sideDrawerOpen: false}}>Hjem</Link>
+                    <li><Link to="/LoginPage" onClick={{sideDrawerOpen: false}}>Påloggingsside</Link></li>
+                    <li><Link to="/SignupPage" onClick={{sideDrawerOpen: false}}>Registrer deg</Link></li>
+                    <li><Link to="/RegisterEventPage" onClick={{sideDrawerOpen: false}}>Nytt arrangement</Link></li>
+                    <li><Link to="/Events" onClick={{sideDrawerOpen: false}}>Arrangementer</Link></li>
+                    <li><Link to="/StartPage" onClick={{sideDrawerOpen: false}}>Startside TEMPORARY</Link></li>
+                    <li><Link to="/Privacy" onClick={{sideDrawerOpen: false}}>Personvern</Link></li>
+                    <li><Link to="/Cookies" onClick={{sideDrawerOpen: false}}>Informasjonskapsler</Link></li>
                 </ul>
             </navlink>
         );
