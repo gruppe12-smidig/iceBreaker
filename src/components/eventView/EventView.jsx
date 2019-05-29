@@ -6,8 +6,6 @@ import floePeng from '../../images/floePeng.png';
 import peng from '../../images/penguin.png';
 
 
-import calender from '../../images/kalender-white.png';
-
 
 
 class EventView extends Component {

@@ -8,7 +8,7 @@ class Cookies extends Component {
     render() {
         return(
             <div className='mainContainer'>
-                <Header/>
+             <div className="wrapperCookies" >
                 <h2 className='pageHeadline'>Informasjonskapsler</h2>
 
                 <div className='textWrapper'>
@@ -79,6 +79,7 @@ class Cookies extends Component {
 
                     { /** TABELL OM COOKIES **/ }
 
+                </div>
                 </div>
                 <Footer/>
             </div>
