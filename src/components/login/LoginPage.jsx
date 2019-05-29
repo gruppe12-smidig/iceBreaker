@@ -19,7 +19,9 @@ class LoginPage extends Component {
                         <input className="username" placeholder="Brukernavn" type="text"></input>
                         <input className="password" placeholder="Passord" type="text"></input>
                     </form>
-                    <button className="btn-login">Logg inn</button> 
+
+                    <a href="/">
+                    <button className="btn-login">Logg inn</button></a>
                 </div>
 
             </div>

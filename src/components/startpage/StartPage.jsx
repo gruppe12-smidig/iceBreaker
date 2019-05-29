@@ -16,7 +16,8 @@ class StartPage extends Component {
               <button className="btn-logIn">Logg inn</button>
               </a>
 
-            <button className='btn-joinIceBreaker'>Join Ice Breaker</button>
+            <a href='/SignupPage'>
+            <button className='btn-joinIceBreaker'>Join Ice Breaker</button></a>
             </div>
           </div>
         );

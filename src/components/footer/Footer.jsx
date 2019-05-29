@@ -17,8 +17,8 @@ class Footer extends Component {
 
                     <div className='topSection'>
 
-           
-                        <Link className="link" to="/"><h3>Om oss</h3></Link>
+                        
+                        <Link className="link" to="/About"><h3>Om oss</h3></Link>
             
 
                         <h4>Kontakt</h4 >
