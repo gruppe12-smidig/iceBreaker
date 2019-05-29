@@ -46,6 +46,7 @@ p {
 
 .inputForm{
     /* border: solid 3px rgb(23, 71, 175); */
+    margin-top:-1rem; 
     padding: 2rem; 
    
 }
@@ -94,3 +95,43 @@ p {
 }
 
 
+
+/* -----------  iPad  ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 568px) 
+  and (max-device-width: 1112px)
+  and (-webkit-min-device-pixel-ratio: 2)
+{
+
+   
+    
+  }
+
+  /* ----------- Desktop ----------- */
+@media screen 
+and (min-device-width: 1200px) 
+
+ { 
+
+  .inputForm{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: 50px;
+  }
+  .formContainerReg{
+ float: left;
+  }
+  .wrapperButtons {
+      float: left;
+
+}    
+
+.input-box-short {
+   
+    margin-right: 2rem;
+  
+}
+           
+}

@@ -50,7 +50,7 @@ class RegisterEventPage extends Component {
                         </div>
              
                         <div className='inputSection'>
-                            <label className='boldP'> type arrangement</label>
+                            <label className='boldP'> Type arrangement</label>
                             <input className='input-box' type="text" placeholder="Arrangement-typ" />
                         </div>
                         

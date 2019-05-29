@@ -92,3 +92,35 @@ p {
 }
 
 
+
+/* -----------  iPad  ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 568px) 
+  and (max-device-width: 1112px)
+  and (-webkit-min-device-pixel-ratio: 2)
+{
+
+   
+    
+  }
+
+  /* ----------- Desktop ----------- */
+@media screen 
+and (min-device-width: 1200px) 
+
+ { 
+
+  .inputForm{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: 50px;
+  }
+  .formContainer{
+
+      float: left;
+  }
+            
+           
+}

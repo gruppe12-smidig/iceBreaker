@@ -19,15 +19,16 @@ class MyEvents extends Component {
          <div>
                     <div className="mainContainer">
 
+                    <div className='myEventContainer'>
 
                         <h2 className='subHeader' >Mine arrangementer</h2>
 
-                        <div className='myEventContainer'>
+                    
 
                             <div className='adminEventsContainer'>
-                                <h3 className='subHeader'>Ansvarlig for</h3>
+                                <h3 className='subHeaderMin'>Ansvarlig for</h3>
                                 {/*Render of event components from DB  */}
-                                <ul>
+                                <ul className='myEventsList'>
 
                                     <li className='eventBox'><div className="testEvent"></div></li>
                                     <li className='eventBox'><div className="testEvent"></div></li>
@@ -43,9 +44,9 @@ class MyEvents extends Component {
 
                             <div className="joinedEventsContainer" >
 
-                                <h3 className='subHeader'>Oppmeldt til</h3>
+                                <h3 className='subHeaderMin'>Oppmeldt til</h3>
                                 {/*Render of event components from DB  */}
-                                <ul>
+                                <ul  className='myEventsList'>
                                 <li className='eventBox'><div className="testEvent"></div></li>
                                 <li className='eventBox'><div className="testEvent"></div></li>
                                 <li className='eventBox'><div className="testEvent"></div></li>

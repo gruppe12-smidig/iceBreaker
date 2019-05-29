@@ -66,7 +66,7 @@ class SignupPage extends Component {
 
             <div className='formContainer'>
 
-                <h2 className='subHeader' >Opprett bruker</h2>
+                <h2 className='subHeader'> Opprett bruker </h2>
 
              
                     <form className='inputForm' onSubmit={this.handleSubmit}>

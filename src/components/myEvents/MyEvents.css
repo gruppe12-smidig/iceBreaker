@@ -1,11 +1,13 @@
 /* .mainContainer{
 padd
 } */
-.myEventContainer .subHeader{
+.subHeaderMin{
     margin-top: 1rem;
     text-align: center;
-    color: #007A9E;
+    color: rgb(117, 117, 117);
     font-size: 1.4rem;
+    font-weight: 700;
+    
 }
 
 .myEventContainer .btn{
@@ -14,8 +16,7 @@ padd
     font-size: 1rem;
     padding: 2px;
    height: 43px;
-   width: 100%;
-   max-width: 200px;
+   width: 200px;
    border-radius: 20px;
    text-align: center;
    display: block;
@@ -23,19 +24,23 @@ padd
 
 
 .myEventContainer{
-    margin-top: 4rem;
+    margin-top: 8rem;
    
 }
 
 .adminEventsContainer , 
 .joinedEventsContainer{
     margin: 0 auto;
-    margin-top: 1rem;
-    display: grid;
-    grid-template-columns: 90%; 
+  padding-top: 0.5rem;
     justify-content: center;
     border-radius: 5px;
     background-color: rgb(255, 255, 255);
+}
+
+.joinedEventsContainer{
+  
+    margin-top:-3rem;
+   
 }
 
 
@@ -59,4 +64,48 @@ padd
     display: flex;
     justify-content: space-between;
 
+}
+
+
+/* -----------  iPad  ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 568px) 
+  and (max-device-width: 1112px)
+  and (-webkit-min-device-pixel-ratio: 2)
+{
+.myEventsList{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+}
+
+.joinedEventsContainer{
+  
+    margin-top:-7rem;
+   
+}
+   
+    
+  }
+
+  /* ----------- Desktop ----------- */
+@media screen 
+and (min-device-width: 1200px) 
+
+ { 
+
+    .myEventsList{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+   
+    }
+    .joinedEventsContainer{
+  
+        margin-top:-15rem;
+       
+    }
+            
+           
 }
