@@ -10,11 +10,14 @@ outline: none !important;
 }
 
 .header img{
-
     display:block;
 	margin:0 auto;
     width: 150px;
     height: 70px;
+}
+
+.header{
+    margin-bottom: 100px;
 }
 
 .mainContainerLogIn{

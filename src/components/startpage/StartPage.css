@@ -14,8 +14,19 @@ outline: none !important;
 .header img{
     display:block;
 	margin:0 auto;
-    width: 155px;
+    width: 100px;
     height: 70px;
+    margin-left: 10px;
+    margin-top: -20px;
+}
+
+.header h1{
+    margin-left: 110px;
+    margin-top: -50px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    color: #B9B9B9;
+    font-weight: 300;
 }
 
 .mainContainerStartPage{
@@ -37,7 +48,7 @@ outline: none !important;
     font-size: 25px;
     font-weight: 100;
     text-align: center;
-    margin-top: 90px;
+    margin-top: 80px;
     margin-bottom: 90px;
 }
 

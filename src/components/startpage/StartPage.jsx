@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import './StartPage.css';
-import logo from '../../images/logo.png';
+import logo from '../../images/logo-1.png';
 
 
 class StartPage extends Component {
@@ -8,7 +8,7 @@ class StartPage extends Component {
         return ( 
           <div className='mainContainerStartPage'>
             <div className='formContainer'>
-              <div className='header'><img className="logo" src={logo} alt="logo"/></div>
+              <div className='header'><img className="logo" src={logo} alt="logo"/> <h1 className='IceBreaker'>IceBreaker</h1></div>
 
               <h1 className='quote'>«A place to connect with other students»</h1>
               
@@ -17,7 +17,7 @@ class StartPage extends Component {
               </a>
 
             <a href='/SignupPage'>
-            <button className='btn-joinIceBreaker'>Join Ice Breaker</button></a>
+            <button className='btn-joinIceBreaker'>Opprett bruker</button></a>
             </div>
           </div>
         );
