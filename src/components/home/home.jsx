@@ -11,8 +11,8 @@ class Home extends Component {
                 <div className='mainContainer'>
                  <div className='homeContainer'>
                     <div className='wrapperPenguin'>
-                            <img className='frontPenguin' src={penguin} alt="Image of penguin" />
-                            <img className='frontPenguin' src={penguin} alt="Image of penguin" />
+                            <img className='frontPenguin' src={penguin} alt=" penguin" />
+                            <img className='frontPenguin' src={penguin} alt=" penguin" />
                     </div>
 
                     <div className='greetContainer'>
