@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import './About.css'
-import Footer from '../footer/Footer.jsx'
+import phone from '../../images/black-phone-icon.png';
+import mail from '../../images/black-mail-icon.png';
 
 
 class About extends Component {
@@ -24,8 +25,8 @@ felles interesser.
 
         <div className='contactUs'>
       <h2 className='heading'>Kontak oss</h2>
-        <p className='contactUs-description'>IceBreaker@mail.com<br></br>
-999 99 999
+        <p className='contactUs-description'><img className="mail" src={mail} alt="mail"/>IceBreaker@mail.com<br></br>
+        <img className="phone" src={phone} alt="phone"/>999 99 999
         </p>
         </div>
 
