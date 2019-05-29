@@ -18,7 +18,7 @@ import SideDrawer from "./SideDrawer";
 import About from "./about/About";
 import StartPage from "./startpage/StartPage";
 import EventView from "./eventView/EventView";
-import Cookies from "./cookies/Cookies";
+import Cookies from "./cookies/cookies";
 import Privacy from "./privacy/Privacy";
 
 
