@@ -30,7 +30,7 @@ class Cookies extends Component {
                         De fleste moderne nettlesere (Chrome, Firefox, Opera, Safari, Internet Explorer, Edge, etc) 
                         er innstilt på å akseptere informasjonskapsler automatisk, men du kan selv velge å endre 
                         innstillingene slik at Informasjonskapsler ikke blir akseptert. Vi gjør oppmerksom på at dette 
-                        kan føre til at Icebreakers nettjenester ikke vil fungere optimalt. <a href="https://nettvett.no/slik-administrer-du-informasjonskapsler/">
+                        kan føre til at Icebreakers nettjenester ikke vil fungere optimalt.<br /> <a href="https://nettvett.no/slik-administrer-du-informasjonskapsler/">
                         Nettsiden nettvett.no forklarer hvordan du selv kan administrere informasjonskapsler.</a>
                         </p>
 
