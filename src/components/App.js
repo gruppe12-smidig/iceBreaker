@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { BrowserRouter ,Route, Switch, Redirect} from "react-router-dom";
+import { BrowserRouter ,Route, Switch, Redirect, withRouter} from "react-router-dom";
 import {navigate, Router} from '@reach/router';
 import firebase from './firebase/Firebase';
 
@@ -21,7 +21,7 @@ import StartPage from "./startpage/StartPage";
 import EventView from "./eventView/EventView";
 import Cookies from "./cookies/cookies";
 import Privacy from "./privacy/Privacy";
-import Welcome from "./welcome/Welcome";
+import notFound from "./notFound/NotFound";
 
 
 
@@ -92,6 +92,7 @@ class App extends Component {
 
         firebase.auth().signOut().then(()=>{
             console.log('you are logged out')
+            window.location = '/loginPage';
         })
     };
 
@@ -101,7 +102,6 @@ class App extends Component {
 
 
     };
-
 
 
 
@@ -122,13 +122,16 @@ class App extends Component {
         if (window.location.pathname === '/StartPage') {
             return <StartPage/>;
         }
+        if (window.location.pathname === '/SignupPage') {
+            return <SignupPage/>;
+        }
 
 
 
         else return (
+
+
             <div style={{height: '100%'}}>
-
-
 
                 <BrowserRouter>
 
@@ -139,7 +142,7 @@ class App extends Component {
                         <Switch>
                             <Route exact path="/"  render={(props) => <Home {...props} user={this.state.user}/>}/>
                             <Route exact path="/ProfilePage" user={this.state.user} component={ProfilePage} />
-                            <Route exact path="/loginPage" render={(props)=><LoginPage {...props} logOut/>}    />
+                            <Route exact path="/loginPage" render={(props)=><LoginPage {...props}/>}/>
                             <Route exact path="/SignupPage"  render={(props) => <SignupPage {...props} registerUser={this.registerUser}/>}/>
                             <Route exact path="/RegisterEventPage" render={ (props) =><RegisterEventPage {...props} addEvent={this.addEvent}/>}/>
                             <Route exact path="/events" user={this.state.user} component={Events}/>
@@ -150,6 +153,7 @@ class App extends Component {
                             <Route exact path="/EventView" user={this.state.user} component={EventView}/>
                             <Route exact path="/Cookies" user={this.state.user} component={Cookies}/>
                             <Route exact path="/Privacy" user={this.state.user} component={Privacy}/>
+                            <Route component={notFound}/>
                         </Switch>
                 </BrowserRouter>
             </div>

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import firebase from '../firebase/Firebase';
 import FormError from '../formError/FormError';
 import {navigate} from "@reach/router";
+import { Redirect} from "react-router-dom";
 
 
 import './loginPage.css';
@@ -37,8 +38,8 @@ class LoginPage extends Component {
             signupInfo.email,
             signupInfo.password
         ).then(()=> {
-
-           console.log('you are logged in');
+            console.log('you are logged in');
+            window.location = '/';
         })
             .catch(error => {
                 if (error.message !== null){

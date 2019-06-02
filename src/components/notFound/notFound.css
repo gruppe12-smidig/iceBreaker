@@ -1,0 +1,17 @@
+
+
+
+.containerLol {
+
+}
+
+content-container h2, p{
+    text-align: center;
+    display: inline;
+    float: none;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+
+}
+

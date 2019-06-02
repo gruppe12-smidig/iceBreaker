@@ -10,15 +10,13 @@ class SideDrawer extends Component {
         this.state = {
             sideDrawOpen: false
         };
-
-
     }
+
+
 
     render() {
 
-        const {user,logOutUser} = this.props;
-
-
+        const {logOutUser} = this.props
         return (
             <div className="side-drawer">
                 <ul>
@@ -29,6 +27,7 @@ class SideDrawer extends Component {
                     <li><Link to="/Events">Events</Link></li>
                     <li><Link to="/StartPage">Startpage TEMPORARY</Link></li>
                     <li><Link to="/LoginPage" onClick={e => logOutUser(e)}>Sign out</Link></li>
+
                 </ul>
             </div>
         );
