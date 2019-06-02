@@ -1,6 +1,6 @@
 
 import React, { Component } from 'react';
-import * as firebase from "firebase";
+import firebase from '../firebase/Firebase'
 import FormError from '../formError/FormError';
 import './SignupPage.css';
 import '../formError/FormError.css'
@@ -10,7 +10,7 @@ class SignupPage extends Component {
     constructor(props){
       super(props);
       this.state = {
-          firstName: '',
+          displayName: '',
           lastName: '',
           email: '',
           passOne: '',
@@ -37,7 +37,7 @@ class SignupPage extends Component {
 
     handleSubmit(e) {
         let signupInfo = {
-            firstName: this.state.firstName,
+            displayName: this.state.displayName,
             lastName: this.state.lastName,
             email: this.state.email,
             password: this.state.passOne
@@ -47,7 +47,9 @@ class SignupPage extends Component {
         firebase.auth().createUserWithEmailAndPassword(
             signupInfo.email,
             signupInfo.password
-        )
+        ).then(()=> {
+            this.props.registerUser(signupInfo.displayName);
+        })
             .catch(error => {
             if (error.message !== null){
                 this.setState({errorMessage: error.message});
@@ -68,66 +70,89 @@ class SignupPage extends Component {
 
                 <h2 className='subHeader'> Opprett bruker </h2>
 
+                <div>{this.props.username}</div>
+
              
                     <form className='inputForm' onSubmit={this.handleSubmit}>
                         <div className='inputSection'>
                             { this.state.errorMessage !== null ? (
                                <FormError theMessage={this.state.errorMessage}/>
                             ): null}
-                            <label className="boldP">Fornavn *</label>
+                            <label
+                                className="boldP"
+                                htmlFor="displayName"
+                            >Fornavn *</label>
                             <input
                                 className='input-box'
                                 type="text"
+                                id="displayName"
                                 placeholder="Fornavn"
-                                name="firstName"
-                                value={this.state.firstName}
+                                name="displayName"
+                                required
+                                value={this.state.displayName}
                                 onChange={this.handleChange}
                             />
                         </div>
 
                         <div className='inputSection'>
-                            <label className="boldP"> Etternavn *</label>
+                            <label className="boldP"
+                                   htmlFor="lastName"
+                            > Etternavn *</label>
                             <input
                                 className='input-box'
                                 type="text"
+                                id="lastName"
                                 placeholder="Etternavn"
                                 name="lastName"
+                                required
                                 value={this.state.lastName}
                                 onChange={this.handleChange}
                             />
                         </div>
 
                         <div className='inputSection'>
-                            <label className="boldP"> E-mail *</label>
+                            <label className="boldP"
+                                   htmlFor="email"
+                            > E-mail *</label>
                             <input
                                 className='input-box'
                                 type="text"
+                                id="email"
                                 placeholder="E-mail"
                                 name="email"
+                                required
                                 value={this.state.email}
                                 onChange={this.handleChange}
                             />
                         </div>
 
                         <div className='inputSection'>
-                            <label className="boldP"> Passord *</label>
+                            <label className="boldP"
+                                   htmlFor="passOne"
+                            > Passord *</label>
                             <input
                                 className='input-box'
                                 type="passOne"
+                                id="passOne"
                                 placeholder="Passord ..."
                                 name="passOne"
+                                required
                                 value={this.state.passOne}
                                 onChange={this.handleChange}
                             />
                         </div>
 
                         <div className='inputSection'>
-                            <label className="boldP">Gjenta passord *</label>
+                            <label className="boldP"
+                                   htmlFor="passTwo"
+                            >Gjenta passord *</label>
                             <input
                                 className='input-box'
                                 type="passTwo"
+                                id="passTwo"
                                 placeholder="Passord..."
                                 name="passTwo"
+                                required
                                 value={this.state.passTwo}
                                 onChange={this.handleChange}
                             />

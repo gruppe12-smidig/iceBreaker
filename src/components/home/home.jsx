@@ -1,7 +1,9 @@
 import React, {Component} from 'react';
+import {Link} from "react-router-dom";
 import './Home.css';
 import Footer from "../footer/Footer";
 import penguin from '../../images/penguin.png';
+
 
 class Home extends Component {
     render() {
@@ -22,9 +24,9 @@ class Home extends Component {
 
                     <div className='btnWrapper'>
                         
-                        <a href="/Events"><button className='btn'>Finn arrangementer</button></a> 
-                        <a href="/MyEvents"><button className='btn'>Mine arrangementer</button></a> 
-                        <a href="/RegisterEventPage"><button className='btn'>Opprett arrangement</button></a> 
+                        <Link to="/Events"><button className='btn'>Finn arrangementer</button></Link>
+                        <Link to="/MyEvents"><button className='btn'>Mine arrangementer</button></Link>
+                        <Link to="/RegisterEventPage"><button className='btn'>Opprett arrangement</button></Link>
                   
                         
                     </div>

@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
+import { BrowserRouter ,Route, Switch, Redirect} from "react-router-dom";
+import {navigate, Router} from '@reach/router';
 import firebase from './firebase/Firebase';
 
 import './App.css';
@@ -20,15 +21,23 @@ import StartPage from "./startpage/StartPage";
 import EventView from "./eventView/EventView";
 import Cookies from "./cookies/cookies";
 import Privacy from "./privacy/Privacy";
+import Welcome from "./welcome/Welcome";
+
+
+
 
 
 class App extends Component {
-  constructor() {
-      super();
+  constructor(props) {
+      super(props);
       this.state = {
           user: null,
+          displayName: null,
+          userID: null,
           sideDrawerOpen: false
       };
+      this.drawerToggleClickHandler = this.drawerToggleClickHandler.bind(this);
+      this.backDropClickHandler = this.backDropClickHandler.bind(this);
   }
 
 
@@ -42,24 +51,69 @@ class App extends Component {
 
     backDropClickHandler = () => {
         this.setState({sideDrawerOpen: false});
+
     };
 
-    componentDidMount() {
-        const ref = firebase.database().ref('user');
 
-        ref.on('value', snapshot => {
-            let FBUser = snapshot.val();
-            this.setState({user: FBUser});
-        })
+    componentDidMount() {
+        firebase.auth().onAuthStateChanged(FBUser =>{
+            if (FBUser){
+                this.setState({
+                    user: FBUser,
+                    displayName: FBUser.displayName,
+                    userID: FBUser.uid
+                    });
+            }
+        });
     }
 
+    registerUser = userName => {
+        firebase.auth().onAuthStateChanged(FBUser => {
+            FBUser.updateProfile({
+                displayName: userName
+            }).then(()=>{
+                this.setState({
+                    user: FBUser,
+                    displayName: FBUser.displayName,
+                    userID: FBUser.uid
+                });
+
+            })
+        })
+    };
+
+    logOutUser = e => {
+        e.preventDefault();
+        this.setState({
+            displayName: null,
+            userID: null,
+            user: null
+        });
+
+        firebase.auth().signOut().then(()=>{
+            console.log('you are logged out')
+        })
+    };
+
+    addEvent = eventName => {
+        const ref = firebase.database().ref(`events/${this.state.user.uid}`);
+        ref.push({eventName: eventName});
+
+
+    };
+
+
+
+
     render() {
+
+
         let sideDrawer;
         let backdrop;
-        let header = <Header drawerClickHandler={this.drawerToggleClickHandler}/>
+        let header = <Header userName={this.state.displayName} drawerClickHandler={this.drawerToggleClickHandler}/>;
 
         if (this.state.sideDrawerOpen) {
-            sideDrawer = <SideDrawer/>;
+            sideDrawer = <SideDrawer logOutUser={this.logOutUser}/>;
             backdrop = <Backdrop click={this.backDropClickHandler}/>;
         }
         if (window.location.pathname === '/LoginPage') {
@@ -69,32 +123,35 @@ class App extends Component {
             return <StartPage/>;
         }
 
+
+
         else return (
             <div style={{height: '100%'}}>
 
-                <Router>
-                    {header}
+
+
+                <BrowserRouter>
+
                     {sideDrawer}
                     {backdrop}
+                    {header}
 
-                    <Switch>
-                        <Route exact path="/" component={Home}/>
-                        <Route path="/ProfilePage" component={ProfilePage} />
-                        <Route path="/loginPage" component={LoginPage}/>
-                        <Route path="/SignupPage" component={SignupPage}/>
-                        <Route path="/RegisterEventPage" component={RegisterEventPage}/>
-                        <Route path="/events" component={Events}/>
-                        <Route path="/myEvents" component={MyEvents}/>
-                        <Route path="/findEvents" component={FindEvents}/>
-                        <Route path="/About" component={About}/>
-                        <Route path="/StartPage" component={StartPage}/>
-                        <Route path="/EventView" component={EventView}/>
-                        <Route path="/Cookies" component={Cookies}/>
-                        <Route path="/Privacy" component={Privacy}/>
-
-
-                    </Switch>
-                </Router>
+                        <Switch>
+                            <Route exact path="/"  render={(props) => <Home {...props} user={this.state.user}/>}/>
+                            <Route exact path="/ProfilePage" user={this.state.user} component={ProfilePage} />
+                            <Route exact path="/loginPage" render={(props)=><LoginPage {...props} logOut/>}    />
+                            <Route exact path="/SignupPage"  render={(props) => <SignupPage {...props} registerUser={this.registerUser}/>}/>
+                            <Route exact path="/RegisterEventPage" render={ (props) =><RegisterEventPage {...props} addEvent={this.addEvent}/>}/>
+                            <Route exact path="/events" user={this.state.user} component={Events}/>
+                            <Route exact path="/myEvents" user={this.state.user} component={MyEvents}/>
+                            <Route exact path="/findEvents" user={this.state.user} component={FindEvents}/>
+                            <Route exact path="/About" user={this.state.user} component={About}/>
+                            <Route exact path="/StartPage" user={this.state.user} component={StartPage}/>
+                            <Route exact path="/EventView" user={this.state.user} component={EventView}/>
+                            <Route exact path="/Cookies" user={this.state.user} component={Cookies}/>
+                            <Route exact path="/Privacy" user={this.state.user} component={Privacy}/>
+                        </Switch>
+                </BrowserRouter>
             </div>
         );
     }

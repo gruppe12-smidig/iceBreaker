@@ -1,35 +1,36 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 import './SideDrawer.css';
+import firebase from './firebase/Firebase'
 
 class SideDrawer extends Component {
 
     constructor(props){
         super(props);
         this.state = {
-            user: null,
-            sideDrawerOpen: false
+            sideDrawOpen: false
         };
 
 
     }
 
-
     render() {
+
+        const {user,logOutUser} = this.props;
+
+
         return (
-            <navlink className="side-drawer">
+            <div className="side-drawer">
                 <ul>
-                    <Link to="/" onClick={{sideDrawerOpen: false}}>Hjem</Link>
-                    <li><Link to="/LoginPage" onClick={{sideDrawerOpen: false}}>Påloggingsside</Link></li>
-                    <li><Link to="/SignupPage" onClick={{sideDrawerOpen: false}}>Registrer deg</Link></li>
-                    <li><Link to="/RegisterEventPage" onClick={{sideDrawerOpen: false}}>Nytt arrangement</Link></li>
-                    <li><Link to="/Events" onClick={{sideDrawerOpen: false}}>Arrangementer</Link></li>
-                    <li><Link to="/StartPage" onClick={{sideDrawerOpen: false}}>Startside TEMPORARY</Link></li>
-                    <li><Link to="/Privacy" onClick={{sideDrawerOpen: false}}>Personvern</Link></li>
-                    <li><Link to="/Cookies" onClick={{sideDrawerOpen: false}}>Informasjonskapsler</Link></li>
-                    <li><Link to="/StartPage" onClick={{sideDrawerOpen: false}}>Logg ut</Link></li>
+                    <li><Link to="/">Home</Link></li>
+                    <li><Link to="/LoginPage" >Login Page</Link></li>
+                    <li><Link to="/SignupPage">Sign up</Link></li>
+                    <li><Link to="/RegisterEventPage">New event</Link></li>
+                    <li><Link to="/Events">Events</Link></li>
+                    <li><Link to="/StartPage">Startpage TEMPORARY</Link></li>
+                    <li><Link to="/LoginPage" onClick={e => logOutUser(e)}>Sign out</Link></li>
                 </ul>
-            </navlink>
+            </div>
         );
     }
 }
