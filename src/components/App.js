@@ -35,9 +35,11 @@ class App extends Component {
           displayName: null,
           userID: null,
           sideDrawerOpen: false
+
       };
       this.drawerToggleClickHandler = this.drawerToggleClickHandler.bind(this);
       this.backDropClickHandler = this.backDropClickHandler.bind(this);
+
   }
 
 
@@ -77,9 +79,10 @@ class App extends Component {
                     displayName: FBUser.displayName,
                     userID: FBUser.uid
                 });
+                console.log(this.props.registerUser)
 
-            })
-        })
+            });
+        });
     };
 
     logOutUser = e => {
@@ -106,12 +109,11 @@ class App extends Component {
 
 
     render() {
-
+        console.log(this.props.registerUser)
 
         let sideDrawer;
         let backdrop;
         let header = <Header userName={this.state.displayName} drawerClickHandler={this.drawerToggleClickHandler}/>;
-
         if (this.state.sideDrawerOpen) {
             sideDrawer = <SideDrawer logOutUser={this.logOutUser}/>;
             backdrop = <Backdrop click={this.backDropClickHandler}/>;

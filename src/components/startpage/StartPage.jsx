@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {Link} from "react-router-dom";
 import './StartPage.css';
 import logo from '../../images/logo-1.png';
 
@@ -12,12 +13,12 @@ class StartPage extends Component {
 
               <h1 className='quote'>«A place to connect with other students»</h1>
               
-              <a href='/LoginPage'>
+              <Link to='/LoginPage'>
               <button className="btn-logIn">Logg inn</button>
-              </a>
+              </Link>
 
-            <a href='/SignupPage'>
-            <button className='btn-joinIceBreaker'>Opprett bruker</button></a>
+            <Link to='/SignupPage'>
+            <button className='btn-joinIceBreaker'>Opprett bruker</button></Link>
             </div>
           </div>
         );

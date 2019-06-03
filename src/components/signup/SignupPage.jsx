@@ -47,6 +47,7 @@ class SignupPage extends Component {
         firebase.auth().createUserWithEmailAndPassword(
             signupInfo.email,
             signupInfo.password
+
         ).then(()=> {
             this.props.registerUser(signupInfo.displayName);
         })
@@ -70,7 +71,6 @@ class SignupPage extends Component {
 
                 <h2 className='subHeader'> Opprett bruker </h2>
 
-                <div>{this.props.username}</div>
 
              
                     <form className='inputForm' onSubmit={this.handleSubmit}>
