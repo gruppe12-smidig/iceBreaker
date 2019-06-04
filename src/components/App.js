@@ -116,6 +116,7 @@ class App extends Component {
         let header = <Header userName={this.state.displayName} drawerClickHandler={this.drawerToggleClickHandler}/>;
         if (this.state.sideDrawerOpen) {
             sideDrawer = <SideDrawer logOutUser={this.logOutUser}/>;
+            sideDrawer = <SideDrawer drawerClickHandler={this.drawerToggleClickHandler}/>;
             backdrop = <Backdrop click={this.backDropClickHandler}/>;
         }
         if (window.location.pathname === '/LoginPage') {
