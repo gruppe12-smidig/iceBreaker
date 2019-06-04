@@ -37,14 +37,14 @@ class App extends Component {
           sideDrawerOpen: false
 
       };
-      this.drawerToggleClickHandler = this.drawerToggleClickHandler.bind(this);
+      this.drawerClickHandler = this.drawerClickHandler.bind(this);
       this.backDropClickHandler = this.backDropClickHandler.bind(this);
 
   }
 
 
 
-    drawerToggleClickHandler = () => {
+    drawerClickHandler = () => {
         this.setState((prevState) => {
             return {sideDrawerOpen: !prevState.sideDrawerOpen};
         });
@@ -113,10 +113,10 @@ class App extends Component {
 
         let sideDrawer;
         let backdrop;
-        let header = <Header userName={this.state.displayName} drawerClickHandler={this.drawerToggleClickHandler}/>;
+        let header = <Header userName={this.state.displayName} drawerClickHandler={this.drawerClickHandler}/>;
         if (this.state.sideDrawerOpen) {
             sideDrawer = <SideDrawer logOutUser={this.logOutUser}/>;
-            sideDrawer = <SideDrawer drawerClickHandler={this.drawerToggleClickHandler}/>;
+            sideDrawer = <SideDrawer drawerClickHandler={this.drawerClickHandler}/>;
             backdrop = <Backdrop click={this.backDropClickHandler}/>;
         }
         if (window.location.pathname === '/LoginPage') {
