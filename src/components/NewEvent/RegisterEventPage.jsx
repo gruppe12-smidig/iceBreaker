@@ -15,7 +15,7 @@ class RegisterEventPage extends Component {
           startDate: '',
           endDate: '',
           lastSignDate:'',
-          maxParticipants: null,
+          maxParticipants: '',
           description: ''
 
       };
@@ -72,7 +72,7 @@ class RegisterEventPage extends Component {
 
                         <div className='inputSection'>
                             <label className='boldP' htmlFor="eventType"> Type arrangement</label>
-                            <select  className='input-box'
+                            <select  className='input-box-a'
                                      placeholder="Arrangement-typ"
                                      name="eventType"
                                      value={this.state.eventType}
@@ -152,15 +152,15 @@ class RegisterEventPage extends Component {
                         </div>
 
                         <div>
-                            <button className='signBtn' type="submit">Opprett</button>
+                        <div className='wrapperButtons'>
+                            <button className='signBtn'>Tøm</button>
+                            <button type='submit'className='signBtn'>Opprett</button>
+                        </div>
                         </div>
 
               
                     </form>
-                    <div className='wrapperButtons'>
-                            <button className='signBtn'>Tøm</button>
-                            <button className='signBtn'>Opprett</button>
-                        </div>
+                 
 
                 </div>
             </div>

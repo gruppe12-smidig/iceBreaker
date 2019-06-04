@@ -1,17 +1,29 @@
 
 
 
-.containerLol {
-
+.mainContainer {
+    /* border: solid 3px rgb(81, 255, 0); */
 }
 
-content-container h2, p{
+h2{
+    font-size: 1.7rem;
+}
+
+.pengNotFound{
+    max-width: 90px;
+    max-height: 90%;
+}
+
+.notFoundContainer {
+   
+    padding-top:12rem ;
+    /* border: solid 3px red; */
+
     text-align: center;
-    display: inline;
-    float: none;
-    width: 100px;
-    height: 100px;
+  
+
     margin: 0 auto;
 
 }
+
 
