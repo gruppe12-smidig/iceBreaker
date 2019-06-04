@@ -24,11 +24,9 @@ class EventView extends Component {
 
         return (
 
-         <div>
-                    <div className="mainContainer">
-
-          
-
+         <div className="mainContainer">
+               {/* div wrapperContent adds a margin to the top giving space to hamburger-menu */}
+                    <div className="wrapperContent">
 
 
                         <div className='eventViewContainer'>

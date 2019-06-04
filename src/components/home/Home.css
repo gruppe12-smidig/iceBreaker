@@ -80,10 +80,7 @@ and (min-device-width: 1200px)
         height: 100%;
         }
 
-        .greetContainer{
-            margin:2rem ; 
-        
-        }
+    
 
         .btnWrapper {
             margin-top: -4rem;

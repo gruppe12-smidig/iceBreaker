@@ -8,7 +8,8 @@ class About extends Component {
 render() {
 return (
 <div className='mainContainer'>
-  <div className='formContainer'>
+  {/* div wrapperContent adds a margin to the top giving space to hamburger-menu */}
+  <div className='wrapperContent'>
     <h2 className='subHeader'> Om oss</h2>
 
       <div className='aboutUs'>

@@ -30,15 +30,7 @@ p {
 }
 
 
-/*Wrapper whole order input section  */
-.formContainer{
-     
-    margin: 0 auto;
-    margin-top: 7rem;
-    height: 500px;
-    width: 300px;
 
-}
 
 .inputContainerShorts {
     margin: 0.5rem auto 1rem auto;
@@ -117,9 +109,9 @@ and (min-device-width: 1200px)
       grid-template-columns: 1fr 1fr;
       grid-column-gap: 50px;
   }
-  .formContainer{
+  .wrapperContent{
 
-      float: left;
+      text-align: left;
   }
             
            

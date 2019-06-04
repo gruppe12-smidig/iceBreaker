@@ -1,18 +1,20 @@
 import React from 'react';
 import './notFound.css';
-import pengNotFound from '../../images/pengNotFound.png';
+import pengNotFound from '../../images/pengError.png';
 
 
 function notFound() {
 
         return (
-            <div className="mainContainer">
+            <div className='mainContainer'>
 
-                <div className="notFoundContainer">
-                    <h2>NOT FOUND: 404</h2>
+                <div className="wrapperContent">
+                  
                     <img className="pengNotFound" src={pengNotFound} alt="penguin not knowing"/>
+                    <h2>NOT FOUND: 404</h2>
+                    <p className='boldP'>  Feilmelding:</p>
                     <p>
-                        ERROR: the page you requested in not available.
+                       Siden du leter etter blir desverre ikke funnet.
                     </p>
                 </div>
             </div>

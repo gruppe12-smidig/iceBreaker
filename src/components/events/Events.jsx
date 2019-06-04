@@ -18,8 +18,8 @@ return(
 <div className='mainContainer'>
 
 
-
-<div className='eventsContainer'>
+{/* div wrapperContent adds a margin to the top giving space to hamburger-menu */}
+<div className='wrapperContent'> 
 
 <h2 className='subHeader'>Arrangementer</h2>
 

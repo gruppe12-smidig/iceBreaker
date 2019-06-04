@@ -5,8 +5,11 @@ import './ProfilePage.css'
 class ProfilePage extends Component {
     render() {
         return(
-            <div className="container">
-                <h2 className='subheader' >MIN PROFIL</h2>
+            <div className="mainContainer">
+                <div className='wrapperContent'>
+                    <h2 className='subheader' >MIN PROFIL</h2>
+                </div>
+             
 
             </div>
 

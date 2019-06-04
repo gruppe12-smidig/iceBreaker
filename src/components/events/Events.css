@@ -9,9 +9,6 @@ margin: 0 auto;
 outline: none !important;
 }
 
-.eventsContainer{
-    margin-top: 7rem;
-}
 
 .wrapperGenreButtons {
 display: grid;
@@ -147,16 +144,19 @@ background-color: #BB2D56;
 
 
 
-/* -----------  iPad  ----------- */
+/* ----------- < iPad  ----------- */
 
 /* Portrait and Landscape */
 @media only screen 
-  and (min-device-width: 568px) 
+
   and (max-device-width: 1112px)
   and (-webkit-min-device-pixel-ratio: 2)
 {
 
-   
+    .wrapperContent{
+    
+        margin-top: 4rem;
+      }
     
   }
 

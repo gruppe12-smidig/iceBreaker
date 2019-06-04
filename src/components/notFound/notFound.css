@@ -1,29 +1,21 @@
 
 
 
-.mainContainer {
-    /* border: solid 3px rgb(81, 255, 0); */
-}
+.wrapperContent{
+    margin:8rem 2rem; 
+    text-align: center;
+}    
 
 h2{
     font-size: 1.7rem;
 }
 
 .pengNotFound{
-    max-width: 90px;
-    max-height: 90%;
-}
-
-.notFoundContainer {
-   
-    padding-top:12rem ;
-    /* border: solid 3px red; */
-
-    text-align: center;
-  
-
-    margin: 0 auto;
+    margin: 2rem;
+    max-height: 200px;
 
 }
+
+
 
 

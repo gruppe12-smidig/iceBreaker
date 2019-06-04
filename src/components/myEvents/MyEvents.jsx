@@ -16,14 +16,13 @@ class MyEvents extends Component {
 
         return (
 
-         <div>
-                    <div className="mainContainer">
+         <div className='mainContainer'>
+               {/* div wrapperContent adds a margin to the top giving space to hamburger-menu */}
+                    <div className="wrapperContent">
 
-                    <div className='myEventContainer'>
 
                         <h2 className='subHeader' >Mine arrangementer</h2>
 
-                    
 
                             <div className='adminEventsContainer'>
                                 <h3 className='subHeaderMin'>Ansvarlig for</h3>
@@ -59,12 +58,6 @@ class MyEvents extends Component {
                                 </div>
                             </div>
 
-
-
-
-
-
-                        </div>
 
                 
                     </div>

@@ -67,7 +67,7 @@ class SignupPage extends Component {
         return(
             <div className="mainContainer">
 
-            <div className='formContainer'>
+            <div className='wrapperContent'>
 
                 <h2 className='subHeader'> Opprett bruker </h2>
 

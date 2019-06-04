@@ -6,8 +6,9 @@ class Cookies extends Component {
 
     render() {
         return(
-            <div className='mainContainer'>
-                <div className="wrapperCookies" >
+            <div className="mainContainer" >
+                {/* div wrapperContent adds a margin to the top giving space to hamburger-menu */}
+                <div className="wrapperContent" >
                     <h2 className='pageHeadline'>Informasjonskapsler</h2>
 
                     <div className='textWrapper'>

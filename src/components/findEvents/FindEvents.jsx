@@ -17,10 +17,11 @@ class FindEvents extends Component {
 
         return (
 
-         <div>
-                    <div className="mainContainer">
+         <div className="mainContainer">
+               {/* div wrapperContent adds a margin to the top giving space to hamburger-menu */}
+                    <div  className="wrapperContent">
 
-                        <div className='findEventsContainer'>
+                
                         <h2 className='subHeader' > Genre-navn</h2>
 
                    
@@ -52,7 +53,7 @@ class FindEvents extends Component {
                                  <p>Opprett ny</p> <img className="calender" src={calender} alt="boot"/></button></a> 
 
                         </div>
-                    </div>
+                
 
             <Footer/> 
 
