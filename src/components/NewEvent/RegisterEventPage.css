@@ -1,8 +1,4 @@
-body {
 
-    margin: 0rem;
-    background-color:#FAFAFA;
-}
 
 /* Deletes chrome blue focus-border */
 :focus {
@@ -31,6 +27,7 @@ p {
 .formContainerReg{
     margin: 0 auto;
     margin-top: 7rem;
+    max-width: 700px;
 
   
 
@@ -123,24 +120,29 @@ p {
 and (min-device-width: 1200px) 
 
  { 
+        .formContainer{
+         
+        }
+        .inputForm{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-column-gap: 50px;
+        }
+        .subHeader{
 
-  .inputForm{
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-column-gap: 50px;
-  }
-  .formContainerReg{
- float: left;
-  }
-  .wrapperButtons {
-      float: left;
+             padding:2rem;
 
-}    
+        }
+        .wrapperButtons {
+            
+            float: left;
 
-.input-box-short {
-   
-    margin-right: 2rem;
-  
-}
+        }    
+
+        .input-box-short {
+        
+            margin-right: 2rem;
+        
+        }
            
 }

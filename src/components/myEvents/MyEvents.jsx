@@ -36,7 +36,7 @@ class MyEvents extends Component {
                                 </ul>
 
                                 <div className='btnWrapper'>
-                                    <a href="/RegisterEventPage"><button className='btn'>Opprett ny</button></a> 
+                                    <a href="/RegisterEventPage"><button className='btnRounded'>Opprett ny</button></a> 
                                 </div>
 
                             </div>
@@ -54,7 +54,7 @@ class MyEvents extends Component {
 
                                 </ul>
                                 <div className='btnWrapper'>
-                                      <a href="/Events"><button className='btn'>Finn ny</button></a> 
+                                      <a href="/Events"><button className='btnRounded'>Finn ny</button></a> 
                                 </div>
                             </div>
 

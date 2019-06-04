@@ -1,7 +1,4 @@
-.homeContainer{
-    margin-top: 8rem;
-    text-align: center;  
-}
+
 .greeting {
     font-size: 2.2rem;
     font-family: 'Roboto', sans-serif;
@@ -35,7 +32,7 @@ height: 90%;
 
 .btnWrapper{
     margin-bottom: 20%;
-    padding: 10%;
+    padding: 5%;
     text-align: center;
 }
 /* ----------- < iPad  ----------- */
@@ -72,7 +69,7 @@ and (min-device-width: 1200px)
 
  { 
     .wrapperPenguin{
-        margin-top: 12rem;
+        margin: 12rem auto 3rem auto;
        
     }
 
@@ -83,7 +80,6 @@ and (min-device-width: 1200px)
     
 
         .btnWrapper {
-            margin-top: -4rem;
            display: flex;
            justify-content: space-evenly;
         }
