@@ -5,10 +5,6 @@ body {
 margin: 0 auto;
 }
 
-/* Deletes chrome blue focus-border */
-:focus {
-outline: none !important;
-}
 
 .header img{
     display:block;
@@ -54,3 +50,4 @@ outline: none !important;
     height: 50px;
     margin-top: 50px;
 }
+
