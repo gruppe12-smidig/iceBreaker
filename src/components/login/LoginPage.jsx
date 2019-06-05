@@ -58,7 +58,7 @@ class LoginPage extends Component {
 
                 <div className='mainLogIn'>
                     <form className='inputFormLogIn' onSubmit={this.handleSubmit}>
-                    <div className='logo'><img className="logo" src={logo} alt="logo"/></div>
+                    <div className='logoLogin'><img className="logo" src={logo} alt="logo"/></div>
 
             
                         <input
