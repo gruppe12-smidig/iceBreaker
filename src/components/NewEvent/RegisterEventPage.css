@@ -1,9 +1,6 @@
 
 
-/* Deletes chrome blue focus-border */
-:focus {
-    outline: none !important;
-}
+
 
 
 p {
