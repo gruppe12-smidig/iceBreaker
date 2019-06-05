@@ -3,6 +3,7 @@ import firebase from '../firebase/Firebase';
 import FormError from '../formError/FormError';
 import {navigate} from "@reach/router";
 import { Redirect} from "react-router-dom";
+import penguin from '../../images/penguin-cropped.png';
 
 
 import './loginPage.css';
@@ -53,11 +54,13 @@ class LoginPage extends Component {
     render() {
         return(
             <div className='mainContainerLogIn'>
-                <div className='formContainer'>
-                <div className='header'><img className="logo" src={logo} alt="logo"/></div>
+                <img className="penguin" src={penguin} alt="penguin"/>
+
+                <div className='mainLogIn'>
                     <form className='inputFormLogIn' onSubmit={this.handleSubmit}>
+                    <div className='logo'><img className="logo" src={logo} alt="logo"/></div>
 
-
+            
                         <input
                             className="username"
                             placeholder="Brukernavn"
@@ -89,8 +92,9 @@ class LoginPage extends Component {
                             ): null}
                         </div>
 
+                        <h4 className="h4-text">Ikke registrert?<a href="#"> Lag en bruker</a></h4>
+            
                     </form>
-
                 </div>
 
             </div>

@@ -49,8 +49,9 @@ color: white;
 }
 
 .btn-onTour {
-color: black;
-background-color: #678C97;
+color: white;
+background-color: #30873E;
+
 }
 
 .btn-onTour img{
@@ -62,8 +63,8 @@ background-color: #678C97;
 }
 
 .btn-physicalActivity {
-color: black;
-background-color: #7DFBBC;
+color:white;
+background-color: #982B74;
 }
 
 .btn-physicalActivity img{
@@ -75,8 +76,8 @@ background-color: #7DFBBC;
 }
 
 .btn-foodAndTalk {
-color: black;
-background-color: #EE8178;
+color: white;
+background-color: #007EB4;
 }
 
 .btn-foodAndTalk img{
