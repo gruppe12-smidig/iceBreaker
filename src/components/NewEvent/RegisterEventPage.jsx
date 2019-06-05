@@ -16,7 +16,7 @@ class RegisterEventPage extends Component {
           endDate: '',
           lastSignDate:'',
           maxParticipants: '',
-          description: ''
+          description:  ''
 
       };
 
