@@ -160,6 +160,7 @@ class App extends Component {
                     {header}
 
                         <Switch>
+
                             <Route exact path="/"  render={(props) => <Home {...props} user={this.state.user}/>}/>
                             <Route exact path="/ProfilePage" user={this.state.user} component={ProfilePage} />
                             <Route exact path="/loginPage" render={(props)=><LoginPage {...props}/>}/>
