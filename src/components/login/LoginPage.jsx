@@ -93,6 +93,7 @@ class LoginPage extends Component {
                         </div>
 
                         <h4 className="h4-text">Ikke registrert?<a href="#"> Lag en bruker</a></h4>
+            
                     </form>
                 </div>
 
