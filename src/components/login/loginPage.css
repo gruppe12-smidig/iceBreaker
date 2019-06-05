@@ -6,10 +6,6 @@ margin: 0 auto;
 min-height: 100%;
 }
 
-/* Deletes chrome blue focus-border */
-:focus {
-outline: none !important;
-}
 
 .penguin{
     width: 200px;

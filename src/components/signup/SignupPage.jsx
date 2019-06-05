@@ -20,6 +20,7 @@ class SignupPage extends Component {
 
       this.handleChange = this.handleChange.bind(this);
       this.handleSubmit = this.handleSubmit.bind(this);
+
   }
 
     handleChange(e) {
@@ -49,7 +50,9 @@ class SignupPage extends Component {
             signupInfo.password
 
         ).then(()=> {
-            this.props.registerUser(signupInfo.displayName);
+            console.log('før');
+            this.props.registerUser(signupInfo.displayName).bind(this);
+            console.log('etter');
         })
             .catch(error => {
             if (error.message !== null){
@@ -64,6 +67,8 @@ class SignupPage extends Component {
 
 
     render() {
+
+        const {registerUser}=this.props;
         return(
             <div className="mainContainer">
 

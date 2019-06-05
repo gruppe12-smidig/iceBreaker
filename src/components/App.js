@@ -22,6 +22,7 @@ import EventView from "./eventView/EventView";
 import Cookies from "./cookies/cookies";
 import Privacy from "./privacy/Privacy";
 import notFound from "./notFound/NotFound";
+import CookiesPopUp from "./cookies/CookiesPopUp";
 
 
 
@@ -34,11 +35,13 @@ class App extends Component {
           user: null,
           displayName: null,
           userID: null,
-          sideDrawerOpen: false
+          sideDrawerOpen: false,
+          conscent: true
 
       };
       this.drawerClickHandler = this.drawerClickHandler.bind(this);
       this.backDropClickHandler = this.backDropClickHandler.bind(this);
+
 
   }
 
@@ -68,6 +71,16 @@ class App extends Component {
             }
         });
     }
+
+    userConscent = conscent => {
+
+
+
+
+
+
+    };
+
 
     registerUser = userName => {
         firebase.auth().onAuthStateChanged(FBUser => {
@@ -109,7 +122,9 @@ class App extends Component {
 
 
     render() {
-        console.log(this.props.registerUser)
+        console.log(this.props.registerUser);
+
+        const {registerUser} = this.props;
 
         let sideDrawer;
         let backdrop;
@@ -131,6 +146,11 @@ class App extends Component {
 
 
 
+
+
+
+
+
         else return (
 
 
@@ -146,7 +166,7 @@ class App extends Component {
                             <Route exact path="/"  render={(props) => <Home {...props} user={this.state.user}/>}/>
                             <Route exact path="/ProfilePage" user={this.state.user} component={ProfilePage} />
                             <Route exact path="/loginPage" render={(props)=><LoginPage {...props}/>}/>
-                            <Route exact path="/SignupPage"  render={(props) => <SignupPage {...props} registerUser={this.registerUser}/>}/>
+                            <Route exact path="/SignupPage"  render={ (props) => <SignupPage {...props} registerUser={registerUser} />}/>
                             <Route exact path="/RegisterEventPage" render={ (props) =><RegisterEventPage {...props} addEvent={this.addEvent}/>}/>
                             <Route exact path="/events" user={this.state.user} component={Events}/>
                             <Route exact path="/myEvents" user={this.state.user} component={MyEvents}/>
@@ -156,7 +176,9 @@ class App extends Component {
                             <Route exact path="/EventView" user={this.state.user} component={EventView}/>
                             <Route exact path="/Cookies" user={this.state.user} component={Cookies}/>
                             <Route exact path="/Privacy" user={this.state.user} component={Privacy}/>
+                            <Route exact path="/CookiesPopUp" component={CookiesPopUp}/>
                             <Route component={notFound}/>
+
                         </Switch>
                 </BrowserRouter>
             </div>

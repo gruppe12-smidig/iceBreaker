@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 import './SideDrawer.css';
-import firebase from './firebase/Firebase'
+import firebase from './firebase/Firebase'  
 import DrawerToggleButton from './DrawerToggleButton';
 
 class SideDrawer extends Component {
