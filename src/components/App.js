@@ -82,7 +82,7 @@ class App extends Component {
     };
 
 
-    registerUser = userName => {
+    registerUser = (userName) => {
         firebase.auth().onAuthStateChanged(FBUser => {
             FBUser.updateProfile({
                 displayName: userName
@@ -92,10 +92,10 @@ class App extends Component {
                     displayName: FBUser.displayName,
                     userID: FBUser.uid
                 });
-                console.log(this.props.registerUser)
+                window.location.pathname = '/';
 
-            });
-        });
+            })
+        })
     };
 
     logOutUser = e => {
@@ -122,16 +122,13 @@ class App extends Component {
 
 
     render() {
-        console.log(this.props.registerUser);
 
-        const {registerUser} = this.props;
 
         let sideDrawer;
         let backdrop;
         let header = <Header userName={this.state.displayName} drawerClickHandler={this.drawerClickHandler}/>;
         if (this.state.sideDrawerOpen) {
-            sideDrawer = <SideDrawer logOutUser={this.logOutUser}/>;
-            sideDrawer = <SideDrawer drawerClickHandler={this.drawerClickHandler}/>;
+            sideDrawer = <SideDrawer drawerClickHandler={this.drawerClickHandler} logOutUser={this.logOutUser}/>;
             backdrop = <Backdrop click={this.backDropClickHandler}/>;
         }
         if (window.location.pathname === '/LoginPage') {
@@ -141,7 +138,7 @@ class App extends Component {
             return <StartPage/>;
         }
         if (window.location.pathname === '/SignupPage') {
-            return <SignupPage/>;
+            return <SignupPage registerUser={this.registerUser}/>;
         }
 
 
@@ -166,7 +163,7 @@ class App extends Component {
                             <Route exact path="/"  render={(props) => <Home {...props} user={this.state.user}/>}/>
                             <Route exact path="/ProfilePage" user={this.state.user} component={ProfilePage} />
                             <Route exact path="/loginPage" render={(props)=><LoginPage {...props}/>}/>
-                            <Route exact path="/SignupPage"  render={ (props) => <SignupPage {...props} registerUser={registerUser} />}/>
+                            <Route exact path="/SignupPage"  render={ (props) => <SignupPage {...props} registerUser={this.registerUser}  />}/>
                             <Route exact path="/RegisterEventPage" render={ (props) =><RegisterEventPage {...props} addEvent={this.addEvent}/>}/>
                             <Route exact path="/events" user={this.state.user} component={Events}/>
                             <Route exact path="/myEvents" user={this.state.user} component={MyEvents}/>

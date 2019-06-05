@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import firebase from '../firebase/Firebase';
 import FormError from '../formError/FormError';
-import {navigate} from "@reach/router";
-import { Redirect} from "react-router-dom";
+import { Redirect, Link} from "react-router-dom";
 import penguin from '../../images/penguin-cropped.png';
 
 
@@ -92,7 +91,7 @@ class LoginPage extends Component {
                             ): null}
                         </div>
 
-                        <h4 className="h4-text">Ikke registrert?<a href="#"> Lag en bruker</a></h4>
+                        <h4 className="h4-text">Ikke registrert?<a href="/signupPage"> Lag en bruker</a></h4>
             
                     </form>
                 </div>
