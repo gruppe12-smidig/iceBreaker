@@ -14,7 +14,7 @@ class RegisterEventPage extends Component {
           eventType: '',
           startDate: '',
           endDate: '',
-          lastSignDate:'',
+          lastSignDate: '',
           maxParticipants: '',
           description:  ''
 
