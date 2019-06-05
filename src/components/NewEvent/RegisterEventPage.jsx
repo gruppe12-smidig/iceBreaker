@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './RegisterEventPage.css';
 import DatePicker from 'react-datepicker';
-import Footer from "../footer/Footer";
+
 import 'react-datepicker/dist/react-datepicker.css';
 import firebase from "../firebase/Firebase";
 
@@ -22,7 +22,6 @@ class RegisterEventPage extends Component {
 
       this.handleChange = this.handleChange.bind(this);
       this.handleSubmit = this.handleSubmit.bind(this);
-      this.resetForms = this.resetForms.bind(this);
   }
 
     handleChange(e) {
@@ -30,19 +29,6 @@ class RegisterEventPage extends Component {
         const itemValue = e.target.value;
 
         this.setState({[itemName]: itemValue});
-    }
-
-    resetForms(){
-        this.setState({
-            eventName : '',
-            eventType: '',
-            startDate: '',
-            endDate: '',
-            lastSignDate:'',
-            maxParticipants: '',
-            description: ''
-  
-        }) ;
     }
 
     handleSubmit(e) {
@@ -86,7 +72,7 @@ class RegisterEventPage extends Component {
 
                         <div className='inputSection'>
                             <label className='boldP' htmlFor="eventType"> Type arrangement</label>
-                            <select  className='input-box-a'
+                            <select  className='input-box'
                                      placeholder="Arrangement-typ"
                                      name="eventType"
                                      value={this.state.eventType}
@@ -166,21 +152,18 @@ class RegisterEventPage extends Component {
                         </div>
 
                         <div>
-                        <div className='wrapperButtons'>
-                            <button className='signBtn' onClick={this.resetForms}>Tøm</button>
-                            <button type='submit'className='signBtn'>Opprett</button>
-                        </div>
+                            <button className='signBtn' type="submit">Opprett</button>
                         </div>
 
               
                     </form>
-                 
+                    <div className='wrapperButtons'>
+                            <button className='signBtn'>Tøm</button>
+                            <button className='signBtn'>Opprett</button>
+                        </div>
 
                 </div>
-                <Footer/>
             </div>
-
-       
         )
     }
 }
