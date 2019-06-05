@@ -1,8 +1,9 @@
 
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,700&display=swap');
-body {
+body, html{
 margin: 0 auto;
+min-height: 100%;
 }
 
 /* Deletes chrome blue focus-border */
@@ -10,34 +11,61 @@ margin: 0 auto;
 outline: none !important;
 }
 
-.header img{
-    display:block;
-	margin:0 auto;
-    width: 150px;
-    height: 70px;
+.penguin{
+    width: 200px;
+    display: block;
+    margin:0 auto;
 }
 
-.header{
-    margin-bottom: 100px;
+.logo img{
+    display:block;
+    margin:0 auto;
+    width: 150px;
+    height: 60px;
+}
+
+.logo{
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 .mainContainerLogIn{
-    background: blue;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    border: 0.1px solid transparent;
+    padding: 10px 10px 10px;
+    background: #4CB8C4;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #3CD3AD, #4CB8C4);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #3CD3AD, #4CB8C4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+}
+
+.inputFormLogIn{
+    width: 300px;
+	height: 450px;
+	background: #f9ffff;
+	margin: 100px auto;
+	text-align: center;
+	border-radius: 10px;
+	-webkit-box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    padding: 10px 10px;
+    margin-top: 0px;
 }
 
 .username, .password{
+	width: 70%;
+	outline: none;
+	border-top: 0;
+	border-left: 0;
+	border-right: 0;
+	font-size: 14px;
+	padding: 16px;
+    font-weight: 300;
+    background-color: #ebe5e567;
+    border-radius: 15px;
+    margin-top: 10px;
     font-family: 'Montserrat', sans-serif;
-    font-size: 15px;
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0px;
-    box-sizing: border-box;
-    border: 1px solid grey;
+
 }
+
 
 .btn-login{
     font-family: 'Montserrat', sans-serif;
@@ -45,12 +73,18 @@ outline: none !important;
     border-style: none;
     border-radius: 3px;
     font-size: 20px;
-    font-weight: 700;
+    font-weight: 300;
     display:block;
 	margin:0 auto;
-    background-color: #E2B14D;
+    background-color: #155767;
     color: white;
     width: 240px;
     height: 50px;
     margin-top: 50px;
 }
+
+.h4-text{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+}
+
