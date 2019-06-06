@@ -16,7 +16,8 @@ class RegisterEventPage extends Component {
           endDate: '',
           lastSignDate: '',
           maxParticipants: '',
-          description:  ''
+          description:  '',
+          errorMessage: ''
 
       };
 
@@ -38,11 +39,12 @@ class RegisterEventPage extends Component {
             maxParticipants: this.state.maxParticipants,
             description: this.state.description
         }
-        e.preventDefault();
-        this.props.addEvent(eventInfo);
-        this.setState({eventInfo: ' '});
 
+            e.preventDefault();
+            this.props.addEvent(eventInfo);
+            this.setState({eventInfo: ' '});
     }
+
 
 
 
