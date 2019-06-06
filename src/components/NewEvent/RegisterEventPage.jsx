@@ -40,7 +40,7 @@ class RegisterEventPage extends Component {
         }
         e.preventDefault();
         this.props.addEvent(eventInfo);
-        this.setState({eventInfo: ' '});
+        this.setState({eventName: ' ', eventType: '', description: '', maxParticipants: '' });
 
     }
 
