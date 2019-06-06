@@ -33,7 +33,7 @@ class MyEvents extends Component {
 
                                     <ul className='myEventsList'>
 
-                                        <EventsList events={this.props.events}/>
+                                        <EventsList events= {this.props.events}/>
 
                                     </ul>
 
