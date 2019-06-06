@@ -46,6 +46,9 @@ class RegisterEventPage extends Component {
 
 
 
+
+
+
     render() {
         return(
             <div className="mainContainer">
