@@ -143,6 +143,7 @@ class App extends Component {
     addEvent = eventInfo => {
         const ref = firebase.database().ref(`events/${this.state.user.uid}`);
         ref.push({eventName: eventInfo.eventName, eventType: eventInfo.eventType, maxParticipants: eventInfo.maxParticipants, description: eventInfo.description});
+        window.location = '/myEvents';
 
 
     };
@@ -195,7 +196,7 @@ class App extends Component {
                             <Route exact path="/SignupPage"  render={ (props) => <SignupPage {...props} registerUser={this.registerUser}  />}/>
                             <Route exact path="/RegisterEventPage" render={ (props) =><RegisterEventPage {...props} addEvent={this.addEvent}/>}/>
                             <Route exact path="/events" user={this.state.user} component={Events}/>
-                            <Route exact path="/myEvents" render={(props) => <MyEvents {...props} events={this.state.events}/>}/>
+                            <Route exact path="/myEvents" render={(props) => <MyEvents {...props} events={this.state.events} userID={this.state.userID}/>}/>
                             <Route exact path="/findEvents" user={this.state.user} component={FindEvents}/>
                             <Route exact path="/About" user={this.state.user} component={About}/>
                             <Route exact path="/StartPage" user={this.state.user} component={StartPage}/>
