@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Link} from 'react-router-dom';
 import './Events.css';
 import tea from '../../images/tea.png';
 import boot from '../../images/boot.png';
@@ -26,9 +27,9 @@ return(
 <div className="wrapperGenreButtons">
 
 <div className='wrapperBtn'>
-    <a href="/FindEvents">
+    <Link to="/FindEvents">
     <button className='btn-coffeMeeting'><p className='btnP'>Kaffetreff</p><img className="tea" src={tea} alt="tea"/>
-    </button> </a> 
+    </button> </Link>
 
     <p className='btnBigScreen'>Kaffetreff</p>
 
@@ -36,9 +37,9 @@ return(
 
 
 <div className='wrapperBtn'>
-    <a href="/FindEvents">
+    <Link to="/FindEvents">
     <button className='btn-onTour'><p className='btnP'>Ut på tur</p><img className="boot" src={boot} alt="boot"/>
-    </button> </a> 
+    </button> </Link>
 
 
 <p className='btnBigScreen'>Ut på tur</p>
@@ -47,9 +48,9 @@ return(
 
 
 <div className='wrapperBtn'>
-    <a href="/FindEvents">
+    <Link to="/FindEvents">
     <button className='btn-physicalActivity'><p className='btnP'>Fysisk aktivitet</p><img className="gym" src={gym} alt="gym"/>
-    </button> </a> 
+    </button> </Link>
 
     <p className='btnBigScreen'>Fysisk aktivitet</p>
 
@@ -57,18 +58,18 @@ return(
 
 <div className='wrapperBtn'>
 
-<a href="/FindEvents">
+<Link to="/FindEvents">
     <button className='btn-foodAndTalk'><p className='btnP'>Mat&Prat</p><img className="cutlery" src={cutlery} alt="cutlery"/>
-    </button> </a> 
+    </button> </Link>
 
     <p className='btnBigScreen'>Mat&Prat</p>
 
 </div>
 
 <div className='wrapperBtn'>
-    <a href="/FindEvents">
+    <Link to="/FindEvents">
     <button className='btn-studyGroup'><p className='btnP'>Studiegrupper</p><img className="studying" src={studying} alt="studying"/>
-    </button> </a> 
+    </button> </Link>
 
     <p className='btnBigScreen'>Studiegrupper</p>
 
@@ -79,9 +80,9 @@ return(
 
 
 </div>
-<a href="/RegisterEventPage">
+<Link to="/RegisterEventPage">
 <button className='btn-createEvent'>OPPRETT ARRANGEMENT<br></br><img className="calender" src={calender} alt="calender"/>
-</button></a>
+</button></Link>
 
 </div>
 </div>

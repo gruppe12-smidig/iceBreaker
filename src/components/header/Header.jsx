@@ -3,8 +3,6 @@ import DrawerToggleButton from '../DrawerToggleButton';
 import {Link} from "react-router-dom";
 import './Header.css';
 import logo from '../../images/logo.png';
-import firebase from '../firebase/Firebase'
-import Welcome from '../welcome/Welcome'
 
 
 class Header extends Component {

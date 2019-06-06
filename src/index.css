@@ -1,7 +1,14 @@
 html {
   height: 100%;
 }
+/* Under construction */
+button:focus{
+  border: solid 3px rgb(10, 180, 202);
+}
+:focus{
 
+  outline: 3px solid  rgb(14, 204, 204);
+}
 
 body {
   margin: 0;

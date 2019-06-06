@@ -51,7 +51,7 @@ class SignupPage extends Component {
 
         ).then(()=> {
             console.log('før');
-            this.props.registerUser(signupInfo.displayName).bind(this);
+            this.props.registerUser(signupInfo.displayName);
             console.log('etter');
         })
             .catch(error => {
@@ -68,7 +68,6 @@ class SignupPage extends Component {
 
     render() {
 
-        const {registerUser}=this.props;
         return(
             <div className="mainContainer">
 
