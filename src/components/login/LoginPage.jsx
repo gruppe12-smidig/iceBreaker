@@ -92,7 +92,8 @@ class LoginPage extends Component {
                         </div>
 
                         <h4 className="h4-text">Ikke registrert?<a href="/signupPage"> Lag en bruker</a></h4>
-            
+                        <h4 className="h4-forgotPassword">Glemt passord?</h4>
+
                     </form>
                 </div>
 

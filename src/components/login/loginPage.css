@@ -28,9 +28,7 @@ min-height: 100%;
 .mainContainerLogIn{
     padding: 10px 10px 10px;
     background: #4CB8C4;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #3CD3AD, #4CB8C4);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #3CD3AD, #4CB8C4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    
+
 }
 
 .inputFormLogIn{
@@ -82,5 +80,10 @@ min-height: 100%;
 .h4-text{
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
+}
+
+.h4-forgotPassword{
+    font-size: 10px;
+    font-weight: 100;
 }
 
