@@ -1,0 +1,28 @@
+.popUpContainer {
+    position: fixed;
+    bottom: 0;
+
+}
+
+.iUnderstandBtn {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+
+}
+
+.bannerText {
+    font-size: 16px;
+    
+
+}
+
+.nettvettLink {
+    font-size: 16px;
+
+}
+
+.cookiePolicyLink {
+    font-size: 16px;
+
+}
