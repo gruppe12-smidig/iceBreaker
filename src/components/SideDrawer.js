@@ -26,6 +26,7 @@ class SideDrawer extends Component {
                     <li><Link to="/RegisterEventPage" onClick={this.props.drawerClickHandler}>New event</Link></li>
                     <li><Link to="/Events" onClick={this.props.drawerClickHandler}>Events</Link></li>
                     <li><Link to="/StartPage" onClick={this.props.drawerClickHandler}>Startpage TEMPORARY</Link></li>
+                    <li><Link to="/Privacy" onClick={this.props.drawerClickHandler}>Personvern</Link></li>
                     <li><Link to="/LoginPage" onClick={this.props.logOutUser}>Sign out</Link></li>
                 </ul>
 

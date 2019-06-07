@@ -1,7 +1,14 @@
 .popUpContainer {
+    position: relative;
+    bottom: 0;
+    height: 5%;
+
+}
+
+.popUpContent {
     position: fixed;
     bottom: 0;
-
+    background-color: gray;
 }
 
 .iUnderstandBtn {
@@ -12,6 +19,7 @@
 }
 
 .bannerText {
+    float: left;
     font-size: 16px;
     
 
@@ -19,6 +27,7 @@
 
 .nettvettLink {
     font-size: 16px;
+    float: right;
 
 }
 

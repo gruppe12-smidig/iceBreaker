@@ -17,6 +17,10 @@ class Privacy extends Component {
                         samles inn opplysninger fra nettstedet vårt, og generell informasjon om hvordan vi behandler personopplysninger.
                         </p>
 
+                        <br />
+                        <br />
+                        <br />
+
                         <p className='mainArticle'>
                         Icebreaker er behandlingsansvarlig for nettstedets behandling av personopplysninger. 
                         Behandlingsgrunnlaget er samtykke fra den enkelte.
