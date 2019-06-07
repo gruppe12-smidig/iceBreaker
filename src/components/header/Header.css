@@ -57,3 +57,9 @@
 .toolbar_navigation_items a:active {
     color: orange;
 }
+
+.username-txt{
+   font-size: 1.1srem;
+   color: #727272;
+   padding: 0.5rem;
+}

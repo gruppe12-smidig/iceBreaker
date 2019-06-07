@@ -25,7 +25,7 @@ class Header extends Component {
 
                     <div className="username-tag">
                         <span className="username-txt">
-                          Hei {userName}
+                          Hei {userName}!
                         </span>
 
                     </div>
