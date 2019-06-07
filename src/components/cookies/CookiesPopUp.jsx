@@ -14,9 +14,9 @@ class CookiesPopUp extends Component{
                 <div className="popUpContent">
 
                     <div>
-                        <p>Denne nettsiden benytter informasjonskapsler for å forbedre din opplevelse </p>
-                        <a href="nettvett.no">Les mer </a>
-                        <Link to='/Cookies'> Vår policy på informasjonskapsler</Link>
+                        <p className="bannerText">Denne nettsiden benytter informasjonskapsler for å forbedre din opplevelse </p>
+                        <a className="nettvettLink" href="nettvett.no">Les mer </a>
+                        <Link className="cookiePolicyLink" to='/Cookies'> Vår policy på informasjonskapsler</Link>
                     </div>
 
                     <div className="iUnderStandBtnBox">
