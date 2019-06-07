@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { BrowserRouter ,Route, Switch, Redirect, withRouter} from "react-router-dom";
+import { BrowserRouter ,Route, Switch, Redirect, withRouter, Link} from "react-router-dom";
 import {navigate, Router} from '@reach/router';
 import firebase from './firebase/Firebase';
 
@@ -136,7 +136,7 @@ class App extends Component {
 
         firebase.auth().signOut().then(()=>{
             console.log('you are logged out')
-            window.location = '/loginPage';
+            window.location.pathname = '/LoginPage';
         })
     };
 
@@ -192,7 +192,7 @@ class App extends Component {
 
                             <Route exact path="/"  render={(props) => <Home {...props} user={this.state.user}/>}/>
                             <Route exact path="/ProfilePage" user={this.state.user} component={ProfilePage} />
-                            <Route exact path="/loginPage" render={(props)=><LoginPage {...props}/>}/>
+                            <Route exact path="/loginPage" render={(props)=><LoginPage {...props} logOutUser={this.logOutUser}/>}/>
                             <Route exact path="/SignupPage"  render={ (props) => <SignupPage {...props} registerUser={this.registerUser}  />}/>
                             <Route exact path="/RegisterEventPage" render={ (props) =><RegisterEventPage {...props} addEvent={this.addEvent}/>}/>
                             <Route exact path="/events" user={this.state.user} component={Events}/>

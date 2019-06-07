@@ -64,6 +64,7 @@ class RegisterEventPage extends Component {
                                 type="text"
                                 name="eventName"
                                 placeholder="Navn"
+                                required
                                 value={this.state.eventName}
                                 onChange={this.handleChange}
 
@@ -75,6 +76,7 @@ class RegisterEventPage extends Component {
                             <select  className='input-box'
                                      placeholder="Arrangement-typ"
                                      name="eventType"
+                                     required
                                      value={this.state.eventType}
                                      onChange={this.handleChange}>
 
@@ -115,6 +117,7 @@ class RegisterEventPage extends Component {
                                     <label className='boldP'> Siste påmelding</label>
                                     <DatePicker
                                         className='input-box-short'
+                                        type="datetime-local"
                                         name="lastSignDate"
                                         value={this.state.lastSignDate}
                                         selected={ this.state.lastSignDate}
@@ -131,6 +134,7 @@ class RegisterEventPage extends Component {
                                 type="number"
                                 placeholder="Maks"
                                 name="maxParticipants"
+                                required
                                 value={this.state.maxParticipants}
                                 onChange={this.handleChange}
                             />
@@ -145,6 +149,7 @@ class RegisterEventPage extends Component {
                                 type="text"
                                 placeholder="Beskrivelse"
                                 name="description"
+                                required
                                 value={this.state.description}
                                 onChange={this.handleChange}
                             />
