@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { BrowserRouter ,Route, Switch, Redirect, withRouter} from "react-router-dom";
+import { BrowserRouter ,Route, Switch, Redirect, withRouter, Link} from "react-router-dom";
 import {navigate, Router} from '@reach/router';
 import firebase from './firebase/Firebase';
 
@@ -23,6 +23,9 @@ import Cookies from "./cookies/cookies";
 import Privacy from "./privacy/Privacy";
 import notFound from "./notFound/NotFound";
 import CookiesPopUp from "./cookies/CookiesPopUp";
+import PrivateRoute from "./firebase/PrivateRoute";
+import {AuthProvider} from "./firebase/Auth";
+
 
 
 
@@ -68,6 +71,31 @@ class App extends Component {
                     displayName: FBUser.displayName,
                     userID: FBUser.uid
                     });
+                const eventsRef = firebase.database().ref('events/' + FBUser.uid);
+
+                eventsRef.on('value', snapshot =>  {
+
+                    let events = snapshot.val();
+                    let eventList = [];
+
+                    for(let item in events) {
+                        eventList.push({
+                            eventID: item,
+                            eventName: events[item].eventName,
+                            eventType: events[item].eventType,
+                            maxParticipants: events[item].maxParticipants,
+                            description: events[item].description
+                        });
+                    }
+
+                    this.setState({
+                        events: eventList,
+                        howManyEvents: eventList.length
+                    })
+                })
+
+            } else {
+                this.setState({user:null});
             }
         });
     }
@@ -112,9 +140,10 @@ class App extends Component {
         })
     };
 
-    addEvent = eventName => {
+    addEvent = eventInfo => {
         const ref = firebase.database().ref(`events/${this.state.user.uid}`);
-        ref.push({eventName: eventName});
+        ref.push({eventName: eventInfo.eventName, eventType: eventInfo.eventType, maxParticipants: eventInfo.maxParticipants, description: eventInfo.description});
+        window.location = '/myEvents';
 
 
     };
@@ -131,7 +160,7 @@ class App extends Component {
             sideDrawer = <SideDrawer drawerClickHandler={this.drawerClickHandler} logOutUser={this.logOutUser}/>;
             backdrop = <Backdrop click={this.backDropClickHandler}/>;
         }
-        if (window.location.pathname === '/LoginPage') {
+        if (window.location.pathname === '/loginPage') {
             return <LoginPage/>;
         }
         if (window.location.pathname === '/StartPage') {
@@ -163,11 +192,11 @@ class App extends Component {
 
                             <Route exact path="/"  render={(props) => <Home {...props} user={this.state.user}/>}/>
                             <Route exact path="/ProfilePage" user={this.state.user} component={ProfilePage} />
-                            <Route exact path="/loginPage" render={(props)=><LoginPage {...props}/>}/>
+                            <Route exact path="/loginPage" render={(props)=><LoginPage {...props} logOutUser={this.logOutUser}/>}/>
                             <Route exact path="/SignupPage"  render={ (props) => <SignupPage {...props} registerUser={this.registerUser}  />}/>
                             <Route exact path="/RegisterEventPage" render={ (props) =><RegisterEventPage {...props} addEvent={this.addEvent}/>}/>
                             <Route exact path="/events" user={this.state.user} component={Events}/>
-                            <Route exact path="/myEvents" user={this.state.user} component={MyEvents}/>
+                            <Route exact path="/myEvents" render={(props) => <MyEvents {...props} events={this.state.events} userID={this.state.userID}/>}/>
                             <Route exact path="/findEvents" user={this.state.user} component={FindEvents}/>
                             <Route exact path="/About" user={this.state.user} component={About}/>
                             <Route exact path="/StartPage" user={this.state.user} component={StartPage}/>
@@ -179,6 +208,7 @@ class App extends Component {
 
                         </Switch>
                 </BrowserRouter>
+
             </div>
         );
     }

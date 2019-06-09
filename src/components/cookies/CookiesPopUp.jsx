@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import {Link} from 'react-router-dom';
 
 import './CookiesPopUp.css';
 
@@ -13,12 +14,13 @@ class CookiesPopUp extends Component{
                 <div className="popUpContent">
 
                     <div>
-                        <h3>lalalalalal</h3>
-                        <p>jefewhfiewohfewiohfewoihqwfoqwhfoqwhoqwidoihwqdhwqdioqwdhiwqdwqihdwqihd</p>
+                        <p className="bannerText">Denne nettsiden benytter informasjonskapsler for å forbedre din opplevelse </p>
+                        <a className="nettvettLink" href="nettvett.no">Les mer </a>
+                        <Link className="cookiePolicyLink" to='/Cookies'> Vår policy på informasjonskapsler</Link>
                     </div>
 
                     <div className="iUnderStandBtnBox">
-                        <button className="iUnderstandBtn"> </button>
+                        <button className="iUnderstandBtn">Jeg forstår</button>
                     </div>
 
 

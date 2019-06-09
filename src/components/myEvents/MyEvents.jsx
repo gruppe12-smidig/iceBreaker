@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './MyEvents.css';
 import Footer from "../footer/Footer";
+import EventsList from '../events/EventsList';
 
 
 
@@ -27,16 +28,21 @@ class MyEvents extends Component {
                             <div className='adminEventsContainer'>
                                 <h3 className='subHeaderMin'>Ansvarlig for</h3>
                                 {/*Render of event components from DB  */}
-                                <ul className='myEventsList'>
+                                <div>
+                                {this.props.events && this.props.events.length ? (
 
-                                    <li className='eventBox'><div className="testEvent"></div></li>
-                                    <li className='eventBox'><div className="testEvent"></div></li>
-                                    <li className='eventBox'><div className="testEvent"></div></li>
+                                    <ul className='myEventsList'>
 
-                                </ul>
+                                        <li className="eventBox"> <EventsList userID={this.props.userID} events= {this.props.events}/> </li>
+
+                                    </ul>
+
+                                ): null }
+
+                                </div>
 
                                 <div className='btnWrapper'>
-                                    <a href="/RegisterEventPage"><button className='btnRounded'>Opprett ny</button></a> 
+                                    <a href="/RegisterEventPage"><button className='btnRounded'>Opprett ny</button></a>
                                 </div>
 
                             </div>

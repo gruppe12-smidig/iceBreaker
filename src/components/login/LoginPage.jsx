@@ -3,6 +3,8 @@ import firebase from '../firebase/Firebase';
 import FormError from '../formError/FormError';
 import { Redirect, Link} from "react-router-dom";
 import penguin from '../../images/penguin-cropped.png';
+import CookieConsent from 'react-cookie-consent';
+import SignupPage from '../signup/SignupPage';
 
 
 import './loginPage.css';
@@ -91,11 +93,29 @@ class LoginPage extends Component {
                             ): null}
                         </div>
 
-                        <h4 className="h4-text">Ikke registrert?<a href="/signupPage"> Lag en bruker</a></h4>
+                        <h4 className="h4-text">Ikke registrert?<a href="/SignupPage"> Lag en bruker</a></h4>
                         <h4 className="h4-forgotPassword">Glemt passord?</h4>
 
                     </form>
                 </div>
+                
+                {/* https://github.com/Mastermindzh/react-cookie-consent 
+                    DEBUG = TRUE FOR TESTING PURPOSES ONLY */}
+
+                <CookieConsent
+                    debug={true}
+                    location="bottom"
+                    buttonText="Jeg forstår!"
+                    expires={15}
+                                    
+                >
+                    Denne nettsiden benytter informasjonskapsler for å forbedre din opplevelse.{" "}
+                    <a href='nettvett.no'>Les mer </a>
+
+
+                </CookieConsent>
+
+                
 
             </div>
         )

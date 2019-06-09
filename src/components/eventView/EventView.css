@@ -1,5 +1,7 @@
 
-
+:disabled{
+    opacity: 0.2;
+}
 .descriptionWrapper, .infoWrapper{
    
     padding: 2rem;
@@ -89,5 +91,13 @@ background-color: rgb(236, 162, 0);
 color: black;
 text-transform: uppercase;
 border-radius: 50%;
+}
+
+.fullMessage{
+    margin: 1rem;
+    padding: 1rem 0.4rem;
+    border-radius: 5px;
+    background-color: rgb(0, 66, 92);
+    color: rgb(255, 255, 255);
 }
 
