@@ -35,7 +35,7 @@ h3{
 
 .deletePop{
     border: solid rgb(95, 95, 95) 4px;
-    /* display: none; */
+    display: none;
     padding: 1rem;
     padding-top: 100px;
     height: 200px;
@@ -57,3 +57,36 @@ h3{
     height: 40px;
     width: 70px;
 }
+
+/* .eventView{
+    z-index: 1000;
+    width: 100vh;
+    position: sticky;
+} */
+
+/* ----------- < iPad  ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+
+  and (max-device-width: 1112px)
+  and (-webkit-min-device-pixel-ratio: 2)
+{
+
+    .imgWrapper{
+    display: none;
+    }
+
+    .list-item {
+
+        padding: 1rem;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+    }
+
+    .deleteBtn{
+        margin: 6rem auto auto 5rem; 
+  
+   }
+    
+  }

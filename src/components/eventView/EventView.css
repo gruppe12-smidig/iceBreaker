@@ -1,7 +1,12 @@
 
+body{
+    margin: 0%;
+}
 :disabled{
     opacity: 0.2;
 }
+
+
 .descriptionWrapper, .infoWrapper{
    
     padding: 2rem;

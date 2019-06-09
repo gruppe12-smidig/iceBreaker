@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import firebase from '../firebase/Firebase';
 import {GoTrashcan} from "react-icons/go";
+import EventView from "../eventView/EventView";
 
 import '../myEvents/MyEvents.css';
 import './EventsList.css';
@@ -10,7 +11,6 @@ class EventsList extends Component {
     constructor(props){
         super(props);
         this.deleteEvent = this.deleteEvent.bind(this);
-
     }
 
     deleteEvent = (e, whichEvent) => {
@@ -20,7 +20,7 @@ class EventsList extends Component {
     };
 
 
-    toggleHidden() {
+ toggleHidden() {
         this.setState({
             isHidden: !this.state.isHidden
         })
@@ -32,6 +32,7 @@ class EventsList extends Component {
 
           return(
               <div className="list-item" key={item.eventID} >
+            
                   <div className='imgWrapper'>Img</div>
 
                     <section className="event-info" role="group">
@@ -64,6 +65,10 @@ class EventsList extends Component {
                           <GoTrashcan/>
                       </button>
                   </section>
+                  
+                  {/* <div className='eventView'>
+                        <EventView />
+                  </div> */}
               </div>
           );
         });
@@ -71,8 +76,6 @@ class EventsList extends Component {
         return <div>{userEvents}</div>
     }
 }
-
-
 
 var eventItemGrayed = {
     opacity:'0.4'

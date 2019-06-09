@@ -92,7 +92,7 @@ class EventView extends Component {
                   
                 </div>
 
-                <Footer />
+    
 
             </div>
         )
