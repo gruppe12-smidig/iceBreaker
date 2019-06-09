@@ -5,7 +5,7 @@ import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import firebase from "../firebase/Firebase";
 
-
+import moment from 'moment'
 class RegisterEventPage extends Component {
     constructor (props) {
       super(props)
@@ -14,7 +14,7 @@ class RegisterEventPage extends Component {
           eventType: '',
           startDate: new Date(),
           endDate: new Date(),
-          lastSignDate: new Date(),
+          lastDate: new Date(),
           maxParticipants: '',
           description:  ''
 
@@ -24,7 +24,7 @@ class RegisterEventPage extends Component {
       this.handleSubmit = this.handleSubmit.bind(this);
       this.handleStartDateChange = this.handleStartDateChange.bind(this);
       this.handleEndDateChange = this.handleEndDateChange.bind(this);
-      this.handleLAstDateChange = this.handleLastDateChange.bind(this);
+      this.handleLastDateChange = this.handleLastDateChange.bind(this);
   }
 handleStartDateChange(date){
     this.setState({
@@ -65,6 +65,7 @@ handleLastDateChange(date){
 
 
     render() {
+        
         return(
             <div className="mainContainer">
                           
@@ -113,21 +114,26 @@ handleLastDateChange(date){
 
                                 <div className='inputSection'>
                                     <label className='boldP'> Starter: *</label>
+                                    
                                     <DatePicker
                                         className='input-box-short'
                                         name="startDate"
                                         value={this.state.startDate}
-                                        value={this.state.startDate}
-                                         selected={ this.state.startDate}
+                                        selected={ this.state.startDate}
                                         selected={this.state.date}
                                         onSelect={this.handleStartDateSelect} //when day is clicked
                                         onChange={this.handleStartDateChange} //only when value has changed
+                                        minDate={new Date()}
+                                        placeholderText={this.state.startDate}
+                                     
+                          
 
                                     />
                                 </div>
 
                                 <div className='inputSection'>
                                     <label className='boldP'> Slutter *</label>
+                                    <div className='WrapperEndDate'>
                                     <DatePicker
                                         className='input-box-short'
                                         name="endDate"
@@ -135,22 +141,25 @@ handleLastDateChange(date){
                                         selected={this.state.date}
                                         onSelect={this.handleEndDateSelect} //when day is clicked
                                         onChange={this.handleEndDateChange} //only when value has changed
+                                        minDate={new Date()}
+                                        placeholderText={this.state.endDate}
                                       
 
                                     />
+                                    </div>
                                 </div>
 
                                 <div className='inputSection'>
                                     <label className='boldP'> Siste påmelding</label>
                                     <DatePicker
                                         className='input-box-short'
-                                        type="datetime-local"
-                                        name="lastSignDate"
-                                        dateFormat="MM/DD/YYYY"
+                                        name="lastDate"
                                         value={this.state.lastSignDate}
                                         selected={this.state.date}
-                                        onSelect={this.handleStartDateSelect} //when day is clicked
-                                        onChange={this.handleStartDateChange} //only when value has changed
+                                        onSelect={this.handleLastDateSelect} //when day is clicked
+                                        onChange={this.handleLastDateChange} //only when value has changed
+                                        minDate={new Date()}
+                                        placeholderText={this.state.lastDate}
                                         
 
                                     />

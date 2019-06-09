@@ -97,7 +97,11 @@ p {
     justify-content: flex-start;
 }
 
-
+.WrapperEndDate .react-datepicker {
+   
+    margin-left: -50px!important;
+   
+  }
 
 /* -----------  iPad  ----------- */
 

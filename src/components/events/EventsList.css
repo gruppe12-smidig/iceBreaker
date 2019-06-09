@@ -3,7 +3,7 @@
     margin: 0 auto;
     margin-bottom: 2rem;
     padding: 1rem;
-    height: 130px;
+    height: auto;
     box-shadow: 0px 3px 6px rgba(68, 113, 124, 0.452);
     display: grid;
     grid-template-columns: 4fr 4fr 1fr;
@@ -22,12 +22,12 @@
   
 }
 .deleteBtn{
-     margin: 6rem auto auto 10rem; 
+    margin: 98% auto auto 10rem; 
     height: 40px;
     width: 40px
 }
 
-h3{
+.event-info h3{
     text-transform: uppercase;
     font-size: 1.3rem;
     color: rgb(2, 84, 109);
