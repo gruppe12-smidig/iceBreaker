@@ -136,7 +136,7 @@ class App extends Component {
 
         firebase.auth().signOut().then(()=>{
             console.log('you are logged out')
-            window.location.pathname = '/LoginPage';
+            window.location = '/LoginPage';
         })
     };
 
