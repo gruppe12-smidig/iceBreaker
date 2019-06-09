@@ -12,9 +12,9 @@ class RegisterEventPage extends Component {
       this.state = {
           eventName: '',
           eventType: '',
-          startDate: '',
-          endDate: '',
-          lastSignDate: '',
+          startDate: new Date(),
+          endDate: new Date(),
+          lastSignDate: new Date(),
           maxParticipants: '',
           description:  ''
 
@@ -22,11 +22,29 @@ class RegisterEventPage extends Component {
 
       this.handleChange = this.handleChange.bind(this);
       this.handleSubmit = this.handleSubmit.bind(this);
+      this.handleStartDateChange = this.handleStartDateChange.bind(this);
+      this.handleEndDateChange = this.handleEndDateChange.bind(this);
+      this.handleLAstDateChange = this.handleLastDateChange.bind(this);
   }
-
+handleStartDateChange(date){
+    this.setState({
+        startDate: date,
+      });
+}
+handleEndDateChange(date){
+    this.setState({
+        endDate: date,
+      });
+}
+handleLastDateChange(date){
+    this.setState({
+        lastDate: date,
+      });
+}
     handleChange(e) {
         const itemName = e.target.name;
         const itemValue = e.target.value;
+      
 
         this.setState({[itemName]: itemValue});
     }
@@ -67,6 +85,7 @@ class RegisterEventPage extends Component {
                                 required
                                 value={this.state.eventName}
                                 onChange={this.handleChange}
+                             
 
                             />
                         </div>
@@ -98,7 +117,11 @@ class RegisterEventPage extends Component {
                                         className='input-box-short'
                                         name="startDate"
                                         value={this.state.startDate}
-                                        selected={ this.state.startDate}
+                                        value={this.state.startDate}
+                                         selected={ this.state.startDate}
+                                        selected={this.state.date}
+                                        onSelect={this.handleStartDateSelect} //when day is clicked
+                                        onChange={this.handleStartDateChange} //only when value has changed
 
                                     />
                                 </div>
@@ -109,6 +132,10 @@ class RegisterEventPage extends Component {
                                         className='input-box-short'
                                         name="endDate"
                                         value={this.state.endDate}
+                                        selected={this.state.date}
+                                        onSelect={this.handleEndDateSelect} //when day is clicked
+                                        onChange={this.handleEndDateChange} //only when value has changed
+                                      
 
                                     />
                                 </div>
@@ -119,8 +146,12 @@ class RegisterEventPage extends Component {
                                         className='input-box-short'
                                         type="datetime-local"
                                         name="lastSignDate"
+                                        dateFormat="MM/DD/YYYY"
                                         value={this.state.lastSignDate}
-                                        selected={ this.state.lastSignDate}
+                                        selected={this.state.date}
+                                        onSelect={this.handleStartDateSelect} //when day is clicked
+                                        onChange={this.handleStartDateChange} //only when value has changed
+                                        
 
                                     />
 
