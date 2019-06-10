@@ -10,7 +10,7 @@ import EventsList from '../events/EventsList';
 class MyEvents extends Component {
     state = {
 
-    }
+    };
 
 
     render() {

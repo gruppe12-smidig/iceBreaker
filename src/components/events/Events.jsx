@@ -10,10 +10,15 @@ import calender from '../../images/kalender-white.png';
 
 
 
-
 class Events extends Component {
-state = {
-}
+    constructor(props){
+        super(props);
+        this.state ={
+
+
+        }
+    }
+
 render() {
 return(
 <div className='mainContainer'>
@@ -68,7 +73,7 @@ return(
 
 <div className='wrapperBtn'>
     <Link to="/FindEvents">
-    <button className='btn-studyGroup'><p className='btnP'>Studiegrupper</p><img className="studying" src={studying} alt="studying"/>
+    <button className='btn-studyGroup' itemID="studyBtn"><p className='btnP'>Studiegrupper</p><img className="studying" src={studying} alt="studying"/>
     </button> </Link>
 
     <p className='btnBigScreen'>Studiegrupper</p>

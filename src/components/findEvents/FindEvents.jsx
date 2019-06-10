@@ -5,12 +5,14 @@ import maxParticipants from "../NewEvent/RegisterEventPage"
 
 
 import calender from '../../images/kalender-white.png';
+import EventsList from "../events/EventsList";
 
 
 
 class FindEvents extends Component {
     state = {
         errorMessage: null
+
     };
 
     maxParts = () => {
@@ -23,50 +25,61 @@ class FindEvents extends Component {
 
     render() {
 
+
+
             return (
 
                 <div className="mainContainer">
-                    {/* div wrapperContent adds a margin to the top giving space to hamburger-menu */}
-                    <div className="wrapperContent">
+            {/* div wrapperContent adds a margin to the top giving space to hamburger-menu */}
+        <div className="wrapperContent">
 
 
-                        <h2 className='subHeader'> Genre-navn</h2>
+            <h2 className='subHeader'> Genre-navn</h2>
 
 
-                        {/*Render of event components from DB  */}
-                        <ul className='eventContainer'>
+            {/*Render of event components from DB  */}
+            <ul className='eventContainer'>
 
-                            <li className='eventBox'>
-                                <div className="testEvent">
-                                    <h2 className='heading'>Event navn</h2>
-                                    <p className='arr-info'>Kontakt: Heidi Larsen<br/> Dato: 4/8-2019</p>
-                                    <a href="/">
-                                        <button className='btn-participate' onClick={this.maxParts}>>DELTA</button>
-                                    </a>
-                                </div>
-                            </li>
+                <li className='eventBox'>
+                    <div className="testEvent">
+                        {this.props.coffee && this.props.coffee.length ? (
+                            <div>
 
-                            <li className='eventBox'>
-                                <div className="testEvent"></div>
-                            </li>
-                            <li className='eventBox'>
-                                <div className="testEvent"></div>
-                            </li>
+                                <ul className='myEventsList'>
 
-                        </ul>
+                                    <li className="eventBox"> <EventsList coffeeEvents= {this.props.coffee}/> </li>
+
+                                </ul>
+
+                            </div>
 
 
-                        <a href="/RegisterEventPage">
-                            <button className='btn'>
-                                <p>Opprett ny</p> <img className="calender" src={calender} alt="boot"/></button>
-                        </a>
+                        ): null }
 
                     </div>
+                </li>
+
+                <li className='eventBox'>
+                    <div className="testEvent"></div>
+                </li>
+                <li className='eventBox'>
+                    <div className="testEvent"></div>
+                </li>
+
+            </ul>
 
 
-                    <Footer/>
+            <a href="/RegisterEventPage">
+                <button className='btn'>
+                    <p>Opprett ny</p> <img className="calender" src={calender} alt="boot"/></button>
+            </a>
 
-                </div>
+        </div>
+
+
+        <Footer/>
+
+        </div>
             )
         }
 }

@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import firebase from '../firebase/Firebase';
 import {GoTrashcan} from "react-icons/go";
-import EventView from "../eventView/EventView";
 
 import '../myEvents/MyEvents.css';
 import './EventsList.css';
@@ -20,7 +19,7 @@ class EventsList extends Component {
 
     deleteEvent = (e, whichEvent) => {
         e.preventDefault();
-        const ref = firebase.database().ref(`events/${this.props.userID}/${whichEvent}`);
+        const ref = firebase.database().ref(`userEvents/${this.props.userID}/${whichEvent}`);
         ref.remove();
     };
 
@@ -32,57 +31,85 @@ class EventsList extends Component {
     }
 
     render() {
-        const {events} = this.props;
-        const userEvents = events.map(item => {
 
-          return(
-              <div className="list-item" key={item.eventID} >
-            
-                  <div className='imgWrapper'><img className="eventIcon" src={item.eventType} alt={item.eventType}/></div>
+     if(window.location.pathname === '/MyEvents') {
+         const {events} = this.props;
+         const userEvents = events.map(item => {
 
-                    <section className="event-info" role="group">
-                        <ul>
-                            <li className='eventHeader' > <h3>{item.eventName}</h3> </li>
-                            <li> Type: {item.eventType}</li>
-                            <li> Maks deltagere: {item.maxParticipants}</li>
-                            <li> Beskrivelse: {item.description}</li>
-                        </ul>
-                    </section>
+             return (
+                 <div className="list-item" key={item.eventID}>
 
-                <div className='deletePop'>
+                     <div className='imgWrapper'><img className="eventIcon" src={item.eventType} alt={item.eventType}/>
+                     </div>
 
-                    <p className='boldP'> Are you sure you want to delete this event? </p>
+                     <section className="event-info" role="group">
+                         <ul>
+                             <li> Navn: {item.eventName}</li>
+                             <li> Type: {item.eventType}</li>
+                             <li> Maks deltagere: {item.maxParticipants}</li>
+                             <li> Beskrivelse: {item.description}</li>
+                         </ul>
+                     </section>
 
-                    <div className='wrapperBtns'>
-                        <button className="eventBtn" 
-                              title="Delete Event"
-                              onClick={e => this.deleteEvent(e, item.eventID)}> YES
-                         </button> 
-                         
-                         <button className="eventBtn"> No </button>
-                    </div>
-           
-            </div>
-                  <section className="btn-group" role="group">
-                      <button className="deleteBtn"
-                              title="Delete Event"
-                              onClick={e => this.deleteEvent(e, item.eventID)}>
-                          <GoTrashcan/>
-                      </button>
-                  </section>
-                  
-                  {/* <div className='eventView'>
+                     <div className='deletePop'>
+
+                         <p className='boldP'> Are you sure you want to delete this event? </p>
+
+                         <div className='wrapperBtns'>
+                             <button className="eventBtn"
+                                     title="Delete Event"
+                                     onClick={e => this.deleteEvent(e, item.eventID)}> YES
+                             </button>
+
+                             <button className="eventBtn"> No</button>
+                         </div>
+
+                     </div>
+                     <section className="btn-group" role="group">
+                         <button className="deleteBtn"
+                                 title="Delete Event"
+                                 onClick={e => this.deleteEvent(e, item.eventID)}>
+                             <GoTrashcan/>
+                         </button>
+                     </section>
+
+                     {/* <div className='eventView'>
                         <EventView />
                   </div> */}
-              </div>
-          );
-        });
+                 </div>
+             );
+         });
 
-        return <div>{userEvents}</div>
+         return <div>{userEvents}</div>
+
+     }
+
+     if(window.location.pathname === 'findEvents'){
+         const {coffee} = this.props;
+
+       const coffeeEvents = coffee.map(item => {
+            return (
+                 <div className="list-item" key={item.eventID}>
+
+
+                     <section className="event-info" role="group">
+                         <ul>
+                             <li> Navn: {item.eventName}</li>
+                             <li> Type: {item.eventType}</li>
+                             <li> Maks deltagere: {item.maxParticipants}</li>
+                             <li> Beskrivelse: {item.description}</li>
+                         </ul>
+                     </section>
+
+                 </div>
+             );
+         });
+         return <div>{coffeeEvents}</div>
+     }
     }
 }
 
-var eventItemGrayed = {
+let eventItemGrayed = {
     opacity:'0.4'
 
 }

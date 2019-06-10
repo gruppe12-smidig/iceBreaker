@@ -31,6 +31,7 @@ import {AuthProvider} from "./firebase/Auth";
 
 
 
+
 class App extends Component {
   constructor(props) {
       super(props);
@@ -71,9 +72,11 @@ class App extends Component {
                     displayName: FBUser.displayName,
                     userID: FBUser.uid
                     });
-                const eventsRef = firebase.database().ref('events/' + FBUser.uid);
 
-                eventsRef.on('value', snapshot =>  {
+
+                const myMeetingsRef = firebase.database().ref('userEvents/' + FBUser.uid);
+
+                myMeetingsRef.on('value', snapshot =>  {
 
                     let events = snapshot.val();
                     let eventList = [];
@@ -92,6 +95,112 @@ class App extends Component {
                         events: eventList,
                         howManyEvents: eventList.length
                     })
+                });
+
+                const eventsCoffeeRef   = firebase.database().ref('events').orderByChild('eventType').equalTo('kaffetreff');
+
+                eventsCoffeeRef.on('value', snapshot => {
+                    let coffee = snapshot.val();
+                    let coffeeList = [];
+
+                    for (let item in coffee) {
+                        coffeeList.push({
+                            eventID: item,
+                            eventName: coffee[item].eventName,
+                            eventType: coffee[item].eventType,
+                            maxParticipants: coffee[item].maxParticipants,
+                            description: coffee[item].description
+                        });
+
+                    }
+                        this.setState({
+                        coffee: coffeeList,
+                        howManyCoffee: coffeeList.length
+                    })
+                });
+
+                const eventsStudyRef = firebase.database().ref('events').orderByChild('eventType').equalTo('studiegrupper');
+
+                eventsStudyRef.on('value', snapshot => {
+                    let study = snapshot.val();
+                    let studyList = [];
+
+                    for (let item in study) {
+                        studyList.push({
+                            eventID: item,
+                            eventName: study[item].eventName,
+                            eventType: study[item].eventType,
+                            maxParticipants: study[item].maxParticipants,
+                            description: study[item].description
+                        })
+                    }
+                    this.setState({
+                        study: studyList,
+                        howManyStudy: studyList.length
+                    })
+                });
+
+                const eventsFoodRef = firebase.database().ref('events').orderByChild('eventType').equalTo('Mat&Prat');
+
+                eventsFoodRef.on('value', snapshot => {
+                    let food = snapshot.val();
+                    let foodList = [];
+
+                    for (let item in food) {
+                        foodList.push({
+                            eventID: item,
+                            eventName: food[item].eventName,
+                            eventType: food[item].eventType,
+                            maxParticipants: food[item].maxParticipants,
+                            description: food[item].description
+                        })
+                    }
+                    this.setState({
+                        food: foodList,
+                        howManyFood: foodList.length
+                    })
+                });
+
+                const eventsTurRef = firebase.database().ref('events').orderByChild('eventType').equalTo('ut på tur');
+
+                eventsTurRef.on('value', snapshot =>{
+                    let tur = snapshot.val();
+                    let turList = [];
+
+                    for (let item in tur) {
+                        turList.push({
+                            eventID: item,
+                            eventName: tur[item].eventName,
+                            eventType: tur[item].eventType,
+                            maxParticipants: tur[item].maxParticipants,
+                            description: tur[item].description
+                        })
+                    }
+                    this.setState({
+                        tur: turList,
+                        howManyTur: turList.length
+                    })
+                });
+
+                const eventsFysiskRef = firebase.database().ref('events').orderByChild('eventType').equalTo('fysisk aktivitet');
+
+                eventsFysiskRef.on('value', snapshot => {
+                    let fysisk = snapshot.val();
+                    let fysiskList = [];
+
+                    for (let item in fysisk) {
+                        fysiskList.push({
+                            eventID: item,
+                            eventName: fysisk[item].eventName,
+                            eventType: fysisk[item].eventType,
+                            maxParticipants: fysisk[item].maxParticipants,
+                            description: fysisk[item].description
+                        })
+                    }
+                    this.setState({
+                        fysisk: fysiskList,
+                        howManyFysisk: fysiskList.length
+                    })
                 })
 
             } else {
@@ -99,6 +208,7 @@ class App extends Component {
             }
         });
     }
+
 
     userConscent = conscent => {
 
@@ -141,12 +251,16 @@ class App extends Component {
     };
 
     addEvent = eventInfo => {
-        const ref = firebase.database().ref(`events/${this.state.user.uid}`);
+        const allEventsRef = firebase.database().ref(`events`);
+        const ref = firebase.database().ref(`userEvents/${this.state.user.uid}`);
         ref.push({eventName: eventInfo.eventName, eventType: eventInfo.eventType, maxParticipants: eventInfo.maxParticipants, description: eventInfo.description});
+        allEventsRef.push({userID: this.state.user.uid, eventName: eventInfo.eventName, eventType: eventInfo.eventType, maxParticipants: eventInfo.maxParticipants, description: eventInfo.description})
         window.location = '/myEvents';
 
 
     };
+
+
 
 
 
@@ -197,9 +311,9 @@ class App extends Component {
                             <Route exact path="/RegisterEventPage" render={ (props) =><RegisterEventPage {...props} addEvent={this.addEvent}/>}/>
                             <Route exact path="/events" user={this.state.user} component={Events}/>
                             <Route exact path="/myEvents" render={(props) => <MyEvents {...props} events={this.state.events} userID={this.state.userID}/>}/>
-                            <Route exact path="/findEvents" user={this.state.user} component={FindEvents}/>
-                            <Route exact path="/About" user={this.state.user} component={About}/>
+                            <Route exact path="/FindEvents" render={ (props) => <FindEvents {...props}  coffee={this.state.coffee} userID={this.state.userID}/>}/>
                             <Route exact path="/StartPage" user={this.state.user} component={StartPage}/>
+                            <Route exact path="/About" user={this.state.user} component={About}/>
                             <Route exact path="/EventView" user={this.state.user} component={EventView}/>
                             <Route exact path="/Cookies" user={this.state.user} component={Cookies}/>
                             <Route exact path="/Privacy" user={this.state.user} component={Privacy}/>
@@ -212,6 +326,7 @@ class App extends Component {
             </div>
         );
     }
+
 }
 
 export default App;
