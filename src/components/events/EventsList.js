@@ -12,6 +12,7 @@ import studying from '../../images/studying.png';
 
 class EventsList extends Component {
 
+
     constructor(props){
         super(props);
         this.deleteEvent = this.deleteEvent.bind(this);
