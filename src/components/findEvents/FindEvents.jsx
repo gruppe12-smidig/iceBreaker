@@ -47,7 +47,7 @@ class FindEvents extends Component {
 
                                 <ul className='myEventsList'>
 
-                                    <li className="eventBox"> <EventsList coffeeEvents= {this.props.coffee}/> </li>
+                                    <li className="eventBox"> <EventsList coffee = {this.props.coffee}/> </li>
 
                                 </ul>
 

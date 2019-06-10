@@ -54,11 +54,14 @@ handleLastDateChange(date){
             eventName: this.state.eventName,
             eventType: this.state.eventType,
             maxParticipants: this.state.maxParticipants,
-            description: this.state.description
+            description: this.state.description,
+            startDate: this.state.startDate,
+            endDate: this.state.endDate,
+            lastDate: this.state.lastDate
         }
         e.preventDefault();
         this.props.addEvent(eventInfo);
-        this.setState({eventName: ' ', eventType: '', description: '', maxParticipants: '' });
+        this.setState({eventName: ' ', eventType: '', description: '', maxParticipants: '', startDate: new Date(), endDate: new Date(), lastDate: new Date() });
 
     }
 

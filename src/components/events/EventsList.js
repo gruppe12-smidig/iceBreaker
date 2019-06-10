@@ -19,8 +19,10 @@ class EventsList extends Component {
 
     deleteEvent = (e, whichEvent) => {
         e.preventDefault();
-        const ref = firebase.database().ref(`userEvents/${this.props.userID}/${whichEvent}`);
-        ref.remove();
+        const userRef = firebase.database().ref(`userEvents/${this.props.userID}/${whichEvent}`);
+        const eventRef = firebase.database().ref(`events/${whichEvent}`);
+        userRef.remove();
+        eventRef.remove();
     };
 
 
@@ -84,7 +86,7 @@ class EventsList extends Component {
 
      }
 
-     if(window.location.pathname === 'findEvents'){
+    else  if(window.location.pathname === '/FindEvents'){
          const {coffee} = this.props;
 
        const coffeeEvents = coffee.map(item => {

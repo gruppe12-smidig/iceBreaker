@@ -28,6 +28,10 @@ import {AuthProvider} from "./firebase/Auth";
 
 
 
+const AuthenticatedRoute = ({authenticated, ...props}) =>
+        authenticated
+        ? <Route {...props}/>
+        : <Redirect to="/LoginPage"/>;
 
 
 
@@ -37,6 +41,7 @@ class App extends Component {
       super(props);
       this.state = {
           user: null,
+          authenticated: null,
           displayName: null,
           userID: null,
           sideDrawerOpen: false,
@@ -47,7 +52,9 @@ class App extends Component {
       this.backDropClickHandler = this.backDropClickHandler.bind(this);
 
 
+
   }
+
 
 
 
@@ -69,14 +76,15 @@ class App extends Component {
             if (FBUser){
                 this.setState({
                     user: FBUser,
+                    authenticated: true,
                     displayName: FBUser.displayName,
                     userID: FBUser.uid
                     });
 
 
-                const myMeetingsRef = firebase.database().ref('userEvents/' + FBUser.uid);
+                const myEventsRef = firebase.database().ref('userEvents/' + FBUser.uid);
 
-                myMeetingsRef.on('value', snapshot =>  {
+                myEventsRef.on('value', snapshot =>  {
 
                     let events = snapshot.val();
                     let eventList = [];
@@ -204,7 +212,7 @@ class App extends Component {
                 })
 
             } else {
-                this.setState({user:null});
+                this.setState({user:null, authentication: false});
             }
         });
     }
@@ -251,12 +259,12 @@ class App extends Component {
     };
 
     addEvent = eventInfo => {
-        const allEventsRef = firebase.database().ref(`events`);
-        const ref = firebase.database().ref(`userEvents/${this.state.user.uid}`);
-        ref.push({eventName: eventInfo.eventName, eventType: eventInfo.eventType, maxParticipants: eventInfo.maxParticipants, description: eventInfo.description});
-        allEventsRef.push({userID: this.state.user.uid, eventName: eventInfo.eventName, eventType: eventInfo.eventType, maxParticipants: eventInfo.maxParticipants, description: eventInfo.description})
-        window.location = '/myEvents';
-
+        const allEventsRef = firebase.database().ref(`events/`);
+        const ref = firebase.database().ref(`userEvents/${this.state.user.uid}/`);
+        ref.push({eventName: eventInfo.eventName, eventType: eventInfo.eventType, startDate: eventInfo.startDate, endDate: eventInfo.endDate, lastDate: eventInfo.lastDate, maxParticipants: eventInfo.maxParticipants, description: eventInfo.description});
+        console.log('opprettet MYID bruker events');
+        allEventsRef.push({userID: this.state.user.uid, eventName: eventInfo.eventName, eventType: eventInfo.eventType, startDate: eventInfo.startDate, endDate: eventInfo.endDate, lastDate: eventInfo.lastDate, maxParticipants: eventInfo.maxParticipants, description: eventInfo.description});
+        console.log('oprettet felles events ');
 
     };
 
@@ -265,7 +273,6 @@ class App extends Component {
 
 
     render() {
-
 
         let sideDrawer;
         let backdrop;
@@ -287,10 +294,6 @@ class App extends Component {
 
 
 
-
-
-
-
         else return (
 
 
@@ -302,16 +305,20 @@ class App extends Component {
                     {backdrop}
                     {header}
 
+
+
+
                         <Switch>
 
-                            <Route exact path="/"  render={(props) => <Home {...props} user={this.state.user}/>}/>
+                            <Route exact path="/" authenticated={this.state.authenticated} component={Home}/>
                             <Route exact path="/ProfilePage" user={this.state.user} component={ProfilePage} />
                             <Route exact path="/loginPage" render={(props)=><LoginPage {...props} logOutUser={this.logOutUser}/>}/>
                             <Route exact path="/SignupPage"  render={ (props) => <SignupPage {...props} registerUser={this.registerUser}  />}/>
                             <Route exact path="/RegisterEventPage" render={ (props) =><RegisterEventPage {...props} addEvent={this.addEvent}/>}/>
                             <Route exact path="/events" user={this.state.user} component={Events}/>
                             <Route exact path="/myEvents" render={(props) => <MyEvents {...props} events={this.state.events} userID={this.state.userID}/>}/>
-                            <Route exact path="/FindEvents" render={ (props) => <FindEvents {...props}  coffee={this.state.coffee} userID={this.state.userID}/>}/>
+                            <Route exact path="/FindEvents" render={ (props) => <FindEvents {...props}  events={this.state.events} coffee={this.state.coffee}
+                                                                                            food={this.state.food} tur={this.state.tur} fysisk={this.state.fysisk} userID={this.state.userID}/>}/>
                             <Route exact path="/StartPage" user={this.state.user} component={StartPage}/>
                             <Route exact path="/About" user={this.state.user} component={About}/>
                             <Route exact path="/EventView" user={this.state.user} component={EventView}/>
