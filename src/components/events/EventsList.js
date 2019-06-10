@@ -15,6 +15,7 @@ class EventsList extends Component {
     constructor(props){
         super(props);
         this.deleteEvent = this.deleteEvent.bind(this);
+     
     }
 
     deleteEvent = (e, whichEvent) => {
@@ -24,11 +25,6 @@ class EventsList extends Component {
     };
 
 
- toggleHidden() {
-        this.setState({
-            isHidden: !this.state.isHidden
-        })
-    }
 
     render() {
 
@@ -51,26 +47,15 @@ class EventsList extends Component {
                          </ul>
                      </section>
 
-                     <div className='deletePop'>
+        
 
-                         <p className='boldP'> Are you sure you want to delete this event? </p>
-
-                         <div className='wrapperBtns'>
-                             <button className="eventBtn"
-                                     title="Delete Event"
-                                     onClick={e => this.deleteEvent(e, item.eventID)}> YES
-                             </button>
-
-                             <button className="eventBtn"> No</button>
-                         </div>
-
-                     </div>
                      <section className="btn-group" role="group">
                          <button className="deleteBtn"
                                  title="Delete Event"
                                  onClick={e => this.deleteEvent(e, item.eventID)}>
                              <GoTrashcan/>
                          </button>
+         
                      </section>
 
                      {/* <div className='eventView'>
@@ -113,5 +98,6 @@ let eventItemGrayed = {
     opacity:'0.4'
 
 }
+
 
 export default EventsList

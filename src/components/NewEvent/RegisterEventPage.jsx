@@ -93,7 +93,7 @@ handleLastDateChange(date){
 
                         <div className='inputSection'>
                             <label className='boldP' htmlFor="eventType"> Type arrangement</label>
-                            <select  className='input-box'
+                            <select  style={heightFix}
                                      placeholder="Arrangement-typ"
                                      name="eventType"
                                      required
@@ -202,15 +202,20 @@ handleLastDateChange(date){
 
               
                     </form>
-                    <div className='wrapperButtons'>
-                            <button className='signBtn'>Tøm</button>
-                            <button className='signBtn'>Opprett</button>
-                        </div>
+               
 
                 </div>
             </div>
         )
     }
 }
+const heightFix = {
+    border:'solid 2px rgb(226, 226, 226)' ,
+    padding:' 0.5rem',
+    fontSize:'1rem',
+    height: '40px',
+
+};
+
 
 export default RegisterEventPage;
