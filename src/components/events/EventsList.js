@@ -6,6 +6,11 @@ import EventView from "../eventView/EventView";
 import '../myEvents/MyEvents.css';
 import './EventsList.css';
 
+import gym from '../../images/gym.png';
+import matprat from '../../images/cutlery.png';
+import kaffetreff from '../../images/tea.png';
+import studying from '../../images/studying.png';
+
 class EventsList extends Component {
 
     constructor(props){
@@ -33,7 +38,7 @@ class EventsList extends Component {
           return(
               <div className="list-item" key={item.eventID} >
             
-                  <div className='imgWrapper'>Img</div>
+                  <div className='imgWrapper'><img className="eventIcon" src={item.eventType} alt={item.eventType}/></div>
 
                     <section className="event-info" role="group">
                         <ul>

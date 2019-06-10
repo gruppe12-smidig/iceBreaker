@@ -99,7 +99,7 @@ handleLastDateChange(date){
                                      required
                                      value={this.state.eventType}
                                      onChange={this.handleChange}>
-
+                                 <option value="kaffetreff"> Velg typ </option>
                                 <option value="kaffetreff">Kaffetreff</option>
                                 <option value="ut på tur">Ut på tur</option>
                                 <option value="Fysisk aktivitet">Fysisk aktivitet</option>
