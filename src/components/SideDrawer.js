@@ -21,15 +21,16 @@ class SideDrawer extends Component {
 
                 <ul>
 
-                    <li><Link to="/" onClick={this.props.drawerClickHandler}>Home</Link></li>
-                    <li><Link to="/LoginPage" onClick={this.props.drawerClickHandler} >Login Page</Link></li>
-                    <li><Link to="/SignupPage" onClick={this.props.drawerClickHandler}>Sign up</Link></li>
-                    <li><Link to="/RegisterEventPage" onClick={this.props.drawerClickHandler}>New event</Link></li>
-                    <li><Link to="/Events" onClick={this.props.drawerClickHandler}>Events</Link></li>
+                    <li><Link to="/" onClick={this.props.drawerClickHandler}>Hjem</Link></li>
+                    {/* <li><Link to="/LoginPage" onClick={this.props.drawerClickHandler} >Login Page</Link></li>
+                    <li><Link to="/SignupPage" onClick={this.props.drawerClickHandler}>Sign up</Link></li> */}
+                    <li><Link to="/RegisterEventPage" onClick={this.props.drawerClickHandler}>Nytt arrangement</Link></li>
+                    <li><Link to="/Events" onClick={this.props.drawerClickHandler}>Finn arrangmenter</Link></li>
                     <li><Link to="/myEvents" onClick={this.props.drawerClickHandler}>Mine arrangmenter</Link></li>
-                    <li><Link to="/StartPage" onClick={this.props.drawerClickHandler}>Startpage TEMPORARY</Link></li>
-                    <li><Link to="/Privacy" onClick={this.props.drawerClickHandler}>Personvern</Link></li>
-                    <li><Link to="/LoginPage" onclick={this.props.drawerClickHandler} onClick={this.props.logOutUser}>Sign out</Link></li>
+                    {/* <li><Link to="/StartPage" onClick={this.props.drawerClickHandler}>Startpage TEMPORARY</Link></li> */}
+                    <li><Link to="/About" onClick={this.props.drawerClickHandler}>Om Icebreaker</Link></li>
+                    <li><Link to="/Privacy" onClick={this.props.drawerClickHandler}>Mer om personvern</Link></li>
+                    <li><Link to="/LoginPage" onclick={this.props.drawerClickHandler} onClick={this.props.logOutUser}>Logg ut</Link></li>
 
 
                 </ul>

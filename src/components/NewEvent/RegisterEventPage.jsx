@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 import './RegisterEventPage.css';
 import DatePicker from 'react-datepicker';
-
+import Footer from "../footer/Footer";
 import 'react-datepicker/dist/react-datepicker.css';
 import firebase from "../firebase/Firebase";
 
-import moment from 'moment'
 class RegisterEventPage extends Component {
     constructor (props) {
       super(props)
@@ -96,7 +95,7 @@ handleLastDateChange(date){
 
                         <div className='inputSection'>
                             <label className='boldP' htmlFor="eventType"> Type arrangement</label>
-                            <select  className='input-box'
+                            <select  style={heightFix}
                                      placeholder="Arrangement-typ"
                                      name="eventType"
                                      required
@@ -205,15 +204,23 @@ handleLastDateChange(date){
 
               
                     </form>
-                    <div className='wrapperButtons'>
-                            <button className='signBtn'>Tøm</button>
-                            <button className='signBtn'>Opprett</button>
-                        </div>
+               
 
                 </div>
+                <Footer/>
             </div>
         )
     }
 }
+const heightFix = {
+    border:'solid 2px rgb(226, 226, 226)' ,
+    padding:' 0.5rem',
+    fontSize:'1rem',
+    height: '40px',
+    color:'gray',
+    maxWidth:'290px'
+
+};
+
 
 export default RegisterEventPage;
