@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 import './RegisterEventPage.css';
 import DatePicker from 'react-datepicker';
-
+import Footer from "../footer/Footer";
 import 'react-datepicker/dist/react-datepicker.css';
 import firebase from "../firebase/Firebase";
 
-import moment from 'moment'
 class RegisterEventPage extends Component {
     constructor (props) {
       super(props)
@@ -205,6 +204,7 @@ handleLastDateChange(date){
                
 
                 </div>
+                <Footer/>
             </div>
         )
     }
@@ -214,6 +214,8 @@ const heightFix = {
     padding:' 0.5rem',
     fontSize:'1rem',
     height: '40px',
+    color:'gray',
+    maxWidth:'290px'
 
 };
 
