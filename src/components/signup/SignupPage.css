@@ -1,7 +1,7 @@
 body {
 
-    margin: 0rem;
-    background-color:#FAFAFA;
+
+
 }
 
 
@@ -16,7 +16,7 @@ p {
 
 .signBtn {
 
-    margin: 1.5rem;
+    margin-top: 1.5rem;
     height: 45px;
     width: 150px;
     border-radius: 3px;
@@ -29,25 +29,22 @@ p {
 
 /*Wrapper whole order input section  */
 .formContainer{
-     
-    margin: 0 auto;
-    margin-top: 7rem;
-    height: 500px;
-    width: 300px;
-
-}
-
-.inputContainerShorts {
-    margin: 0.5rem auto 1rem auto;
+    display: block;
+    margin-top: -10px !important ;
     display: grid;
-    grid-template-columns: 30% 30%;
-}
+    justify-content: center;
+    background-color:rgb(247, 247, 247);
 
+}
 .inputForm{
-    /* border: solid 3px rgb(23, 71, 175); */
+
     padding: 2rem; 
+  
    
 }
+
+
+
 
 /* Class for all sections containing input-fields */
 .inputSection {
@@ -65,6 +62,7 @@ p {
     padding: 0.5rem;
     font-size: 1rem;
     height: 17px;
+    width: 270px;
 
 }
 
@@ -82,12 +80,6 @@ p {
     width: 100%;
 }
 
-.wrapperButtons {
-    width : 300px;
-    display: flex;
-    justify-content: space-between;
-}
-
 
 
 /* -----------  iPad  ----------- */
@@ -98,7 +90,13 @@ p {
   and (max-device-width: 1112px)
   and (-webkit-min-device-pixel-ratio: 2)
 {
-
+    .formContainer{
+        margin: 5% 10% auto 10% !important;
+         border: solid 1px rgb(219, 219, 219); 
+         height: 100%;
+         width: 80%;
+       
+       }
 
     
   }
@@ -106,18 +104,28 @@ p {
   /* ----------- Desktop ----------- */
 @media screen 
 and (min-device-width: 1200px) 
-
  { 
-
   .inputForm{
+     
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-column-gap: 50px;
+   
   }
   .formContainer{
-
-      float: left;
+   margin: 5% 10% auto 10% !important;
+    border: solid 1px rgb(219, 219, 219); 
+    height: 600px;
+    width: 80%;
+  
   }
-            
+  .signBtn {
+    margin: 0rem;
+    margin-top: 2rem;
+    float: left;
+ 
+   
+
+}        
            
 }

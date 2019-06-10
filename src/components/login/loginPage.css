@@ -4,6 +4,7 @@
 body, html{
 margin: 0 auto;
 min-height: 100%;
+
 }
 
 
@@ -26,7 +27,8 @@ min-height: 100%;
 }
 
 .mainContainerLogIn{
-    padding: 10px 10px 10px;
+
+    padding: 100px 10px 10px;
     background: #4CB8C4;  /* fallback for old browsers */
 
 }

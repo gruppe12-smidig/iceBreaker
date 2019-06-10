@@ -54,7 +54,9 @@ class LoginPage extends Component {
 
     render() {
         return(
-            <div className='mainContainerLogIn'>
+            <div className='mainContainer'>
+               
+                    <div className='mainContainerLogIn'>
                 <img className="penguin" src={penguin} alt="penguin"/>
 
                 <div className='mainLogIn'>
@@ -97,6 +99,8 @@ class LoginPage extends Component {
                         <h4 className="h4-forgotPassword">Glemt passord?</h4>
 
                     </form>
+                
+                    </div>
                 </div>
                 
                 {/* https://github.com/Mastermindzh/react-cookie-consent 

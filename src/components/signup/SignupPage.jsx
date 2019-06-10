@@ -69,7 +69,7 @@ class SignupPage extends Component {
     render() {
 
         return(
-            <div className="mainContainer">
+    
 
             <div className='formContainer'>
 
@@ -78,6 +78,7 @@ class SignupPage extends Component {
 
              
                     <form className='inputForm' onSubmit={this.handleSubmit}>
+
                         <div className='inputSection'>
                             { this.state.errorMessage !== null ? (
                                <FormError theMessage={this.state.errorMessage}/>
@@ -167,10 +168,12 @@ class SignupPage extends Component {
                             <input className='input-box' type="school" placeholder="Skole ..." />
                         </div>
 
-                        <div className='inputSection'>
+
+                        {/* // Add this function later on              */}
+                        {/* <div className='inputSection'>
                             <label className="boldP"> Interesser</label>
                             <input className='input-box' type="school" placeholder="Interesser ... " />
-                        </div>
+                        </div> */}
 
 
                         <div className='wrapperButtons'>
@@ -180,7 +183,7 @@ class SignupPage extends Component {
                     </form>
 
                 </div>
-            </div>
+      
         )
     }
 }

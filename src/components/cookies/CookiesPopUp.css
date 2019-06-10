@@ -4,7 +4,7 @@
     height: 5%;
 
 }
-
+ 
 .popUpContent {
     position: fixed;
     bottom: 0;
@@ -12,9 +12,12 @@
 }
 
 .iUnderstandBtn {
+    margin: 1rem;
     position: fixed;
     bottom: 0;
     right: 0;
+  
+  
 
 }
 
@@ -35,3 +38,5 @@
     font-size: 16px;
 
 }
+
+
