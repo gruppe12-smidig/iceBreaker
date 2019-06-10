@@ -10,12 +10,12 @@ class CookiesPopUp extends Component{
 
         return(
 
-            <div className="popUpContainer">
+            <div className="popUpContainer" >
                 <div className="popUpContent">
 
                     <div>
                         <p className="bannerText">Denne nettsiden benytter informasjonskapsler for å forbedre din opplevelse </p>
-                        <a className="nettvettLink" href="nettvett.no">Les mer </a>
+                        <a className="nettvettLink" href="nettvett.no" style={linkFix}>Les mer </a>
                         <Link className="cookiePolicyLink" to='/Cookies'> Vår policy på informasjonskapsler</Link>
                     </div>
 
@@ -30,5 +30,13 @@ class CookiesPopUp extends Component{
         );
     }
 }
+
+const linkFix = {
+  
+    color:'white',
+    textDecoration:'underline',
+  
+
+};
 
 export default CookiesPopUp;

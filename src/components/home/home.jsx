@@ -19,7 +19,7 @@ class Home extends Component {
 
                     <div className='greetContainer'>
                         <h3 className='greeting'>Break some Ice</h3>
-                        <p>Lorem ipsum lorem lorem lorem lorem ipsum lorem lorem lorem lorem</p>
+                        <p className='boldP'></p>
                     </div>
 
                     <div className='btnWrapper'>
