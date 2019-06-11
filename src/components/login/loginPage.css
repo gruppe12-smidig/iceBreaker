@@ -55,10 +55,22 @@ min-height: 100%;
 	font-size: 14px;
 	padding: 16px;
     font-weight: 300;
-    background-color: #ebe5e567;
+    background-color: #E7F0FE;
     border-radius: 15px;
     margin-top: 10px;
     font-family: 'Montserrat', sans-serif;
+    margin-bottom: 10px;
+
+}
+
+.password{
+    display: block;
+    margin:0 auto;
+}
+
+.password input {
+    border: none;
+    background-color: #E7F0FE;
 
 }
 
