@@ -9,6 +9,7 @@ import gym from '../../images/gym.png';
 import matprat from '../../images/cutlery.png';
 import kaffetreff from '../../images/tea.png';
 import studying from '../../images/studying.png';
+import notFound from "../notFound/NotFound";
 
 class EventsList extends Component {
 
@@ -31,7 +32,9 @@ class EventsList extends Component {
 
     render() {
 
-     if(window.location.pathname === '/MyEvents') {
+        const {coffee, events} = this.props;
+
+     if(window.location.pathname === '/myEvents') {
          const {events} = this.props;
          const userEvents = events.map(item => {
 
@@ -94,13 +97,17 @@ class EventsList extends Component {
          });
          return <div>{coffeeEvents}</div>
      }
+
+     else return(<div>{notFound}</div>)
+
+
     }
 }
 
 let eventItemGrayed = {
     opacity:'0.4'
 
-}
+};
 
 
 export default EventsList

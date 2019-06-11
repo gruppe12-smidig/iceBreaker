@@ -4,6 +4,7 @@ import firebase from '../firebase/Firebase'
 import FormError from '../formError/FormError';
 import './SignupPage.css';
 import '../formError/FormError.css'
+import PasswordMask from 'react-password-mask';
 
 
 class SignupPage extends Component {
@@ -135,7 +136,7 @@ class SignupPage extends Component {
                             <label className="boldP"
                                    htmlFor="passOne"
                             > Passord *</label>
-                            <input
+                            <PasswordMask
                                 className='input-box'
                                 type="passOne"
                                 id="passOne"
@@ -151,7 +152,7 @@ class SignupPage extends Component {
                             <label className="boldP"
                                    htmlFor="passTwo"
                             >Gjenta passord *</label>
-                            <input
+                            <PasswordMask
                                 className='input-box'
                                 type="passTwo"
                                 id="passTwo"

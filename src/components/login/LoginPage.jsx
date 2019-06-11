@@ -5,6 +5,7 @@ import { Redirect, Link} from "react-router-dom";
 import penguin from '../../images/penguin-cropped.png';
 import CookieConsent from 'react-cookie-consent';
 import SignupPage from '../signup/SignupPage';
+import PasswordMask from 'react-password-mask';
 
 
 import './loginPage.css';
@@ -74,7 +75,7 @@ class LoginPage extends Component {
                             value={this.state.email}
                             onChange={this.handleChange}
                         />
-                        <input
+                        <PasswordMask
                             className="password"
                             placeholder="Passord"
                             type="text"

@@ -41,7 +41,6 @@ class App extends Component {
       super(props);
       this.state = {
           user: null,
-          authenticated: null,
           displayName: null,
           userID: null,
           sideDrawerOpen: false,
