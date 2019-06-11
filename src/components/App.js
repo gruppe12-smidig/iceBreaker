@@ -279,7 +279,7 @@ class App extends Component {
             sideDrawer = <SideDrawer drawerClickHandler={this.drawerClickHandler} logOutUser={this.logOutUser}/>;
             backdrop = <Backdrop click={this.backDropClickHandler}/>;
         }
-        if (window.location.pathname === '/loginPage') {
+        if (window.location.pathname === '/LoginPage') {
             return <LoginPage/>;
         }
         if (window.location.pathname === '/StartPage') {
