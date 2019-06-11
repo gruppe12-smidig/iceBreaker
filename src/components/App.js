@@ -22,7 +22,6 @@ import EventView from "./eventView/EventView";
 import Cookies from "./cookies/cookies";
 import Privacy from "./privacy/Privacy";
 import notFound from "./notFound/NotFound";
-import CookiesPopUp from "./cookies/CookiesPopUp";
 import PrivateRoute from "./firebase/PrivateRoute";
 import {AuthProvider} from "./firebase/Auth";
 
@@ -323,7 +322,6 @@ class App extends Component {
                             <Route exact path="/EventView" user={this.state.user} component={EventView}/>
                             <Route exact path="/Cookies" user={this.state.user} component={Cookies}/>
                             <Route exact path="/Privacy" user={this.state.user} component={Privacy}/>
-                            <Route exact path="/CookiesPopUp" component={CookiesPopUp}/>
                             <Route component={notFound}/>
 
                         </Switch>
