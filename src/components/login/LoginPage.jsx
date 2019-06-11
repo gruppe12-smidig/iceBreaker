@@ -90,7 +90,7 @@ class LoginPage extends Component {
                             <button className="btn-login" type="submit">Logg inn</button>
                         </div>
 
-                        <div>
+                        <div className='errorMessages'>
                             { this.state.errorMessage !== null ? (
                                 <FormError theMessage={this.state.errorMessage}/>
                             ): null}
