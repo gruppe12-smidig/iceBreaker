@@ -97,6 +97,73 @@ class EventsList extends Component {
          });
          return <div>{coffeeEvents}</div>
      }
+    else if(window.location.pathname === '/outOnTrip'){
+         const {tur} = this.props;
+
+         const turEvents = tur.map(item => {
+             return (
+                 <div className="list-item" key={item.eventID}>
+
+
+                     <section className="event-info" role="group">
+                         <ul>
+                             <li> Navn: {item.eventName}</li>
+                             <li> Type: {item.eventType}</li>
+                             <li> Maks deltagere: {item.maxParticipants}</li>
+                             <li> Beskrivelse: {item.description}</li>
+                         </ul>
+                     </section>
+
+                 </div>
+             );
+         });
+         return <div>{turEvents}</div>
+     }
+     else if(window.location.pathname === '/foodEvent'){
+         const {food} = this.props;
+
+         const foodEvents = food.map(item => {
+             return (
+                 <div className="list-item" key={item.eventID}>
+
+
+                     <section className="event-info" role="group">
+                         <ul>
+                             <li> Navn: {item.eventName}</li>
+                             <li> Type: {item.eventType}</li>
+                             <li> Maks deltagere: {item.maxParticipants}</li>
+                             <li> Beskrivelse: {item.description}</li>
+                         </ul>
+                     </section>
+
+                 </div>
+             );
+         });
+         return <div>{foodEvents}</div>
+     }
+     else if(window.location.pathname === '/studyGroup'){
+         const {study} = this.props;
+
+         const studyEvents = study.map(item => {
+             return (
+                 <div className="list-item" key={item.eventID}>
+
+
+                     <section className="event-info" role="group">
+                         <ul>
+                             <li> Navn: {item.eventName}</li>
+                             <li> Type: {item.eventType}</li>
+                             <li> Maks deltagere: {item.maxParticipants}</li>
+                             <li> Beskrivelse: {item.description}</li>
+                         </ul>
+                     </section>
+
+                 </div>
+             );
+         });
+         return <div>{studyEvents}</div>
+     }
+
 
      else return(<div>{notFound}</div>)
 

@@ -24,6 +24,10 @@ import Privacy from "./privacy/Privacy";
 import notFound from "./notFound/NotFound";
 import PrivateRoute from "./firebase/PrivateRoute";
 import {AuthProvider} from "./firebase/Auth";
+import OutOnTripEvent from "./findEvents/OutOnTripEvent";
+import ActivityEvent from "./findEvents/ActivityEvent";
+import FoodTalkEvent from "./findEvents/FoodTalkEvent";
+import StudyGroupEvent from "./findEvents/StudyGroupEvent";
 
 
 
@@ -315,8 +319,11 @@ class App extends Component {
                             <Route exact path="/RegisterEventPage" render={ (props) =><RegisterEventPage {...props} addEvent={this.addEvent}/>}/>
                             <Route exact path="/events" user={this.state.user} component={Events}/>
                             <Route exact path="/myEvents" render={(props) => <MyEvents {...props} events={this.state.events} userID={this.state.userID}/>}/>
-                            <Route exact path="/FindEvents" render={ (props) => <FindEvents {...props}  events={this.state.events} coffee={this.state.coffee}
-                                                                                            food={this.state.food} tur={this.state.tur} fysisk={this.state.fysisk} userID={this.state.userID}/>}/>
+                            <Route exact path="/FindEvents" render={ (props) => <FindEvents {...props}  events={this.state.events} coffee={this.state.coffee} userID={this.state.userID}/>}/>
+                            <Route exact path='/outOnTrip' render={(props) => <OutOnTripEvent {...props} tur={this.state.tur} userID={this.state.userID}/>}/>
+                            <Route exact path='/activity' render={(props) => <ActivityEvent {...props} fysisk={this.state.fysisk} userID={this.state.userID}/>}/>
+                            <Route exact path='/foodEvent' render={(props) => <FoodTalkEvent {...props} food={this.state.food} userID={this.state.userID} />}/>
+                            <Route exact path='/studyGroup' render={(props) => <StudyGroupEvent {...props} study={this.state.study} userID={this.state.userID}/>}/>
                             <Route exact path="/StartPage" user={this.state.user} component={StartPage}/>
                             <Route exact path="/About" user={this.state.user} component={About}/>
                             <Route exact path="/EventView" user={this.state.user} component={EventView}/>

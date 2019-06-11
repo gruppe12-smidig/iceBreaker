@@ -42,7 +42,7 @@ return(
 
 
 <div className='wrapperBtn'>
-    <Link to="/FindEvents">
+    <Link to="/outOnTrip">
     <button className='btn-onTour'><p className='btnP'>Ut på tur</p><img className="boot" src={boot} alt="boot"/>
     </button> </Link>
 
@@ -53,7 +53,7 @@ return(
 
 
 <div className='wrapperBtn'>
-    <Link to="/FindEvents">
+    <Link to="/activity">
     <button className='btn-physicalActivity'><p className='btnP'>Fysisk aktivitet</p><img className="gym" src={gym} alt="gym"/>
     </button> </Link>
 
@@ -63,7 +63,7 @@ return(
 
 <div className='wrapperBtn'>
 
-<Link to="/FindEvents">
+<Link to="/foodEvent">
     <button className='btn-foodAndTalk'><p className='btnP'>Mat&Prat</p><img className="cutlery" src={cutlery} alt="cutlery"/>
     </button> </Link>
 
@@ -72,7 +72,7 @@ return(
 </div>
 
 <div className='wrapperBtn'>
-    <Link to="/FindEvents">
+    <Link to="/studyGroup">
     <button className='btn-studyGroup' itemID="studyBtn"><p className='btnP'>Studiegrupper</p><img className="studying" src={studying} alt="studying"/>
     </button> </Link>
 
