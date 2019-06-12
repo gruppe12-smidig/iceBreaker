@@ -50,6 +50,8 @@ class ProfilePage extends Component {
         return(
             <div>
                 <div>
+                    <h1> Endre mail </h1>
+
                     <PasswordMask
                         className="password"
                         placeholder="Passord"
@@ -77,6 +79,33 @@ class ProfilePage extends Component {
                         </button>
                     </div>
                 </div>
+
+                <div>
+                    <h1>Endre passord</h1>
+
+                    <PasswordMask
+                        className="password"
+                        placeholder="Passord"
+                        type="text"
+                        id="password"
+                        name="password"
+                        required
+                        value={this.state.password}
+                        onChange={this.handleChange}
+                    />
+
+                    <PasswordMask
+                        className="username"
+                        placeholder="nytt passord"
+                        type="text"
+                        id="password"
+                        name="password"
+                        required
+                        value={this.state.newPassword}
+                        onChange={this.handleChange}
+                    />
+
+                </div>
             </div>
         )
     };
@@ -94,12 +123,70 @@ class ProfilePage extends Component {
                     <h2 className='subheader' >MIN PROFIL</h2>
                 </div>
                 <div>
-                    <button className="profil-btn" id="newMailBtn" onClick={this.renderPage = true}> Endre email </button>
-                </div>
-                <div>
-                    <button className="profil-btn" id="newMailBtn">Endre Passord</button>
-                </div>
+                    <div>
+                        <h1> Endre mail </h1>
 
+                        <PasswordMask
+                            className="password"
+                            placeholder="Passord"
+                            type="text"
+                            id="password"
+                            name="password"
+                            required
+                            value={this.state.password}
+                            onChange={this.handleChange}
+                        />
+
+                        <input
+                            className="username"
+                            type="text"
+                            id="email"
+                            name="email"
+                            required
+                            value={this.state.newMail}
+                            onChange={this.handleChange}
+                        />
+
+                        <div>
+                            <button  className="btn-login">
+                                utfør
+                            </button>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h1>Endre passord</h1>
+
+                        <PasswordMask
+                            className="password"
+                            placeholder="Passord"
+                            type="text"
+                            id="password"
+                            name="password"
+                            required
+                            value={this.state.password}
+                            onChange={this.handleChange}
+                        />
+
+                        <PasswordMask
+                            className="username"
+                            placeholder="nytt passord"
+                            type="text"
+                            id="password"
+                            name="password"
+                            required
+                            value={this.state.newPassword}
+                            onChange={this.handleChange}
+                        />
+
+                        <div>
+                            <button  className="btn-login">
+                                utfør
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
 
             </div>
 

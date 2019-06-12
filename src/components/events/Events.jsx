@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
+
+
 import './Events.css';
 import tea from '../../images/tea.png';
 import boot from '../../images/boot.png';
@@ -28,6 +30,8 @@ return(
 <div className='wrapperContent'> 
 
 <h2 className='subHeader'>Arrangementer</h2>
+
+
 
 <div className="wrapperGenreButtons">
 

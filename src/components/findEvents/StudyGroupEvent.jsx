@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import {FaArrowLeft} from 'react-icons/fa';
+
 import './FindEvents.css';
 import Footer from "../footer/Footer";
 import maxParticipants from "../NewEvent/RegisterEventPage"
@@ -6,14 +8,20 @@ import maxParticipants from "../NewEvent/RegisterEventPage"
 
 import calender from '../../images/kalender-white.png';
 import EventsList from "../events/EventsList";
+import {Link} from "react-router-dom";
 
 
 
 class StudyGroupEvent extends Component {
-    state = {
-        errorMessage: null
+    constructor(props) {
+        super(props);
 
-    };
+        this.state = {
+            errorMessage: null
+        };
+
+        this.routeChange = this.routeChange.bind(this);
+    }
 
     maxParts = () => {
         let maxParts = maxParticipants;
@@ -21,6 +29,11 @@ class StudyGroupEvent extends Component {
             this.setState({errorMessage: 'Event is full'});
         }
     };
+
+    routeChange() {
+        let path = '/events';
+        this.props.history.push(path);
+    }
 
 
     render() {
@@ -35,6 +48,12 @@ class StudyGroupEvent extends Component {
 
 
                     <h2 className='subHeader'> Studiegrupper </h2>
+
+                    <section>
+                        <button className="back-btn" onClick={this.routeChange}>
+                            <FaArrowLeft/>
+                        </button>
+                    </section>
 
 
                     {/*Render of event components from DB  */}
