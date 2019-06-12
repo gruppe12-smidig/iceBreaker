@@ -28,7 +28,6 @@ font-size: 1.3rem;
  }
  .eventBox{
 
-     border:solid rgb(78, 85, 189) 5px; 
     display:grid;
 
 }

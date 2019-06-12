@@ -82,12 +82,7 @@ class FoodTalkEvent extends Component {
                       
                         </li>
 
-                        <li className='eventBox'>
-                            <div className="testEvent"></div>
-                        </li>
-                        <li className='eventBox'>
-                            <div className="testEvent"></div>
-                        </li>
+                     
 
                     </ul>
 
