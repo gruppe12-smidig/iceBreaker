@@ -17,6 +17,7 @@
 
 .toolbar_navigation{
     display: flex;
+    margin: 0rem;
     align-items: center;
     height: 100%;
     padding: 0 1rem;

@@ -103,12 +103,13 @@ background-color: #BB2D56;
 
 .btn-createEvent{
     display:block;
-	margin:0 auto;
+    margin:0 auto;
+    padding: 10px;
     background-color: #155767;
     color: white;
     border-radius: 3px;
     font-family: 'Montserrat', sans-serif;
-    height: 76px;
+    height: 90px;
     width: 207px;
     text-align: center;
     font-size: 16px;
