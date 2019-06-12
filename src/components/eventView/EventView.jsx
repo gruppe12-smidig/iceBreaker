@@ -1,4 +1,8 @@
 import React, { Component } from 'react';
+import firebase from "../firebase/Firebase";
+
+import PasswordMask from 'react-password-mask';
+
 import './EventView.css';
 import Footer from "../footer/Footer";
 import floePeng from '../../images/floePeng.png';
@@ -7,9 +11,10 @@ import peng from '../../images/penguin.png';
 
 
 
+
 class EventView extends Component {
-    constructor() {
-        super()
+    constructor(props) {
+        super(props)
         this.state = {
             chatHidden: true,
             isFull: false,
@@ -28,6 +33,21 @@ class EventView extends Component {
         console.log(this.state.isFull);
     
     }
+
+    displayEventView = (e, whichEvent) => {
+        const eventRef = firebase.database().ref(`events/${whichEvent}`);
+
+        if(eventRef) {
+
+            return(
+                <div>
+
+
+
+                </div>
+            )
+        }
+    };
 
 
     render() {

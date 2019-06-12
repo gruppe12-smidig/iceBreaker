@@ -84,7 +84,7 @@ class App extends Component {
                     });
 
 
-                const myEventsRef = firebase.database().ref('userEvents/' + FBUser.uid);
+                const myEventsRef = firebase.database().ref('userEvents/' + FBUser.uid).limitToFirst(4);
 
                 myEventsRef.on('value', snapshot =>  {
 
@@ -107,7 +107,7 @@ class App extends Component {
                     })
                 });
 
-                const eventsCoffeeRef   = firebase.database().ref('events').orderByChild('eventType').equalTo('kaffetreff');
+                const eventsCoffeeRef   = firebase.database().ref('events').orderByChild('eventType').equalTo('kaffetreff').limitToFirst(4);
 
                 eventsCoffeeRef.on('value', snapshot => {
                     let coffee = snapshot.val();
@@ -129,7 +129,7 @@ class App extends Component {
                     })
                 });
 
-                const eventsStudyRef = firebase.database().ref('events').orderByChild('eventType').equalTo('studiegrupper');
+                const eventsStudyRef = firebase.database().ref('events').orderByChild('eventType').equalTo('studiegrupper').limitToFirst(4);
 
                 eventsStudyRef.on('value', snapshot => {
                     let study = snapshot.val();
@@ -141,7 +141,8 @@ class App extends Component {
                             eventName: study[item].eventName,
                             eventType: study[item].eventType,
                             maxParticipants: study[item].maxParticipants,
-                            description: study[item].description
+                            description: study[item].description,
+                            participants: []
                         })
                     }
                     this.setState({
@@ -150,7 +151,7 @@ class App extends Component {
                     })
                 });
 
-                const eventsFoodRef = firebase.database().ref('events').orderByChild('eventType').equalTo('Mat&Prat');
+                const eventsFoodRef = firebase.database().ref('events').orderByChild('eventType').equalTo('Mat&Prat').limitToFirst(4);
 
                 eventsFoodRef.on('value', snapshot => {
                     let food = snapshot.val();
@@ -171,7 +172,7 @@ class App extends Component {
                     })
                 });
 
-                const eventsTurRef = firebase.database().ref('events').orderByChild('eventType').equalTo('ut på tur');
+                const eventsTurRef = firebase.database().ref('events').orderByChild('eventType').equalTo('ut på tur').limitToFirst(4);
 
                 eventsTurRef.on('value', snapshot =>{
                     let tur = snapshot.val();
@@ -192,7 +193,7 @@ class App extends Component {
                     })
                 });
 
-                const eventsFysiskRef = firebase.database().ref('events').orderByChild('eventType').equalTo('fysisk aktivitet');
+                const eventsFysiskRef = firebase.database().ref('events').orderByChild('eventType').equalTo('fysisk aktivitet').limitToFirst(4);
 
                 eventsFysiskRef.on('value', snapshot => {
                     let fysisk = snapshot.val();
@@ -276,6 +277,8 @@ class App extends Component {
 
     render() {
 
+
+
         let sideDrawer;
         let backdrop;
         let header = <Header userName={this.state.displayName} drawerClickHandler={this.drawerClickHandler}/>;
@@ -313,7 +316,7 @@ class App extends Component {
                         <Switch>
 
                             <Route exact path="/" authenticated={this.state.authenticated} component={Home}/>
-                            <Route exact path="/ProfilePage" user={this.state.user} component={ProfilePage} />
+                            <Route exact path="/ProfilePage" render={(props)=> <ProfilePage {...props} user={this.state.user} userID={this.state.userID}/>}/>
                             <Route exact path="/loginPage" render={(props)=><LoginPage {...props} logOutUser={this.logOutUser}/>}/>
                             <Route exact path="/SignupPage"  render={ (props) => <SignupPage {...props} registerUser={this.registerUser}  />}/>
                             <Route exact path="/RegisterEventPage" render={ (props) =><RegisterEventPage {...props} addEvent={this.addEvent}/>}/>
@@ -326,7 +329,8 @@ class App extends Component {
                             <Route exact path='/studyGroup' render={(props) => <StudyGroupEvent {...props} study={this.state.study} userID={this.state.userID}/>}/>
                             <Route exact path="/StartPage" user={this.state.user} component={StartPage}/>
                             <Route exact path="/About" user={this.state.user} component={About}/>
-                            <Route exact path="/EventView" user={this.state.user} component={EventView}/>
+                            <Route exact path="/EventView" render={(props) => <EventView {...props} events={this.state.events} coffee={this.state.coffee}
+                                                                                         tur={this.state.tur} fysisk={this.state.fysisk} food={this.state.food} study={this.state.study} userID={this.state.userID} />}/>
                             <Route exact path="/Cookies" user={this.state.user} component={Cookies}/>
                             <Route exact path="/Privacy" user={this.state.user} component={Privacy}/>
                             <Route component={notFound}/>

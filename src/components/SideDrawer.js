@@ -30,6 +30,7 @@ class SideDrawer extends Component {
                     {/* <li><Link to="/StartPage" onClick={this.props.drawerClickHandler}>Startpage TEMPORARY</Link></li> */}
                     <li><Link to="/About" onClick={this.props.drawerClickHandler}>Om Icebreaker</Link></li>
                     <li><Link to="/Privacy" onClick={this.props.drawerClickHandler}>Mer om personvern</Link></li>
+                    <li><Link to="/profilePage" onClick={this.props.drawerClickHandler}>Min profil</Link></li>
                     <li><Link to="/LoginPage" onclick={this.props.drawerClickHandler} onClick={this.props.logOutUser}>Logg ut</Link></li>
 
 
