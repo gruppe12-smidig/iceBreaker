@@ -1,6 +1,6 @@
 
 .eventPagesHeader{
- margin-bottom: 4rem;
+ margin-bottom: 3rem;
 }
 .calender{
     height: 40px;
@@ -12,6 +12,7 @@ height: 40px;
 width: 40px;
 border-radius: 50%;
 float: left;
+background-color: rgb(156, 156, 156);
 }
 
 .btn {
@@ -23,13 +24,18 @@ justify-content: space-between;
 font-size: 1.3rem;
 }
  .findEventsContainer{
-     margin-top: 7rem;
+     margin-top: 3rem;
  
  }
  .eventBox{
 
     display:grid;
 
+}
+
+.genreImg{
+    margin: 1rem;
+    height: 200px;
 }
 
 

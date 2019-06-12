@@ -9,7 +9,7 @@ import maxParticipants from "../NewEvent/RegisterEventPage"
 import calender from '../../images/kalender-white.png';
 import EventsList from "../events/EventsList";
 import {Link} from "react-router-dom";
-
+import studying from '../../images/studying.png';
 
 
 class StudyGroupEvent extends Component {
@@ -54,7 +54,7 @@ class StudyGroupEvent extends Component {
                         <FaArrowLeft/>
                     </button>
                 </section>
-
+                <img className="genreImg" src={studying} alt="books"/>
                 <h2 className='subHeader'> Studiegrupper </h2>
 
               

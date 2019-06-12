@@ -9,7 +9,7 @@ import maxParticipants from "../NewEvent/RegisterEventPage"
 import calender from '../../images/kalender-white.png';
 import EventsList from "../events/EventsList";
 import {Link} from "react-router-dom";
-
+import boot from '../../images/boot.png';
 
 
 class OutOnTripEvent extends Component {
@@ -54,7 +54,7 @@ class OutOnTripEvent extends Component {
                         <FaArrowLeft/>
                     </button>
                 </section>
-
+                <img className="genreImg" src={boot} alt="boots"/>
                 <h2 className='subHeader'> Ut på tur </h2>
 
               

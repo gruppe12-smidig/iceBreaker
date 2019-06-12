@@ -5,6 +5,7 @@ import '../events/EventsList.css';
 import './FindEvents.css';
 import Footer from "../footer/Footer";
 import maxParticipants from "../NewEvent/RegisterEventPage"
+import tea from '../../images/tea.png';
 
 
 import calender from '../../images/kalender-white.png';
@@ -58,11 +59,12 @@ class FindEvents extends Component {
                             <FaArrowLeft/>
                         </button>
                     </section>
-
+                    <img className="genreImg" src={tea} alt="tea"/>
                     <h2 className='subHeader'> Kaffetreff </h2>
 
-                  
+         
             </header>
+       
 
             {/*Render of event components from DB  */}
             <ul className='eventContainer'>

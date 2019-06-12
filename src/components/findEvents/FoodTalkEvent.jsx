@@ -9,7 +9,7 @@ import maxParticipants from "../NewEvent/RegisterEventPage"
 import calender from '../../images/kalender-white.png';
 import EventsList from "../events/EventsList";
 import {Link} from "react-router-dom";
-
+import cutlery from '../../images/cutlery.png';
 
 
 class FoodTalkEvent extends Component {
@@ -53,6 +53,7 @@ class FoodTalkEvent extends Component {
                         <FaArrowLeft/>
                     </button>
                 </section>
+                <img className="genreImg" src={cutlery} alt="food icon"/>
 
                 <h2 className='subHeader'> Mat & Prat </h2>
 
