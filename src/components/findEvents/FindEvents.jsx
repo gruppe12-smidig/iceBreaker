@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {Redirect} from 'react-router-dom';
 import {FaArrowLeft} from 'react-icons/fa';
-
+import '../events/EventsList.css';
 import './FindEvents.css';
 import Footer from "../footer/Footer";
 import maxParticipants from "../NewEvent/RegisterEventPage"
@@ -52,7 +52,7 @@ class FindEvents extends Component {
         <div className="wrapperContent">
 
             <header className='eventPagesHeader'>
-                
+
                     <section>
                         <button className="back-btn" onClick={this.routeChange}>
                             <FaArrowLeft/>
@@ -67,14 +67,14 @@ class FindEvents extends Component {
             {/*Render of event components from DB  */}
             <ul className='eventContainer'>
 
-                <li className='eventBox'>
+                <li>
              
                         {this.props.coffee && this.props.coffee.length ? (
                             <div>
 
-                                <ul className='myEventsList'>
+                                <ul className='eventsList'>
 
-                                    <li className="eventBox"> <EventsList coffee = {this.props.coffee}/> </li>
+                                    <li className='eventBox'> <EventsList coffee = {this.props.coffee}/> </li>
 
                                 </ul>
 

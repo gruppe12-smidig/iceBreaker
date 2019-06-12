@@ -27,7 +27,12 @@ font-size: 1.3rem;
  }
  .eventBox{
     margin: 0 auto;
-    margin: 5%;
+    /* border:solid rgb(78, 85, 189) 5px; */
+}
+
+.eventsList{
+    width: 100%;
+
 }
 
 
@@ -55,8 +60,7 @@ and (min-device-width: 1200px)
     .eventContainer{
         margin: 0 auto;
         margin-top: 2rem;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+    
         
     }
 
@@ -65,9 +69,7 @@ and (min-device-width: 1200px)
         width: 95%;
     }
 
-    .findEventsContainer{
-        margin-top: 9rem;
-    }
+   
 
     .back-btn{
         padding: 0.8rem;
@@ -77,4 +79,6 @@ and (min-device-width: 1200px)
         border-radius: 50%;
         float: left;
         }
+
+    
 }
