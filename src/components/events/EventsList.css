@@ -1,9 +1,12 @@
 .list-item {
     margin: 0 auto;
+    margin: 1rem;
     margin-bottom: 2rem;
     padding: 1rem;
     height: auto;
-    box-shadow: 0px 3px 6px rgba(68, 113, 124, 0.452);
+background-color: white;
+    border: dashed 4px rgb(184, 184, 184);
+     /* box-shadow: 0px 3px 6px rgba(68, 113, 124, 0.452);  */
     display: grid;
     grid-template-columns: 7fr 1fr;
 }
