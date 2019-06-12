@@ -1,5 +1,4 @@
 .list-item {
-   
     margin: 0 auto;
     margin-bottom: 2rem;
     padding: 1rem;
@@ -14,6 +13,9 @@
     height: 120px;
     width: 120px;
 }
+.btnRounded{
+        margin-top: 10px; 
+}
 .event-info{
     height: auto;
     max-width: 200px;
@@ -22,10 +24,13 @@
   
 }
 .deleteBtn{
+    position: relative;
     margin: 98% auto auto 10rem; 
     height: 40px;
-    width: 40px
+    width: 40px;
+    padding: 8px 1px 1px 0px;
 }
+
 .eventIcon{
     height: 100%;
 }
@@ -37,7 +42,6 @@
 
 .deletePop{
     border: solid rgb(95, 95, 95) 4px;
- 
     padding: 1rem;
     padding-top: 100px;
     height: 200px;
