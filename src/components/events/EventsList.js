@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import firebase from '../firebase/Firebase';
 import {GoTrashcan} from "react-icons/go";
+import {IoIosAddCircleOutline} from 'react-icons/io';
 
 import '../myEvents/MyEvents.css';
 import './EventsList.css';
@@ -250,7 +251,7 @@ class EventsList extends Component {
                          <button className="deleteBtn"
                                  title="join"
                                  onClick={e => this.joinEvent(e, item.eventID)}>
-                             <GoTrashcan/>
+                             <IoIosAddCircleOutline/>
                          </button>
 
                      </section>
