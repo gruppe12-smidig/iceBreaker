@@ -5,9 +5,9 @@
     box-shadow: 2px 0px 5px rgba(0,0,0,0.5);
     position: fixed;
     top: 0;
-    right: 0;
-    width: 100%;
-    max-width: 400px;
+    right: 0px;
+    width: 110%;
+    max-width: 420px;
     text-align: center;
     text-transform: uppercase;
     z-index: 200;
