@@ -65,7 +65,14 @@ p {
     width: 270px;
 
 }
-
+PasswordMask{
+    border: solid 2px rgb(226, 226, 226);
+    border-radius: 2px;
+    padding: 0.5rem;
+    font-size: 1rem;
+    height: 17px;
+    width: 270px; 
+}
 .input-box-text {
 
     height: 100px;

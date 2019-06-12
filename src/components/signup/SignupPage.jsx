@@ -81,9 +81,12 @@ class SignupPage extends Component {
                     <form className='inputForm' onSubmit={this.handleSubmit}>
 
                         <div className='inputSection'>
+                            
+                        <div className='errorMessages'>
                             { this.state.errorMessage !== null ? (
                                <FormError theMessage={this.state.errorMessage}/>
                             ): null}
+                         </div>
                             <label
                                 className="boldP"
                                 htmlFor="displayName"
