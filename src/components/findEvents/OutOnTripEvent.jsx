@@ -64,8 +64,8 @@ class OutOnTripEvent extends Component {
                     {/*Render of event components from DB  */}
                     <ul className='eventContainer'>
 
-                        <li className='eventBox'>
-                            <div className="testEvent">
+                        <li >
+                          
                                 {this.props.tur && this.props.tur.length ? (
                                     <div>
 
@@ -80,15 +80,10 @@ class OutOnTripEvent extends Component {
 
                                 ): null }
 
-                            </div>
+                  
                         </li>
 
-                        <li className='eventBox'>
-                            <div className="testEvent"></div>
-                        </li>
-                        <li className='eventBox'>
-                            <div className="testEvent"></div>
-                        </li>
+                      
 
                     </ul>
 

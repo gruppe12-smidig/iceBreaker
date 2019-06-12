@@ -63,12 +63,12 @@ class FoodTalkEvent extends Component {
                     {/*Render of event components from DB  */}
                     <ul className='eventContainer'>
 
-                        <li className='eventBox'>
-                            <div className="testEvent">
+                        <li >
+                       
                                 {this.props.food && this.props.food.length ? (
                                     <div>
 
-                                        <ul className='myEventsList'>
+                                        <ul className='EventsList'>
 
                                             <li className="eventBox"> <EventsList food = {this.props.food}/> </li>
 
@@ -79,7 +79,7 @@ class FoodTalkEvent extends Component {
 
                                 ): null }
 
-                            </div>
+                      
                         </li>
 
                         <li className='eventBox'>

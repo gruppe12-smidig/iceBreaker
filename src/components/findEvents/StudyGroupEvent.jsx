@@ -64,8 +64,8 @@ class StudyGroupEvent extends Component {
                     {/*Render of event components from DB  */}
                     <ul className='eventContainer'>
 
-                        <li className='eventBox'>
-                            <div className="testEvent">
+                        <li >
+                         
                                 {this.props.study && this.props.study.length ? (
                                     <div>
 
@@ -80,15 +80,10 @@ class StudyGroupEvent extends Component {
 
                                 ): null }
 
-                            </div>
+                     
                         </li>
 
-                        <li className='eventBox'>
-                            <div className="testEvent"></div>
-                        </li>
-                        <li className='eventBox'>
-                            <div className="testEvent"></div>
-                        </li>
+                     
 
                     </ul>
 
