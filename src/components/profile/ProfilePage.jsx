@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import firebase from '../firebase/Firebase';
 import './ProfilePage.css'
 import PasswordMask from "react-password-mask";
-
+import penguin from '../../images/penguin.png';
 
 class ProfilePage extends Component {
     constructor(props){
@@ -119,10 +119,17 @@ class ProfilePage extends Component {
 
          return (
             <div className="mainContainer">
+
+                   <header className='profileHeader'>
+                   <img className='profilePenguin' src={penguin} alt=" penguin" />
+                            <h2 className='profileNameHeader' >Linda Bennts</h2>
+                    </header>
+
                 <div className='wrapperContent'>
-                    <h2 className='subheader' >MIN PROFIL</h2>
-                </div>
-                <div>
+
+                 
+
+                <div className='infoContainer'>
                     <div>
                         <h1> Endre mail </h1>
 
@@ -187,7 +194,7 @@ class ProfilePage extends Component {
 
                     </div>
                 </div>
-
+                </div>
             </div>
 
         );
