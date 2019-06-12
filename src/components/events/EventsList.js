@@ -233,6 +233,7 @@ class EventsList extends Component {
      else if(window.location.pathname === '/studyGroup'){
          const {study} = this.props;
 
+
          const studyEvents = study.map(item => {
              return (
                  <div className="list-item" key={item.eventID}>
