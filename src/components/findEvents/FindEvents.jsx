@@ -51,21 +51,24 @@ class FindEvents extends Component {
             {/* div wrapperContent adds a margin to the top giving space to hamburger-menu */}
         <div className="wrapperContent">
 
+            <header className='eventPagesHeader'>
+                
+                    <section>
+                        <button className="back-btn" onClick={this.routeChange}>
+                            <FaArrowLeft/>
+                        </button>
+                    </section>
 
-            <h2 className='subHeader'> Kaffetreff </h2>
+                    <h2 className='subHeader'> Kaffetreff </h2>
 
-            <section>
-                <button className="back-btn" onClick={this.routeChange}>
-                    <FaArrowLeft/>
-                </button>
-            </section>
-
+                  
+            </header>
 
             {/*Render of event components from DB  */}
             <ul className='eventContainer'>
 
                 <li className='eventBox'>
-                    <div className="testEvent">
+             
                         {this.props.coffee && this.props.coffee.length ? (
                             <div>
 
@@ -80,15 +83,9 @@ class FindEvents extends Component {
 
                         ): null }
 
-                    </div>
                 </li>
 
-                <li className='eventBox'>
-                    <div className="testEvent"></div>
-                </li>
-                <li className='eventBox'>
-                    <div className="testEvent"></div>
-                </li>
+             
 
             </ul>
 

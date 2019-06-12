@@ -46,14 +46,18 @@ class FoodTalkEvent extends Component {
                 {/* div wrapperContent adds a margin to the top giving space to hamburger-menu */}
                 <div className="wrapperContent">
 
+                <header className='eventPagesHeader'>
+                
+                <section>
+                    <button className="back-btn" onClick={this.routeChange}>
+                        <FaArrowLeft/>
+                    </button>
+                </section>
 
-                    <h2 className='subHeader'> Mat & Prat </h2>
+                <h2 className='subHeader'> Mat & Prat </h2>
 
-                    <section>
-                        <button className="back-btn" onClick={this.routeChange}>
-                            <FaArrowLeft/>
-                        </button>
-                    </section>
+              
+        </header>
 
 
                     {/*Render of event components from DB  */}

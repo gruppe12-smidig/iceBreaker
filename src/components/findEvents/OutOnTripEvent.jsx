@@ -47,13 +47,18 @@ class OutOnTripEvent extends Component {
                 <div className="wrapperContent">
 
 
-                    <h2 className='subHeader'> Ut på tur</h2>
+                <header className='eventPagesHeader'>
+                
+                <section>
+                    <button className="back-btn" onClick={this.routeChange}>
+                        <FaArrowLeft/>
+                    </button>
+                </section>
 
-                    <section>
-                        <button className="back-btn" onClick={this.routeChange}>
-                            <FaArrowLeft/>
-                        </button>
-                    </section>
+                <h2 className='subHeader'> Ut på tur </h2>
+
+              
+        </header>
 
 
                     {/*Render of event components from DB  */}
