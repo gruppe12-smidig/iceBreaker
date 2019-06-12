@@ -316,7 +316,7 @@ class App extends Component {
                         <Switch>
 
                             <Route exact path="/" authenticated={this.state.authenticated} component={Home}/>
-                            <Route exact path="/ProfilePage" render={(props)=> <ProfilePage {...props} user={this.state.user} userID={this.state.userID}/>}/>
+                            <Route exact path="/ProfilePage" render={(props)=> <ProfilePage {...props} userName={this.state.displayName} user={this.state.user} userID={this.state.userID}/>}/>
                             <Route exact path="/loginPage" render={(props)=><LoginPage {...props} logOutUser={this.logOutUser}/>}/>
                             <Route exact path="/SignupPage"  render={ (props) => <SignupPage {...props} registerUser={this.registerUser}  />}/>
                             <Route exact path="/RegisterEventPage" render={ (props) =><RegisterEventPage {...props} addEvent={this.addEvent}/>}/>
