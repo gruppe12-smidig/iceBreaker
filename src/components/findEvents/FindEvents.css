@@ -27,14 +27,13 @@ font-size: 1.3rem;
  
  }
  .eventBox{
-    margin: 0 auto;
-    /* border:solid rgb(78, 85, 189) 5px; */
-}
 
-.eventsList{
-    width: 100%;
+     border:solid rgb(78, 85, 189) 5px; 
+    display:grid;
 
 }
+
+
 
 
 

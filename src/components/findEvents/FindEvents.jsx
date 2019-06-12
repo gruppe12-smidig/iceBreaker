@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {Redirect} from 'react-router-dom';
 import {FaArrowLeft} from 'react-icons/fa';
-// import '../events/EventsList.css';
+import '../events/EventsList.css';
 import './FindEvents.css';
 import Footer from "../footer/Footer";
 import maxParticipants from "../NewEvent/RegisterEventPage"
@@ -65,7 +65,7 @@ class FindEvents extends Component {
             </header>
 
             {/*Render of event components from DB  */}
-            <ul className='eventsContainer'>
+            <ul className='eventContainer'>
 
                 <li>
              
