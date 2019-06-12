@@ -114,6 +114,7 @@ class ProfilePage extends Component {
 
     render() {
 
+        const {userName} = this.props;
 
 
 
@@ -122,7 +123,7 @@ class ProfilePage extends Component {
 
                    <header className='profileHeader'>
                    <img className='profilePenguin' src={penguin} alt=" penguin" />
-                            <h2 className='profileNameHeader' >Linda Bennts</h2>
+                            <h2 className='profileNameHeader' >{userName}</h2>
                     </header>
 
                 <div className='wrapperContent'>
