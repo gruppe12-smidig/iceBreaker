@@ -34,7 +34,7 @@ class FindEvents extends Component {
         <div className="wrapperContent">
 
 
-            <h2 className='subHeader'> Genre-navn</h2>
+            <h2 className='subHeader'> Kaffetreff </h2>
 
 
             {/*Render of event components from DB  */}

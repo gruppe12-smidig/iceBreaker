@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Link} from 'react-router-dom'
 import './MyEvents.css';
 import Footer from "../footer/Footer";
 import EventsList from '../events/EventsList';
@@ -42,7 +43,7 @@ class MyEvents extends Component {
                                 </div>
 
                                 <div className='btnWrapper'>
-                                    <a href="/RegisterEventPage"><button className='btnRounded'>Opprett ny</button></a>
+                                    <Link to="/RegisterEventPage"><button className='btnRounded'>Opprett ny</button></Link>
                                 </div>
 
                             </div>
@@ -60,7 +61,7 @@ class MyEvents extends Component {
 
                                 </ul>
                                 <div className='btnWrapper'>
-                                      <a href="/Events"><button className='btnRounded'>Finn ny</button></a> 
+                                      <Link to="/Events"><button className='btnRounded'>Finn ny</button></Link>
                                 </div>
                             </div>
 
