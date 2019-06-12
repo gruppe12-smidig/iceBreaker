@@ -135,10 +135,10 @@ class EventsList extends Component {
 
                      <section className="event-info" onClick={<div>this.displayEventView</div>} role="group">
                          <ul>
-                             <li> <b>Navn:</b> {item.eventName}</li>
-                             <li> <b>Kategori:</b> {item.eventType}</li>
-                             <li> <b>Maks deltagere:</b> {item.maxParticipants}</li>
-                             <li> <b>Beskrivelse:</b> {item.description}</li>
+                             <li className='headerEventBox'>  {item.eventName}</li>
+                             <li className='pEventBox'> <b>Kategori:</b> {item.eventType}</li>
+                             <li className='pEventBox'> <b>Maks deltagere:</b> {item.maxParticipants}</li>
+                             <li className='pEventBox'> <b>Beskrivelse:</b> {item.description}</li>
                          </ul>
                      </section>
 
