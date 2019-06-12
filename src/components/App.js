@@ -28,6 +28,7 @@ import OutOnTripEvent from "./findEvents/OutOnTripEvent";
 import ActivityEvent from "./findEvents/ActivityEvent";
 import FoodTalkEvent from "./findEvents/FoodTalkEvent";
 import StudyGroupEvent from "./findEvents/StudyGroupEvent";
+import OpprettetEvent from "./feedBack/OpprettetEvent";
 
 
 
@@ -292,6 +293,9 @@ class App extends Component {
         if (window.location.pathname === '/StartPage') {
             return <StartPage/>;
         }
+        if (window.location.pathname === '/OpprettetEvent') {
+            return <OpprettetEvent/>;
+        }
         if (window.location.pathname === '/SignupPage') {
             return <SignupPage registerUser={this.registerUser}/>;
         }
@@ -316,6 +320,9 @@ class App extends Component {
                         <Switch>
 
                             <Route exact path="/" authenticated={this.state.authenticated} component={Home}/>
+
+                    
+
                             <Route exact path="/ProfilePage" render={(props)=> <ProfilePage {...props} userName={this.state.displayName} user={this.state.user} userID={this.state.userID}/>}/>
                             <Route exact path="/loginPage" render={(props)=><LoginPage {...props} logOutUser={this.logOutUser}/>}/>
                             <Route exact path="/SignupPage"  render={ (props) => <SignupPage {...props} registerUser={this.registerUser}  />}/>
@@ -333,6 +340,7 @@ class App extends Component {
                                                                                          tur={this.state.tur} fysisk={this.state.fysisk} food={this.state.food} study={this.state.study} userID={this.state.userID} />}/>
                             <Route exact path="/Cookies" user={this.state.user} component={Cookies}/>
                             <Route exact path="/Privacy" user={this.state.user} component={Privacy}/>
+                            {/* <Route exact path="/OpprettetEvent" user={this.state.user} component={OpprettetEvent}/> */}
                             <Route component={notFound}/>
 
                         </Switch>

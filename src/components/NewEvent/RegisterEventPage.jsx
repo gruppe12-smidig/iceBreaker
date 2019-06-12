@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Link} from 'react-router-dom';
 import './RegisterEventPage.css';
 import DatePicker from 'react-datepicker';
 import Footer from "../footer/Footer";
@@ -101,7 +102,7 @@ handleLastDateChange(date){
                                      required
                                      value={this.state.eventType}
                                      onChange={this.handleChange}>
-                                 <option value="kaffetreff"> Velg typ </option>
+                                 <option value="-"> Velg typ </option>
                                 <option value="kaffetreff">Kaffetreff</option>
                                 <option value="ut på tur">Ut på tur</option>
                                 <option value="Fysisk aktivitet">Fysisk aktivitet</option>
@@ -201,6 +202,10 @@ handleLastDateChange(date){
                         <div>
                             <button className='signBtn' type="submit">Opprett</button>
                         </div>
+                        {/* <Link to="/OpprettetEvent">
+                            <button className='btn-coffeMeeting'><p className='btnP'>Kaffetreff</p>
+                            </button>
+                         </Link> */}
 
               
                     </form>

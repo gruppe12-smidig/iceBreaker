@@ -25,6 +25,7 @@
 
 .side-drawer ul {
     height: 100%;
+    margin-top: -1rem;
     list-style: none;
     display: flex;
     flex-direction: column;
@@ -34,7 +35,7 @@
 }
 
 .side-drawer li {
-    margin: 0.5rem 0;
+    margin: 1rem 0;
     
 }
 
