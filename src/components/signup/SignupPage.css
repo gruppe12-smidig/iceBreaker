@@ -37,7 +37,6 @@ p {
 
 }
 .inputForm{
-
     padding: 2rem; 
   
    
@@ -52,6 +51,7 @@ p {
     padding: 0rem;
     display: grid;
     grid-template-columns: 1fr;
+
 }
 
 
