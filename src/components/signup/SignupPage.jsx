@@ -17,6 +17,7 @@ class SignupPage extends Component {
           email: '',
           passOne: '',
           passTwo: '',
+          school: '',
           errorMessage: null
       };
 
@@ -43,7 +44,8 @@ class SignupPage extends Component {
             displayName: this.state.displayName,
             lastName: this.state.lastName,
             email: this.state.email,
-            password: this.state.passOne
+            password: this.state.passOne,
+            school: this.state.school
         };
         e.preventDefault();
 
@@ -55,6 +57,7 @@ class SignupPage extends Component {
             console.log('før');
             this.props.registerUser(signupInfo.displayName);
             console.log('etter');
+            this.props.addUser(signupInfo);
         })
             .catch(error => {
             if (error.message !== null){
@@ -176,7 +179,14 @@ class SignupPage extends Component {
 
                         <div className='inputSection'>
                             <label className="boldP"> Skole</label>
-                            <input className='input-box' type="school" placeholder="Skole ..." />
+                            <input
+                                className='input-box'
+                                type="school"
+                                placeholder="Skole ..."
+                                name ="school"
+                                value={this.state.school}
+                                onChange={this.handleChange}
+                            />
                         </div>
 
 

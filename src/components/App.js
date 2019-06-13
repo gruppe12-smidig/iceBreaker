@@ -222,6 +222,8 @@ class App extends Component {
     }
 
 
+
+
     userConscent = conscent => {
 
 
@@ -232,7 +234,7 @@ class App extends Component {
     };
 
 
-    registerUser = (userName) => {
+    registerUser = (userName, signupInfo) => {
         firebase.auth().onAuthStateChanged(FBUser => {
             FBUser.updateProfile({
                 displayName: userName
@@ -325,7 +327,7 @@ class App extends Component {
 
                             <Route exact path="/ProfilePage" render={(props)=> <ProfilePage {...props} userName={this.state.displayName} user={this.state.user} userID={this.state.userID}/>}/>
                             <Route exact path="/loginPage" render={(props)=><LoginPage {...props} logOutUser={this.logOutUser}/>}/>
-                            <Route exact path="/SignupPage"  render={ (props) => <SignupPage {...props} registerUser={this.registerUser}  />}/>
+                            <Route exact path="/SignupPage"  render={ (props) => <SignupPage {...props} registerUser={this.registerUser} addUser={this.addUser} userID={this.state.userID}  />}/>
                             <Route exact path="/RegisterEventPage" render={ (props) =><RegisterEventPage {...props} addEvent={this.addEvent}/>}/>
                             <Route exact path="/events" user={this.state.user} component={Events}/>
                             <Route exact path="/myEvents" render={(props) => <MyEvents {...props} events={this.state.events} userID={this.state.userID}/>}/>

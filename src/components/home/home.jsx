@@ -25,7 +25,7 @@ class Home extends Component {
                     <div className='btnWrapper'>
                         
                         <Link to="/Events"><button className='btn'>Finn arrangementer</button></Link>
-                        <Link to="/MyEvents"><button className='btn'>Mine arrangementer</button></Link>
+                        <Link to="/myEvents"><button className='btn'>Mine arrangementer</button></Link>
                         <Link to="/RegisterEventPage"><button className='btn'>Opprett arrangement</button></Link>
                   
                         
