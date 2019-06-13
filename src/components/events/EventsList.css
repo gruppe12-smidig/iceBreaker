@@ -141,7 +141,14 @@ and (min-device-width: 1200px)
         .deleteBtn{
         
             margin: 6rem auto auto 5rem; 
+            
       
        }
+       .joinBtn{
+        
+        margin: 6rem auto auto 5rem; 
+        background-color: #F5C759 !important;
+  
+   }
 
 }

@@ -249,10 +249,11 @@ class EventsList extends Component {
                      </section>
 
                      <section className="btn-group" role="group">
-                         <button className="deleteBtn"
+                         <button className="joinBtn"
                                  title="join"
                                  onClick={e => this.joinEvent(e, item.eventID)}>
-                             <IoIosAddCircleOutline/>
+                                     DELTA
+                             {/* <IoIosAddCircleOutline/> */}
                          </button>
 
                      </section>
