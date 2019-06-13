@@ -338,7 +338,7 @@ const joinBtn={
     fontSize:'1.2rem',
 
   
-}
+};
 
 const btnGroup={
   
@@ -347,8 +347,8 @@ const btnGroup={
     right:    '0',
     bottom:   '0',
     height:'auto',
-    height:'40px',
+
    
 
 
-}
+};
