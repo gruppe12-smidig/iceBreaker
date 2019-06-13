@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {Redirect} from "react-router";
 import firebase from '../firebase/Firebase';
 import {GoTrashcan} from "react-icons/go";
 import {IoIosAddCircleOutline} from 'react-icons/io';
@@ -15,15 +16,24 @@ import floePeng from "../../images/floePeng.png";
 import peng from "../../images/penguin.png";
 
 
+
 class EventsList extends Component {
 
 
     constructor(props){
         super(props);
+        this.state={
+            howManyParticipants: ''
+        };
         this.deleteEvent = this.deleteEvent.bind(this);
+        this.joinEvent = this.joinEvent.bind(this);
      
     }
 
+    componentDidMount() {
+
+
+    }
 
 
     deleteEvent = (e, whichEvent) => {
@@ -36,10 +46,47 @@ class EventsList extends Component {
 
     joinEvent = (e, whichEvent) => {
         e.preventDefault();
+        let user = firebase.auth().currentUser;
         const eventRef = firebase.database().ref(`events/${whichEvent}`);
-        eventRef.child('participants').push("lol");
+        let howManyPart = firebase.database().ref(`events/${whichEvent}/participants`);
+        let maxPartRef = eventRef.child('maxParticipants');
+        let maxRef = '';
 
+        maxPartRef.on('value', snapshot => {
+            maxRef =  snapshot.val();
+        });
+
+        howManyPart.on('value', snapshot => {
+            let part = snapshot.val();
+            let partList = [];
+
+            for (let item in part) {
+                partList.push({
+                    pObject: item,
+                    partName: part[item].deltager,
+                    participantID: part[item].ID
+                })
+            }
+            this.setState({
+                part: partList,
+                howManyParticipants: partList.length
+            })
+        });
+
+        if(this.state.howManyParticipants < maxRef ){
+        eventRef.child(`participants`).push({
+            deltager: user.displayName,
+            ID: user.uid
+        })
+        }else {
+            console.log('full booket');
+            console.log('antall som deltar: '+ this.state.howManyParticipants);
+            console.log('hvor mange er lov: ' + maxRef);
+        }
     };
+
+
+
 
     displayEventView = (e, whichEvent) => {
         e.preventDefault();
@@ -231,7 +278,7 @@ class EventsList extends Component {
          return <div>{foodEvents}</div>
      }
      else if(window.location.pathname === '/studyGroup'){
-         const {study} = this.props;
+         const {study, joinEvent} = this.props;
 
 
          const studyEvents = study.map(item => {
@@ -291,7 +338,7 @@ const joinBtn={
     fontSize:'1.2rem',
 
   
-}
+};
 
 const btnGroup={
   
@@ -300,8 +347,8 @@ const btnGroup={
     right:    '0',
     bottom:   '0',
     height:'auto',
-    height:'40px',
+
    
 
 
-}
+};
