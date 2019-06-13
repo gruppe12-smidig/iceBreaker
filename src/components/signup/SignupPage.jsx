@@ -77,7 +77,7 @@ class SignupPage extends Component {
 
 
                 <section>
-                        <button className="back-btn" onClick={this.routeChange}>
+                         <button className="back-btn" onClick={this.routeChange}>
                             <FaArrowLeft/>
                         </button>
                     </section>

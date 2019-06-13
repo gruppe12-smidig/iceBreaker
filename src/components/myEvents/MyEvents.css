@@ -1,12 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,700&display=swap');
+
 /* .mainContainer{
 padd
 } */
 .subHeaderMin{
+    font-family: 'Montserrat', sans-serif;
     margin: 2rem;
     text-align: center;
     color: rgb(117, 117, 117);
     font-size: 1.4rem;
     font-weight: 700;
+
     
 }
 
