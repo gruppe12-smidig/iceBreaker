@@ -11,7 +11,7 @@ import Footer from "../footer/Footer";
 import happyPeng from '../../images/happyPeng.png';
 
 
-class OpprettetEvent extends Component {
+class JoinetEvent extends Component {
     constructor(props) {
         super(props);
 
@@ -29,7 +29,7 @@ class OpprettetEvent extends Component {
             <div className="mainContainer">
                 {/* div wrapperContent adds a margin to the top giving space to hamburger-menu */}
                 <header className='feedBackHeader'>
-                    <p className="feedBackMessage">Eventet er nå opprettet! </p>
+                    <p className="feedBackMessage">Du har nå joinet eventet! </p>
 
                     <Link to="/">
                             <button className='btn-ok'><p className='btnP'>Ok!</p>
@@ -55,4 +55,4 @@ class OpprettetEvent extends Component {
     }
 }
 
-export default OpprettetEvent
+export default JoinetEvent
