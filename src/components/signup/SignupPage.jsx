@@ -5,6 +5,7 @@ import FormError from '../formError/FormError';
 import './SignupPage.css';
 import '../formError/FormError.css'
 import PasswordMask from 'react-password-mask';
+import {FaArrowLeft} from 'react-icons/fa';
 
 
 class SignupPage extends Component {
@@ -74,8 +75,14 @@ class SignupPage extends Component {
 
             <div className='formContainer'>
 
-                <h2 className='subHeader'> Opprett bruker </h2>
 
+                <section>
+                        <button className="back-btn" onClick={this.routeChange}>
+                            <FaArrowLeft/>
+                        </button>
+                    </section>
+
+                    <h2 className='subHeader'> Opprett bruker </h2>
 
              
                     <form className='inputForm' onSubmit={this.handleSubmit}>

@@ -1,7 +1,6 @@
 body {
 
 
-
 }
 
 
@@ -24,6 +23,12 @@ p {
     font-size: 1rem;
     background-color: #155767;
 
+}
+
+.back-btn{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
 }
 
 
