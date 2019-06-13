@@ -248,8 +248,9 @@ class EventsList extends Component {
                          </ul>
                      </section>
 
-                     <section className="btn-group" role="group">
+                     <section className="btn-group" role="group" style={btnGroup} >
                          <button className="joinBtn"
+                             style={joinBtn}
                                  title="join"
                                  onClick={e => this.joinEvent(e, item.eventID)}>
                                      DELTA
@@ -279,3 +280,28 @@ let eventItemGrayed = {
 
 
 export default EventsList
+
+const joinBtn={
+
+    marginLeft:'1rem',
+    backgroundColor:'#F5C759',
+    color:'black',
+    height:'40px',
+    width:'100px',
+    fontSize:'1.2rem',
+
+  
+}
+
+const btnGroup={
+  
+    padding:'0.5rem',
+    position: 'absolute',
+    right:    '0',
+    bottom:   '0',
+    height:'auto',
+    height:'40px',
+   
+
+
+}
