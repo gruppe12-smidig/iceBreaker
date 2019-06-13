@@ -3,6 +3,7 @@ import firebase from '../firebase/Firebase';
 import './ProfilePage.css'
 import PasswordMask from "react-password-mask";
 import penguin from '../../images/penguin.png';
+import Footer from "../footer/Footer";
 
 class ProfilePage extends Component {
     constructor(props){
@@ -196,6 +197,7 @@ class ProfilePage extends Component {
                     </div>
                 </div>
                 </div>
+                <Footer/>
             </div>
 
         );

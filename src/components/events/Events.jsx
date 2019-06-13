@@ -9,6 +9,7 @@ import gym from '../../images/gym.png';
 import cutlery from '../../images/cutlery.png';
 import studying from '../../images/studying.png';
 import calender from '../../images/kalender-white.png';
+import Footer from "../footer/Footer";
 
 
 
@@ -94,6 +95,7 @@ return(
 </button></Link>
 
 </div>
+<Footer/>
 </div>
 )
 }
