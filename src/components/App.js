@@ -340,6 +340,7 @@ class App extends Component {
                                                                                          tur={this.state.tur} fysisk={this.state.fysisk} food={this.state.food} study={this.state.study} userID={this.state.userID} />}/>
                             <Route exact path="/Cookies" user={this.state.user} component={Cookies}/>
                             <Route exact path="/Privacy" user={this.state.user} component={Privacy}/>
+                            <Route exact path="/eventCreated" render={(props) => <OpprettetEvent {...props}/>}/>
                             {/* <Route exact path="/OpprettetEvent" user={this.state.user} component={OpprettetEvent}/> */}
                             <Route component={notFound}/>
 
