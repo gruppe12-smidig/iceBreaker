@@ -71,7 +71,7 @@ class OutOnTripEvent extends Component {
 
                                         <ul className='myEventsList'>
 
-                                            <li className="eventBox"> <EventsList tur = {this.props.tur}/> </li>
+                                            <li className="eventBox"> <EventsList tur = {this.props.tur} joinEvent={this.props.joinEvent}/> </li>
 
                                         </ul>
 

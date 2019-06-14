@@ -202,6 +202,19 @@ class EventsList extends Component {
                          </ul>
                      </section>
 
+                     <section className="btn-group" role="group" style={btnGroup} >
+
+                         <button className="joinBtn"
+                                 style={joinBtn}
+                                 title="join"
+                                 itemID={item.eventID}
+                                 onClick={e => this.joinEvent(e, item.eventID)}>
+                             DELTA
+                             {/* <IoIosAddCircleOutline/> */}
+                         </button>
+
+                     </section>
+
                  </div>
              );
          });
@@ -224,6 +237,19 @@ class EventsList extends Component {
                          </ul>
                      </section>
 
+                     <section className="btn-group" role="group" style={btnGroup} >
+
+                         <button className="joinBtn"
+                                 style={joinBtn}
+                                 title="join"
+                                 itemID={item.eventID}
+                                 onClick={e => this.joinEvent(e, item.eventID)}>
+                             DELTA
+                             {/* <IoIosAddCircleOutline/> */}
+                         </button>
+
+                     </section>
+
                  </div>
              );
          });
@@ -244,6 +270,19 @@ class EventsList extends Component {
                              <li className='pEventBox'> <b>Maks deltagere:</b> {item.maxParticipants}</li>
                              <li className='pEventBox'> <b>Beskrivelse:</b> {item.description}</li>
                          </ul>
+                     </section>
+
+                     <section className="btn-group" role="group" style={btnGroup} >
+
+                         <button className="joinBtn"
+                                 style={joinBtn}
+                                 title="join"
+                                 itemID={item.eventID}
+                                 onClick={e => this.joinEvent(e, item.eventID)}>
+                             DELTA
+                             {/* <IoIosAddCircleOutline/> */}
+                         </button>
+
                      </section>
 
                  </div>

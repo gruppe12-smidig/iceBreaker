@@ -71,7 +71,7 @@ class FoodTalkEvent extends Component {
 
                                         <ul className='EventsList'>
 
-                                            <li className="eventBox"> <EventsList food = {this.props.food}/> </li>
+                                            <li className="eventBox"> <EventsList food = {this.props.food} joinEvent={this.props.joinEvent}/> </li>
 
                                         </ul>
 
