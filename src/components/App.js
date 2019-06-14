@@ -221,7 +221,7 @@ class App extends Component {
                     })
                 });
 
-                const eventsFysiskRef = firebase.database().ref('events').orderByChild('eventType').equalTo('fysisk aktivitet').limitToFirst(4);
+                const eventsFysiskRef = firebase.database().ref('events').orderByChild('eventType').equalTo('Fysisk aktivitet').limitToFirst(4);
 
                 eventsFysiskRef.on('value', snapshot => {
                     let fysisk = snapshot.val();
@@ -261,7 +261,7 @@ class App extends Component {
     };
 
 
-    registerUser = (userName, signupInfo) => {
+    registerUser = (userName) => {
         firebase.auth().onAuthStateChanged(FBUser => {
             FBUser.updateProfile({
                 displayName: userName
@@ -369,6 +369,7 @@ class App extends Component {
                             <Route exact path="/EventView" render={(props) => <EventView {...props} events={this.state.events} coffee={this.state.coffee}
                                                                                          tur={this.state.tur} fysisk={this.state.fysisk} food={this.state.food} study={this.state.study} userID={this.state.userID} />}/>
                             <Route exact path="/Cookies" user={this.state.user} component={Cookies}/>
+                            <Route exact path="joinedEvent"/>
                             <Route exact path="/Privacy" user={this.state.user} component={Privacy}/>
                             <Route exact path="/eventCreated" render={(props) => <OpprettetEvent {...props}/>}/>
                             {/* <Route exact path="/OpprettetEvent" user={this.state.user} component={OpprettetEvent}/> */}

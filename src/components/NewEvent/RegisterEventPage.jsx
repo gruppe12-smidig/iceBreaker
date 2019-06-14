@@ -8,7 +8,7 @@ import firebase from "../firebase/Firebase";
 
 class RegisterEventPage extends Component {
     constructor (props) {
-      super(props)
+      super(props);
       this.state = {
           eventName: '',
           eventType: '',
