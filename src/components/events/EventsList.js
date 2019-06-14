@@ -7,13 +7,17 @@ import {IoIosAddCircleOutline} from 'react-icons/io';
 import '../myEvents/MyEvents.css';
 import './EventsList.css';
 
-import gym from '../../images/gym.png';
-import matprat from '../../images/cutlery.png';
-import kaffetreff from '../../images/tea.png';
-import studying from '../../images/studying.png';
+
 import notFound from "../notFound/NotFound";
 import floePeng from "../../images/floePeng.png";
 import peng from "../../images/penguin.png";
+
+import tea from '../../images/tea.png';
+import boot from '../../images/boot.png';
+import cutlery from '../../images/cutlery.png';
+import studying from '../../images/studying.png';
+import calender from '../../images/kalender-white.png';
+import Footer from "../footer/Footer";
 
 
 
@@ -149,6 +153,7 @@ class EventsList extends Component {
                  <div className="list-item" key={item.eventID}>
 
                      <div className='imgWrapper'><img className="eventIcon" src={item.eventType} alt={item.eventType}/>
+
                      </div>
 
                      <section className="event-info" onClick={<div>this.displayEventView</div>} role="group">
@@ -192,7 +197,7 @@ class EventsList extends Component {
             return (
                  <div className="list-item" key={item.eventID}>
 
-
+                    <img className="eventIconImg" src={tea} alt="teacup"/>
                      <section className="event-info" role="group">
                          <ul>
                          <li className='headerEventBox'>  {item.eventName}</li>
@@ -226,7 +231,7 @@ class EventsList extends Component {
          const turEvents = tur.map(item => {
              return (
                  <div className="list-item" key={item.eventID}>
-
+                <img className="eventIconImg" src={boot} alt="boots"/>
 
                      <section className="event-info" role="group">
                          <ul>
@@ -261,7 +266,7 @@ class EventsList extends Component {
          const foodEvents = food.map(item => {
              return (
                  <div className="list-item" key={item.eventID}>
-
+                     <img className="eventIconImg" src={cutlery} alt="cutlery"/>
 
                      <section className="event-info" role="group">
                          <ul>
@@ -299,7 +304,7 @@ class EventsList extends Component {
              return (
                  <div className="list-item" key={item.eventID}>
 
-
+                <img className="eventIconImg" src={studying} alt="books"/>
                      <section className="event-info" role="group">
                          <ul>
                          <li className='headerEventBox'>  {item.eventName}</li>
