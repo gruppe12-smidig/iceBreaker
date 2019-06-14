@@ -200,12 +200,13 @@ handleLastDateChange(date){
                         </div>
 
                         <div>
+                        <Link to="/EventCreated">
                             <button className='signBtn' type="submit">Opprett</button>
+                         </Link> 
                         </div>
-                        {/* <Link to="/OpprettetEvent">
-                            <button className='btn-coffeMeeting'><p className='btnP'>Kaffetreff</p>
-                            </button>
-                         </Link> */}
+                         
+                         
+                    
 
               
                     </form>

@@ -50,8 +50,9 @@ class ProfilePage extends Component {
 
         return(
             <div>
+     
                 <div>
-                    <h1> Endre mail </h1>
+                    <h2> Endre mail </h2>
 
                     <PasswordMask
                         className="password"
@@ -132,67 +133,77 @@ class ProfilePage extends Component {
                  
 
                 <div className='infoContainer'>
-                    <div>
-                        <h1> Endre mail </h1>
+                    <div className='upperBox'>
 
-                        <PasswordMask
-                            className="password"
-                            placeholder="Passord"
-                            type="text"
-                            id="password"
-                            name="password"
-                            required
-                            value={this.state.password}
-                            onChange={this.handleChange}
-                        />
+                            <p className='boldP'>E-post</p>
+                            <p >Linda@gmail.com</p>
 
-                        <input
-                            className="username"
-                            type="text"
-                            id="email"
-                            name="email"
-                            required
-                            value={this.state.newMail}
-                            onChange={this.handleChange}
-                        />
+                            <p className='boldP'>Skole</p>
+                                <p >Høgskolen Kristiania</p>
 
-                        <div>
-                            <button  className="btn-login">
-                                utfør
-                            </button>
-                        </div>
-                    </div>
+                     </div>
+                        {/* <h4> Endre mail </h4> */}
 
-                    <div>
-                        <h1>Endre passord</h1>
+{/* <PasswordMask
+    className="password"
+    placeholder="Passord"
+    type="text"
+    id="password"
+    name="password"
+    required
+    value={this.state.password}
+    onChange={this.handleChange}
+/> */}
 
-                        <PasswordMask
-                            className="password"
-                            placeholder="Passord"
-                            type="text"
-                            id="password"
-                            name="password"
-                            required
-                            value={this.state.password}
-                            onChange={this.handleChange}
-                        />
+{/* <PasswordMask
+    className="username"
+    type="text"
+    id="email"
+    name="email"
+    required
+    value={this.state.newMail}
+    onChange={this.handleChange}
+/> */}
 
-                        <PasswordMask
-                            className="username"
-                            placeholder="nytt passord"
-                            type="text"
-                            id="password"
-                            name="password"
-                            required
-                            value={this.state.newPassword}
-                            onChange={this.handleChange}
-                        />
+{/* <div>
+    <button  className="btn-login">
+        utfør
+    </button>
+</div> */}
 
-                        <div>
-                            <button  className="btn-login">
-                                utfør
-                            </button>
-                        </div>
+
+                <div className='bottomBox'>
+                    <h2>Endre passord</h2>
+
+                                <PasswordMask
+                                    className="password"
+                                    placeholder="Passord"
+                                    type="text"
+                                    id="password"
+                                    name="password"
+                                    required
+                                    value={this.state.password}
+                                    onChange={this.handleChange}
+                                />
+<p>  "</p>
+                                <PasswordMask
+                                    className="password"
+                                    placeholder="nytt passord"
+                                    type="text"
+                                    id="password"
+                                    name="password"
+                                    required
+                                    value={this.state.newPassword}
+                                    onChange={this.handleChange}
+                                />
+
+                            
+
+                                <div>
+                                    <button  className="btn-login">
+                                        utfør
+                                    </button>
+                                </div>
 
                     </div>
                 </div>
