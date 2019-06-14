@@ -46,14 +46,14 @@ class ActivityEvent extends Component {
                 {/* div wrapperContent adds a margin to the top giving space to hamburger-menu */}
                 <div className="wrapperContent">
 
-
-                    <h2 className='subHeader'> Fysisk aktivitet </h2>
-
                     <section>
                         <button className="back-btn" onClick={this.routeChange}>
                             <FaArrowLeft/>
                         </button>
                     </section>
+
+
+                    <h2 className='subHeader'> Fysisk aktivitet </h2>
 
 
                     {/*Render of event components from DB  */}
@@ -66,18 +66,15 @@ class ActivityEvent extends Component {
 
                                         <ul className='myEventsList'>
 
-                                            <li className="eventBox"> <EventsList fysisk = {this.props.fysisk}/> </li>
+                                            <li className="eventBox"> <EventsList fysisk = {this.props.fysisk} joinEvent={this.props.joinEvent}/> </li>
 
                                         </ul>
 
                                     </div>
-
-
                                 ): null }
 
                             </div>
                         </li>
-
 
                     </ul>
 

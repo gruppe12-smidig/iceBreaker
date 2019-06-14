@@ -225,6 +225,42 @@ class EventsList extends Component {
          });
          return <div>{coffeeEvents}</div>
      }
+     else  if(window.location.pathname === '/activity'){
+         const {fysisk, userID} = this.props;
+
+         const fysiskEvents = fysisk.map(item => {
+             return (
+                 <div className="list-item" key={item.eventID}>
+
+
+                     <section className="event-info" role="group">
+                         <ul>
+                             <li className='headerEventBox'>  {item.eventName}</li>
+                             <li className='pEventBox'> <b>Kategori:</b> {item.eventType}</li>
+                             <li className='pEventBox'> <b>Maks deltagere:</b> {item.maxParticipants}</li>
+                             <li className='pEventBox'> <b>Beskrivelse:</b> {item.description}</li>
+                         </ul>
+                     </section>
+
+                     <section className="btn-group" role="group" style={btnGroup} >
+
+                         <button className="joinBtn"
+                                 style={joinBtn}
+                                 title="join"
+                                 itemID={item.eventID}
+                                 onClick={e => this.joinEvent(e, item.eventID)}>
+                             DELTA
+                             {/* <IoIosAddCircleOutline/> */}
+                         </button>
+
+                     </section>
+
+                 </div>
+             );
+         });
+         return <div>{fysiskEvents}</div>
+     }
+
     else if(window.location.pathname === '/outOnTrip'){
          const {tur} = this.props;
 
