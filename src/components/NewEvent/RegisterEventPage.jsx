@@ -58,7 +58,7 @@ handleLastDateChange(date){
             startDate: this.state.startDate,
             endDate: this.state.endDate,
             lastDate: this.state.lastDate
-        }
+        };
         e.preventDefault();
         this.props.addEvent(eventInfo);
         this.setState({eventName: ' ', eventType: '', description: '', maxParticipants: '', startDate: new Date(), endDate: new Date(), lastDate: new Date() });
@@ -200,9 +200,9 @@ handleLastDateChange(date){
                         </div>
 
                         <div>
-                        <Link to="/EventCreated">
+
                             <button className='signBtn' type="submit">Opprett</button>
-                         </Link> 
+
                         </div>
                          
                          
