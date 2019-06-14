@@ -27,6 +27,15 @@ font-size: 1.3rem;
      margin-top: 3rem;
  
  }
+
+
+
+.joinBtn{
+margin-bottom: 1rem;
+
+ /* background-color: rgb(121, 113, 94) !important; */
+
+}
  .eventBox{
 
     display:grid;

@@ -91,7 +91,13 @@
     font-size: 15px;
 }
 
+.btn-group{
+    margin-bottom: 0.5rem !important;
 
+   height: 30px !important;
+   position: absolute;
+   
+}
 /* ----------- < iPad  ----------- */
 
 /* Portrait and Landscape */
@@ -145,14 +151,14 @@ and (min-device-width: 1200px)
             
       
        }
-
-       .btn-group{
-
+       .btngroup{
+ 
        }
+ 
        .joinBtn{
-        
-  
-        background-color: #F5C759 !important;
+      margin-bottom: 1rem; 
+
+        /* background-color: rgb(121, 113, 94) !important; */
   
    }
 
