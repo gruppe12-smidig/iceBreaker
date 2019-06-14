@@ -126,7 +126,9 @@ class EventsList extends Component {
         else {
 
             this.setState({
-                displayEventButton: false
+                displayEventButton: false,
+
+
             });
 
 
@@ -224,9 +226,9 @@ class EventsList extends Component {
          return <div>{coffeeEvents}</div>
      }
      else  if(window.location.pathname === '/activity'){
-         const {fysisk, userID} = this.props;
+         const {f} = this.props;
 
-         const fysiskEvents = fysisk.map(item => {
+         const fEvents = f.map(item => {
              return (
                  <div className="list-item" key={item.eventID}>
 
@@ -256,7 +258,7 @@ class EventsList extends Component {
                  </div>
              );
          });
-         return <div>{fysiskEvents}</div>
+         return <div>{fEvents}</div>
      }
 
     else if(window.location.pathname === '/outOnTrip'){
@@ -265,7 +267,7 @@ class EventsList extends Component {
          const turEvents = tur.map(item => {
              return (
                  <div className="list-item" key={item.eventID}>
-                <img className="eventIconImg" src={gym} alt="boots"/>
+                <img className="eventIconImg" src={boot} alt="boots"/>
 
                      <section className="event-info" role="group">
                          <ul>

@@ -221,24 +221,24 @@ class App extends Component {
                     })
                 });
 
-                const eventsFysiskRef = firebase.database().ref('events').orderByChild('eventType').equalTo('Fysisk aktivitet').limitToFirst(4);
+                const eventsfRef = firebase.database().ref('events').orderByChild('eventType').equalTo('Fysisk aktivitet').limitToFirst(4);
 
-                eventsFysiskRef.on('value', snapshot => {
-                    let fysisk = snapshot.val();
-                    let fysiskList = [];
+                eventsfRef.on('value', snapshot => {
+                    let f = snapshot.val();
+                    let fList = [];
 
-                    for (let item in fysisk) {
-                        fysiskList.push({
+                    for (let item in f) {
+                        fList.push({
                             eventID: item,
-                            eventName: fysisk[item].eventName,
-                            eventType: fysisk[item].eventType,
-                            maxParticipants: fysisk[item].maxParticipants,
-                            description: fysisk[item].description
+                            eventName: f[item].eventName,
+                            eventType: f[item].eventType,
+                            maxParticipants: f[item].maxParticipants,
+                            description: f[item].description
                         })
                     }
                     this.setState({
-                        fysisk: fysiskList,
-                        howManyFysisk: fysiskList.length
+                        f: fList,
+                        howManyF: fList.length
                     })
                 })
 
@@ -361,13 +361,13 @@ class App extends Component {
                             <Route exact path="/myEvents" render={(props) => <MyEvents {...props} events={this.state.events} userID={this.state.userID}  joinedE={this.state.joinedE}/>}/>
                             <Route exact path="/FindEvents" render={ (props) => <FindEvents {...props}  events={this.state.events} coffee={this.state.coffee} userID={this.state.userID}/>}/>
                             <Route exact path='/outOnTrip' render={(props) => <OutOnTripEvent {...props} tur={this.state.tur} userID={this.state.userID}/>}/>
-                            <Route exact path='/activity' render={(props) => <ActivityEvent {...props} fysisk={this.state.fysisk} userID={this.state.userID}/>}/>
+                            <Route exact path='/activity' render={(props) => <ActivityEvent {...props} f={this.state.f} userID={this.state.userID}/>}/>
                             <Route exact path='/foodEvent' render={(props) => <FoodTalkEvent {...props} food={this.state.food} userID={this.state.userID} />}/>
                             <Route exact path='/studyGroup' render={(props) => <StudyGroupEvent {...props} study={this.state.study} userID={this.state.userID}/>}/>
                             <Route exact path="/StartPage" user={this.state.user} component={StartPage}/>
                             <Route exact path="/About" user={this.state.user} component={About}/>
                             <Route exact path="/EventView" render={(props) => <EventView {...props} events={this.state.events} coffee={this.state.coffee}
-                                                                                         tur={this.state.tur} fysisk={this.state.fysisk} food={this.state.food} study={this.state.study} userID={this.state.userID} />}/>
+                                                                                         tur={this.state.tur} f={this.state.f} food={this.state.food} study={this.state.study} userID={this.state.userID} />}/>
                             <Route exact path="/Cookies" user={this.state.user} component={Cookies}/>
                             <Route exact path="joinedEvent"/>
                             <Route exact path="/Privacy" user={this.state.user} component={Privacy}/>

@@ -46,35 +46,44 @@ class ActivityEvent extends Component {
                 {/* div wrapperContent adds a margin to the top giving space to hamburger-menu */}
                 <div className="wrapperContent">
 
-                    <section>
-                        <button className="back-btn" onClick={this.routeChange}>
-                            <FaArrowLeft/>
-                        </button>
-                    </section>
+
+                    <header className='eventPagesHeader'>
+
+                        <section>
+                            <button className="back-btn" onClick={this.routeChange}>
+                                <FaArrowLeft/>
+                            </button>
+                        </section>
+
+                        <h2 className='subHeader'> Fysisk aktivtet </h2>
 
 
-                    <h2 className='subHeader'> Fysisk aktivitet </h2>
+                    </header>
 
 
                     {/*Render of event components from DB  */}
                     <ul className='eventContainer'>
 
-                        <li className='eventBox'>
-                            <div className="testEvent">
-                                {this.props.fysisk && this.props.fysisk.length ? (
-                                    <div>
+                        <li >
 
-                                        <ul className='myEventsList'>
+                            {this.props.f && this.props.f.length ? (
+                                <div>
 
-                                            <li className="eventBox"> <EventsList fysisk = {this.props.fysisk} joinEvent={this.props.joinEvent}/> </li>
+                                    <ul className='myEventsList'>
 
-                                        </ul>
+                                        <li className="eventBox"> <EventsList f = {this.props.f} joinEvent={this.props.joinEvent}/> </li>
 
-                                    </div>
-                                ): null }
+                                    </ul>
 
-                            </div>
+                                </div>
+
+
+                            ): null }
+
+
                         </li>
+
+
 
                     </ul>
 
