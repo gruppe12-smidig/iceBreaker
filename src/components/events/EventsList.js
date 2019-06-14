@@ -23,7 +23,14 @@ class EventsList extends Component {
     constructor(props){
         super(props);
         this.state={
-            howManyParticipants: ''
+            eventID: '',
+            eventName: '',
+            eventType: '',
+            maxParticipants: '',
+            description: '',
+            howManyParticipants: '',
+            participantID: '',
+            displayEventButton: true
         };
         this.deleteEvent = this.deleteEvent.bind(this);
         this.joinEvent = this.joinEvent.bind(this);
@@ -31,6 +38,9 @@ class EventsList extends Component {
     }
 
     componentDidMount() {
+
+
+
 
 
     }
@@ -56,6 +66,28 @@ class EventsList extends Component {
             maxRef =  snapshot.val();
         });
 
+        eventRef.on('value', snapshot  =>{
+           let clickedEvent = snapshot.val();
+           let clickedEventList = [];
+
+           for(let item in clickedEvent){
+               clickedEventList.push({
+                   eventID: item,
+                   eventName: clickedEvent[item].eventName,
+                   eventType: clickedEvent[item].eventType,
+                   maxParticipants: clickedEvent[item].maxParticipants,
+                   description: clickedEvent[item].description
+               });
+           }
+            this.setState({
+                clickedEvent: clickedEventList
+            });
+            console.log('listen fra innsiden:' + clickedEvent.eventName);
+
+            const joinedEventsRef = firebase.database().ref(`joinedEvents/${user.uid}/`);
+            joinedEventsRef.push({eventName: clickedEvent.eventName, eventType: clickedEvent.eventType})
+        });
+
         howManyPart.on('value', snapshot => {
             let part = snapshot.val();
             let partList = [];
@@ -69,7 +101,8 @@ class EventsList extends Component {
             }
             this.setState({
                 part: partList,
-                howManyParticipants: partList.length
+                howManyParticipants: partList.length,
+
             })
         });
 
@@ -77,92 +110,30 @@ class EventsList extends Component {
         eventRef.child(`participants`).push({
             deltager: user.displayName,
             ID: user.uid
-        })
-        }else {
+        });
+
+            this.setState({
+                displayEventButton: true
+            });
+
+
+        }
+
+        else {
+
+            this.setState({
+                displayEventButton: false
+            });
+
+
             console.log('full booket');
             console.log('antall som deltar: '+ this.state.howManyParticipants);
             console.log('hvor mange er lov: ' + maxRef);
+            console.log('part ID: ' + this.state.participantID);
+            console.log(user.uid);
         }
     };
 
-
-
-
-    displayEventView = (e, whichEvent) => {
-        e.preventDefault();
-        const onClickEventRef = firebase.database().ref(`events/${whichEvent}`);
-
-        onClickEventRef.on('value', snapshot => {
-            let eventView = snapshot.val();
-
-            console.log(eventView);
-
-            return (
-                <div className="mainContainer">
-                    {/* div wrapperContent adds a margin to the top giving space to hamburger-menu */}
-                    <div className="wrapperContent">
-
-
-                        <div className='eventViewContainer' onClick={this.displayEventView}>
-                            <h2 className='subHeader'> {eventView.eventName}</h2>
-
-                            <div className='descriptionWrapper'>
-
-                                <p className='description'> {eventView.description} </p>
-
-                            </div>
-
-                            <div className='infoWrapper'>
-
-                                <div className='infoSection'>
-                                    <p className='boldP'>Dato:</p>  <span> 20-02-2019 - 23-02-2019 </span>
-                                </div>
-
-                                <div className='infoSection'>
-                                    <p className='boldP'>Siste påmelding:</p>  <span>20-02-2019</span>
-                                </div>
-
-                                <div className='infoSection'>
-                                    <p className='boldP'>Maks deltakere:</p>
-                                    <span>{eventView.maxParticipants}</span>
-                                </div>
-
-                                <div className='infoSection'>
-                                    <p className='boldP'>Ansvarlig:</p>  <span>Anne Lien</span>
-                                </div>
-
-                            </div>
-
-
-                            <img className='floePeng' src={floePeng} alt="penguins"/>
-
-                        </div>
-
-                        <div className='userContainer'>
-                            <ul>
-                                <li className='user'><img className='peng' src={peng} alt=" penguin"/> <span>Anne Lien</span>
-                                </li>
-                                <li className='user'><img className='peng' src={peng} alt=" penguin"/> <span>Per Olsen</span>
-                                </li>
-                                <li className='user'><img className='peng' src={peng} alt=" penguin"/> <span>Johan Berg</span>
-                                </li>
-                            </ul>
-                        </div>
-
-
-                    </div>
-
-
-                </div>
-            )
-
-
-
-
-        });
-
-
-    };
 
 
 
@@ -200,16 +171,19 @@ class EventsList extends Component {
          
                      </section>
 
+
+
                      {/* <div className='eventView'>
                         <EventView />
                   </div> */}
                  </div>
-             );
+             )
          });
 
          return <div>{userEvents}</div>
 
      }
+
 
     else  if(window.location.pathname === '/FindEvents'){
          const {coffee} = this.props;
@@ -278,10 +252,11 @@ class EventsList extends Component {
          return <div>{foodEvents}</div>
      }
      else if(window.location.pathname === '/studyGroup'){
-         const {study, joinEvent} = this.props;
-
+         const {study, joinEvent,displayEventButton,eventIsFull } = this.props;
 
          const studyEvents = study.map(item => {
+
+
              return (
                  <div className="list-item" key={item.eventID}>
 
@@ -296,15 +271,18 @@ class EventsList extends Component {
                      </section>
 
                      <section className="btn-group" role="group" style={btnGroup} >
+
                          <button className="joinBtn"
-                             style={joinBtn}
+                                 style={joinBtn}
                                  title="join"
+                                 itemID={item.eventID}
                                  onClick={e => this.joinEvent(e, item.eventID)}>
-                                     DELTA
+                             DELTA
                              {/* <IoIosAddCircleOutline/> */}
                          </button>
 
                      </section>
+
 
                  </div>
              );
