@@ -116,7 +116,7 @@ class ProfilePage extends Component {
 
     render() {
 
-        const {userName} = this.props;
+        const {userName, email} = this.props;
 
 
 
@@ -136,7 +136,7 @@ class ProfilePage extends Component {
                     <div className='upperBox'>
 
                             <p className='boldP'>E-post</p>
-                            <p >Linda@gmail.com</p>
+                            <p >{email}</p>
 
                             <p className='boldP'>Skole</p>
                                 <p >Høgskolen Kristiania</p>

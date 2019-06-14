@@ -47,6 +47,7 @@ class App extends Component {
           user: null,
           displayName: null,
           userID: null,
+          email: null,
           sideDrawerOpen: false,
           conscent: true
 
@@ -81,7 +82,8 @@ class App extends Component {
                     user: FBUser,
                     authenticated: true,
                     displayName: FBUser.displayName,
-                    userID: FBUser.uid
+                    userID: FBUser.uid,
+                    email: FBUser.email
                     });
 
 
@@ -350,7 +352,7 @@ class App extends Component {
 
                     
 
-                            <Route exact path="/ProfilePage" render={(props)=> <ProfilePage {...props} userName={this.state.displayName} user={this.state.user} userID={this.state.userID}/>}/>
+                            <Route exact path="/ProfilePage" render={(props)=> <ProfilePage {...props} userName={this.state.displayName} email={this.state.email} user={this.state.user} userID={this.state.userID}/>}/>
                             <Route exact path="/loginPage" render={(props)=><LoginPage {...props} logOutUser={this.logOutUser}/>}/>
                             <Route exact path="/SignupPage"  render={ (props) => <SignupPage {...props} registerUser={this.registerUser} addUser={this.addUser} userID={this.state.userID}  />}/>
                             <Route exact path="/RegisterEventPage" render={ (props) =><RegisterEventPage {...props} addEvent={this.addEvent}/>}/>
