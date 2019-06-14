@@ -33,9 +33,10 @@ return (
 
             <div className='teamTextWrapper'>
                 <p className='contactUs-description'> Icebreaker er skapt av oss, en gruppe studenter ved Høyskolen Kristiania.
-                Icebreaker er skapt av oss, en gruppe studenter ved Høyskolen Kristiania.
-                Icebreaker er skapt av oss, en gruppe studenter ved Høyskolen Kristiania
-                Icebreaker er skapt av oss, en gruppe studenter ved Høyskolen Kristiania</p>
+                Vår visjon er å tilby en produkt som studenter er interessert i å bruke. Vi saknet en plass hvor du kan  
+                treffe nye studenter ved å arrangere eller delta på arrangementer som studiegrupper, kaffetreff eller fysiske aktivitet.  
+                Vi håper at du kommer like dette like mye som oss!
+              </p>
             </div>
      
       
