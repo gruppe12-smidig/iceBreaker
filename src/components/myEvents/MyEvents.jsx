@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom'
 import './MyEvents.css';
 import Footer from "../footer/Footer";
 import EventsList from '../events/EventsList';
+import JoinedEventsList from "../events/JoinedEventsList";
 
 
 
@@ -51,15 +52,19 @@ class MyEvents extends Component {
                             <div className="joinedEventsContainer" >
 
                                 <h3 className='subHeaderMin'>Oppmeldt til</h3>
-                                {/*Render of event components from DB  */}
-                                <ul  className='myEventsList'>
-                                <li className='eventBox'><div className="testEvent"></div></li>
-                                <li className='eventBox'><div className="testEvent"></div></li>
-                                <li className='eventBox'><div className="testEvent"></div></li>
-                                <li className='eventBox'><div className="testEvent"></div></li>
-                                <li className='eventBox'><div className="testEvent"></div></li>
 
-                                </ul>
+                                {this.props.joinedE && this.props.joinedE.length ? (
+
+                                    <ul  className='myEventsList'>
+
+                                        <li className='eventBox'><JoinedEventsList userID={this.props.userID} joinedE={this.props.joinedE}/></li>
+
+                                    </ul>
+                                ): null }
+
+
+                                {/*Render of event components from DB  */}
+
                                 <div className='btnWrapper'>
                                       <Link to="/Events"><button className='btnRounded'>Finn ny</button></Link>
                                 </div>

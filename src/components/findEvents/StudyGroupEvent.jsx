@@ -71,7 +71,7 @@ class StudyGroupEvent extends Component {
 
                                         <ul className='myEventsList'>
 
-                                            <li className="eventBox"> <EventsList study = {this.props.study}/> </li>
+                                            <li className="eventBox"> <EventsList study = {this.props.study} joinEvent={this.props.joinEvent}/> </li>
 
                                         </ul>
 

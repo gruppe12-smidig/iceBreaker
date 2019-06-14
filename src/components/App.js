@@ -108,6 +108,31 @@ class App extends Component {
                     })
                 });
 
+                const myJoinedRef = firebase.database().ref(`joinedEvents/${FBUser.uid}/`).limitToFirst(4);
+
+                myJoinedRef.on('value', snapshot =>  {
+
+                    let joinedE = snapshot.val();
+                    let joinedEList = [];
+
+                    for(let item in joinedE) {
+                        joinedEList.push({
+                            eventID: item,
+                            eventName: joinedE[item].eventName,
+                            eventType: joinedE[item].eventType,
+                            maxParticipants: joinedE[item].maxParticipants,
+                            description: joinedE[item].description
+                        });
+                    }
+
+                    this.setState({
+                        joinedE: joinedEList,
+                        howManyJoinedE: joinedEList.length
+                    })
+                });
+
+
+
                 const eventsCoffeeRef   = firebase.database().ref('events').orderByChild('eventType').equalTo('kaffetreff').limitToFirst(4);
 
                 eventsCoffeeRef.on('value', snapshot => {
@@ -330,7 +355,7 @@ class App extends Component {
                             <Route exact path="/SignupPage"  render={ (props) => <SignupPage {...props} registerUser={this.registerUser} addUser={this.addUser} userID={this.state.userID}  />}/>
                             <Route exact path="/RegisterEventPage" render={ (props) =><RegisterEventPage {...props} addEvent={this.addEvent}/>}/>
                             <Route exact path="/events" user={this.state.user} component={Events}/>
-                            <Route exact path="/myEvents" render={(props) => <MyEvents {...props} events={this.state.events} userID={this.state.userID}/>}/>
+                            <Route exact path="/myEvents" render={(props) => <MyEvents {...props} events={this.state.events} userID={this.state.userID}  joinedE={this.state.joinedE}/>}/>
                             <Route exact path="/FindEvents" render={ (props) => <FindEvents {...props}  events={this.state.events} coffee={this.state.coffee} userID={this.state.userID}/>}/>
                             <Route exact path='/outOnTrip' render={(props) => <OutOnTripEvent {...props} tur={this.state.tur} userID={this.state.userID}/>}/>
                             <Route exact path='/activity' render={(props) => <ActivityEvent {...props} fysisk={this.state.fysisk} userID={this.state.userID}/>}/>
