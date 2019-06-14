@@ -14,7 +14,7 @@ import peng from '../../images/penguin.png';
 
 class EventView extends Component {
     constructor(props) {
-        super(props)
+        super(props);
         this.state = {
             chatHidden: true,
             isFull: false,

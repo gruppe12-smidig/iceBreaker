@@ -31,7 +31,7 @@ class OpprettetEvent extends Component {
                 <header className='feedBackHeader'>
                     <p className="feedBackMessage">Eventet er nå opprettet! </p>
 
-                    <Link to="/">
+                    <Link to="/myEvents">
                             <button className='btn-ok'><p className='btnP'>Ok!</p>
                             </button>
                          </Link>

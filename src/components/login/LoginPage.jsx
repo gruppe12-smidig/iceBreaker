@@ -42,7 +42,7 @@ class LoginPage extends Component {
             signupInfo.password
         ).then(()=> {
             console.log('you are logged in');
-            window.location = '/';
+            window.location = '/home';
         })
             .catch(error => {
                 if (error.message !== null){

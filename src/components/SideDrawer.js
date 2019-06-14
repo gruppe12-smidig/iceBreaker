@@ -21,7 +21,7 @@ class SideDrawer extends Component {
 
                 <ul>
 
-                    <li><Link to="/" onClick={this.props.drawerClickHandler}>Hjem</Link></li>
+                    <li><Link to="/home" onClick={this.props.drawerClickHandler}>Hjem</Link></li>
                     {/* <li><Link to="/LoginPage" onClick={this.props.drawerClickHandler} >Login Page</Link></li>
                     <li><Link to="/SignupPage" onClick={this.props.drawerClickHandler}>Sign up</Link></li> */}
                     <li><Link to="/RegisterEventPage" onClick={this.props.drawerClickHandler}>Nytt arrangement</Link></li>
