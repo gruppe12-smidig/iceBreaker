@@ -29,7 +29,7 @@
 }
 .event-info{
     height: auto;
-    max-width: 140px;
+    max-width: 180px;
     float: right;
     text-align: left;
   
@@ -47,6 +47,12 @@
 display: none;
 
   
+}
+.btn-group-del{
+
+    height: 40px;
+
+ 
 }
 
 .event-info h3{
@@ -155,12 +161,13 @@ and (min-device-width: 1200px)
 
         .deleteBtn{
         
-            margin: 6rem auto auto 5rem; 
+            margin: auto -10rem 1rem auto ; 
+        
             
       
        }
        .btngroup{
- 
+        position: absolute;
        }
  
        .joinBtn{

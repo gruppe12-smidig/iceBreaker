@@ -152,9 +152,7 @@ class EventsList extends Component {
              return (
                  <div className="list-item" key={item.eventID}>
 
-                     <div className='imgWrapper'><img className="eventIcon" src={item.eventType} alt={item.eventType}/>
-
-                     </div>
+                  
 
                      <section className="event-info" onClick={<div>this.displayEventView</div>} role="group">
                          <ul>
@@ -167,7 +165,7 @@ class EventsList extends Component {
 
         
 
-                     <section className="btn-group" role="group">
+                     <section className="btn-group-del" role="group">
                          <button className="deleteBtn"
                                  title="Delete Event"
                                  onClick={e => this.deleteEvent(e, item.eventID)}>
