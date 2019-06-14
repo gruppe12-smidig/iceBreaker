@@ -7,7 +7,7 @@ import {IoIosAddCircleOutline} from 'react-icons/io';
 import '../myEvents/MyEvents.css';
 import './EventsList.css';
 
-
+import gym from '../../images/gym.png';
 import notFound from "../notFound/NotFound";
 import floePeng from "../../images/floePeng.png";
 import peng from "../../images/penguin.png";
@@ -267,7 +267,7 @@ class EventsList extends Component {
          const turEvents = tur.map(item => {
              return (
                  <div className="list-item" key={item.eventID}>
-                <img className="eventIconImg" src={boot} alt="boots"/>
+                <img className="eventIconImg" src={gym} alt="boots"/>
 
                      <section className="event-info" role="group">
                          <ul>

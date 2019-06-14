@@ -29,7 +29,7 @@
 }
 .event-info{
     height: auto;
-    max-width: 180px;
+    max-width: 140px;
     float: right;
     text-align: left;
   
@@ -136,7 +136,7 @@ and (min-device-width: 1200px)
 
 { 
     .eventIconImg{
-display: block;
+        display: block;
         height: 200px;
     }
 
