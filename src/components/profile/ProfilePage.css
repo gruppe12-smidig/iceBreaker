@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,700&display=swap');
+
 body {
 
     margin: 0rem;
@@ -34,10 +36,18 @@ body {
 }
 
 .bottomBox{
- margin-top: 12rem;
-    padding: 0rem;
-    display: grid;
-    justify-content: flex-start;
-    /* grid-template-columns: 100%; */
-
+    display:block;
+    margin:0 auto;
+    margin-top: 50px;
 }
+
+h2{
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+.upperBox p{
+    font-family: 'Montserrat', sans-serif; 
+    text-align: center;
+}
+

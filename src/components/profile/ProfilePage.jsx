@@ -77,7 +77,7 @@ class ProfilePage extends Component {
 
                     <div>
                         <button  className="btn-login">
-                            utfør
+                            Utfør
                         </button>
                     </div>
                 </div>
@@ -98,7 +98,7 @@ class ProfilePage extends Component {
 
                     <PasswordMask
                         className="username"
-                        placeholder="nytt passord"
+                        placeholder="Nytt passord"
                         type="text"
                         id="password"
                         name="password"
@@ -135,10 +135,10 @@ class ProfilePage extends Component {
                 <div className='infoContainer'>
                     <div className='upperBox'>
 
-                            <p className='boldP'>E-post</p>
+                            <p className='boldP'>E-post:</p>
                             <p >{email}</p>
 
-                            <p className='boldP'>Skole</p>
+                            <p className='boldP'>Skole:</p>
                                 <p >Høgskolen Kristiania</p>
 
                      </div>
@@ -188,7 +188,7 @@ class ProfilePage extends Component {
 <p>  "</p>
                                 <PasswordMask
                                     className="password"
-                                    placeholder="nytt passord"
+                                    placeholder="Nytt passord"
                                     type="text"
                                     id="password"
                                     name="password"
@@ -201,7 +201,7 @@ class ProfilePage extends Component {
 
                                 <div>
                                     <button  className="btn-login">
-                                        utfør
+                                        Utfør
                                     </button>
                                 </div>
 
